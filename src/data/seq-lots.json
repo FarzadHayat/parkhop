@@ -1,0 +1,2512 @@
+[
+ {
+  "id": "osm-w207667467",
+  "name": "Albion park 'n' ride",
+  "lat": -27.430084,
+  "lon": 153.040247,
+  "perDay": 0,
+  "fillsByHhmm": "07:15",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Albion station",
+   "lat": -27.429711,
+   "lon": 153.040259,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 178
+ },
+ {
+  "id": "osm-w310317237",
+  "name": "Alderley park 'n' ride",
+  "lat": -27.423548,
+  "lon": 153.000883,
+  "perDay": 0,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Alderley station",
+   "lat": -27.423431,
+   "lon": 153.000911,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w392906024",
+  "name": "Altandi park 'n' ride",
+  "lat": -27.581957,
+  "lon": 153.062787,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Altandi station",
+   "lat": -27.582693,
+   "lon": 153.063932,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-r16754991",
+  "name": "Aspley bus station park 'n' ride",
+  "lat": -27.363336,
+  "lon": 153.015294,
+  "perDay": 0,
+  "fillsByHhmm": "06:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Aspley Hypermarket interchange",
+   "lat": -27.363154,
+   "lon": 153.012923,
+   "modes": [
+    "bus"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 65
+ },
+ {
+  "id": "osm-w445894835",
+  "name": "Bald Hills park 'n' ride",
+  "lat": -27.32025,
+  "lon": 153.010588,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Bald Hills station",
+   "lat": -27.320729,
+   "lon": 153.011395,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w206998701",
+  "name": "Banoon park 'n' ride",
+  "lat": -27.57742,
+  "lon": 153.047231,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Banoon station",
+   "lat": -27.576409,
+   "lon": 153.046709,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w33113175",
+  "name": "Banyo park 'n' ride",
+  "lat": -27.37585,
+  "lon": 153.077283,
+  "perDay": 0,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Banyo station",
+   "lat": -27.374743,
+   "lon": 153.077142,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w113158242",
+  "name": "Beenleigh park 'n' ride",
+  "lat": -27.717187,
+  "lon": 153.204928,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Beenleigh station",
+   "lat": -27.717573,
+   "lon": 153.204452,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1243153847",
+  "name": "Beerburrum park 'n' ride",
+  "lat": -26.959948,
+  "lon": 152.958741,
+  "perDay": 0,
+  "fillsByHhmm": "08:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Beerburrum station",
+   "lat": -26.959863,
+   "lon": 152.958891,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1396573764",
+  "name": "Beerwah park 'n' ride",
+  "lat": -26.857448,
+  "lon": 152.958675,
+  "perDay": 0,
+  "fillsByHhmm": "08:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Beerwah station",
+   "lat": -26.857088,
+   "lon": 152.958486,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w97193921",
+  "name": "Bethania park 'n' ride",
+  "lat": -27.688014,
+  "lon": 153.157653,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Bethania station",
+   "lat": -27.687931,
+   "lon": 153.157951,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w18859636",
+  "name": "Birkdale park 'n' ride",
+  "lat": -27.493552,
+  "lon": 153.217137,
+  "perDay": 0,
+  "fillsByHhmm": "07:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Birkdale station",
+   "lat": -27.493704,
+   "lon": 153.218464,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 48
+ },
+ {
+  "id": "osm-w529323407",
+  "name": "Boondall park 'n' ride",
+  "lat": -27.347503,
+  "lon": 153.069108,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Boondall station",
+   "lat": -27.346387,
+   "lon": 153.067519,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w347206523",
+  "name": "Booval park 'n' ride",
+  "lat": -27.609705,
+  "lon": 152.789251,
+  "perDay": 0,
+  "fillsByHhmm": "07:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Booval station",
+   "lat": -27.609442,
+   "lon": 152.78987,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 65
+ },
+ {
+  "id": "osm-w284409101",
+  "name": "Bray Park park 'n' ride",
+  "lat": -27.299504,
+  "lon": 152.98581,
+  "perDay": 0,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Bray Park station",
+   "lat": -27.299627,
+   "lon": 152.985778,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 220
+ },
+ {
+  "id": "osm-w64369943",
+  "name": "Bundamba park 'n' ride",
+  "lat": -27.60687,
+  "lon": 152.804685,
+  "perDay": 0,
+  "fillsByHhmm": "07:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Bundamba station",
+   "lat": -27.607189,
+   "lon": 152.804927,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 56
+ },
+ {
+  "id": "osm-w32886999",
+  "name": "Burpengary park 'n' ride",
+  "lat": -27.161861,
+  "lon": 152.957527,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Burpengary station",
+   "lat": -27.162215,
+   "lon": 152.957457,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w34058704",
+  "name": "Caboolture park 'n' ride",
+  "lat": -27.081911,
+  "lon": 152.954049,
+  "perDay": 0,
+  "fillsByHhmm": "08:00",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Caboolture station",
+   "lat": -27.082646,
+   "lon": 152.953449,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 247
+ },
+ {
+  "id": "osm-w46051663",
+  "name": "Caboolture park 'n' ride",
+  "lat": -27.083543,
+  "lon": 152.953721,
+  "perDay": 0,
+  "fillsByHhmm": "08:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Caboolture bus station",
+   "lat": -27.082994,
+   "lon": 152.953607,
+   "modes": [
+    "bus"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w775807761",
+  "name": "Cannon Hill interchange park 'n' ride",
+  "lat": -27.470683,
+  "lon": 153.096384,
+  "perDay": 0,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Cannon Hill interchange",
+   "lat": -27.470951,
+   "lon": 153.096639,
+   "modes": [
+    "bus"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w23172668",
+  "name": "Cannon Hill park 'n' ride",
+  "lat": -27.4652,
+  "lon": 153.087848,
+  "perDay": 0,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Cannon Hill station",
+   "lat": -27.465353,
+   "lon": 153.088976,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-r16380866",
+  "name": "Capalaba park 'n' ride",
+  "lat": -27.525227,
+  "lon": 153.195565,
+  "perDay": 0,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Capalaba station",
+   "lat": -27.523468,
+   "lon": 153.192402,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 127
+ },
+ {
+  "id": "osm-w330348243",
+  "name": "Capalaba station park 'n' ride",
+  "lat": -27.524012,
+  "lon": 153.193468,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Capalaba station",
+   "lat": -27.523468,
+   "lon": 153.192402,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1211509380",
+  "name": "Carseldine park 'n' ride",
+  "lat": -27.345654,
+  "lon": 153.02846,
+  "perDay": 0,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Carseldine station",
+   "lat": -27.347367,
+   "lon": 153.028682,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 206
+ },
+ {
+  "id": "osm-w300606494",
+  "name": "Chelmer park 'n' ride",
+  "lat": -27.512288,
+  "lon": 152.973264,
+  "perDay": 0,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Chelmer station",
+   "lat": -27.511948,
+   "lon": 152.972555,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w44878256",
+  "name": "Cleveland park 'n' ride",
+  "lat": -27.523957,
+  "lon": 153.265728,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Cleveland station",
+   "lat": -27.524498,
+   "lon": 153.265865,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w45520712",
+  "name": "Coomera park 'n' ride",
+  "lat": -27.853882,
+  "lon": 153.317882,
+  "perDay": 0,
+  "fillsByHhmm": "08:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Coomera station",
+   "lat": -27.852922,
+   "lon": 153.317471,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w32967277",
+  "name": "Coopers Plains park 'n' ride",
+  "lat": -27.567387,
+  "lon": 153.036414,
+  "perDay": 0,
+  "fillsByHhmm": "06:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Coopers Plains station",
+   "lat": -27.56708,
+   "lon": 153.035928,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 62
+ },
+ {
+  "id": "osm-w722070992",
+  "name": "Cooroy park 'n' ride",
+  "lat": -26.417449,
+  "lon": 152.911349,
+  "perDay": 0,
+  "fillsByHhmm": "08:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Cooroy station",
+   "lat": -26.417914,
+   "lon": 152.911477,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w329793381",
+  "name": "Corinda park 'n' ride",
+  "lat": -27.539266,
+  "lon": 152.980852,
+  "perDay": 0,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Corinda station",
+   "lat": -27.53895,
+   "lon": 152.980487,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1061027878",
+  "name": "Dakabin park 'n' ride",
+  "lat": -27.229906,
+  "lon": 152.975381,
+  "perDay": 0,
+  "fillsByHhmm": "07:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Dakabin station",
+   "lat": -27.230347,
+   "lon": 152.975517,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 12
+ },
+ {
+  "id": "osm-w35185926",
+  "name": "Darra park 'n' ride",
+  "lat": -27.566815,
+  "lon": 152.95108,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Darra station",
+   "lat": -27.566121,
+   "lon": 152.952481,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w45468676",
+  "name": "Deagon park 'n' ride",
+  "lat": -27.32754,
+  "lon": 153.063164,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Deagon station",
+   "lat": -27.327508,
+   "lon": 153.063482,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w174195752",
+  "name": "Dinmore park 'n' ride",
+  "lat": -27.595853,
+  "lon": 152.833995,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Dinmore station",
+   "lat": -27.596208,
+   "lon": 152.833321,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w34684898",
+  "name": "Eagle Junction park 'n' ride",
+  "lat": -27.415116,
+  "lon": 153.04962,
+  "perDay": 0,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Eagle Junction station",
+   "lat": -27.414958,
+   "lon": 153.050255,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w890967727",
+  "name": "East Ipswich park 'n' ride",
+  "lat": -27.609907,
+  "lon": 152.775575,
+  "perDay": 0,
+  "fillsByHhmm": "07:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "East Ipswich station",
+   "lat": -27.609875,
+   "lon": 152.774919,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 22
+ },
+ {
+  "id": "osm-w65618376",
+  "name": "Ebbw Vale park 'n' ride",
+  "lat": -27.603378,
+  "lon": 152.822321,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Ebbw Vale station",
+   "lat": -27.603538,
+   "lon": 152.822127,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w123689193",
+  "name": "Edens Landing park 'n' ride",
+  "lat": -27.69851,
+  "lon": 153.170492,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Edens Landing station",
+   "lat": -27.698286,
+   "lon": 153.170107,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w51654006",
+  "name": "Eight Mile Plains park 'n' ride",
+  "lat": -27.578087,
+  "lon": 153.102288,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Eight Mile Plains station",
+   "lat": -27.578382,
+   "lon": 153.101881,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w525276048",
+  "name": "Elimbah park 'n' ride",
+  "lat": -27.011103,
+  "lon": 152.945342,
+  "perDay": 0,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Elimbah station",
+   "lat": -27.011262,
+   "lon": 152.945471,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 20
+ },
+ {
+  "id": "osm-w18563899",
+  "name": "Enoggera park 'n' ride",
+  "lat": -27.421048,
+  "lon": 152.993593,
+  "perDay": 0,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Enoggera interchange",
+   "lat": -27.420627,
+   "lon": 152.992352,
+   "modes": [
+    "bus"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1396573766",
+  "name": "Euldo park 'n' ride",
+  "lat": -26.725827,
+  "lon": 152.957005,
+  "perDay": 0,
+  "fillsByHhmm": "08:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Eudlo station",
+   "lat": -26.725285,
+   "lon": 152.95699,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1314254483",
+  "name": "Eumundi park 'n' ride",
+  "lat": -26.480043,
+  "lon": 152.954505,
+  "perDay": 0,
+  "fillsByHhmm": "08:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Eumundi station",
+   "lat": -26.48047,
+   "lon": 152.955037,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w358570006",
+  "name": "Ferny Grove park 'n' ride",
+  "lat": -27.400796,
+  "lon": 152.935213,
+  "perDay": 0,
+  "fillsByHhmm": "08:00",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Ferny Grove station",
+   "lat": -27.401865,
+   "lon": 152.935651,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 905
+ },
+ {
+  "id": "osm-w392437595",
+  "name": "Fruitgrove park 'n' ride",
+  "lat": -27.597543,
+  "lon": 153.079987,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Fruitgrove station",
+   "lat": -27.598461,
+   "lon": 153.079996,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1243153839",
+  "name": "Gailes park 'n' ride",
+  "lat": -27.602181,
+  "lon": 152.918924,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Gailes station",
+   "lat": -27.602167,
+   "lon": 152.918895,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w17598093",
+  "name": "Gaythorne park 'n' ride",
+  "lat": -27.419582,
+  "lon": 152.985362,
+  "perDay": 0,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Gaythorne station",
+   "lat": -27.41907,
+   "lon": 152.984639,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w207667731",
+  "name": "Geebung park 'n' ride",
+  "lat": -27.368208,
+  "lon": 153.047142,
+  "perDay": 0,
+  "fillsByHhmm": "06:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Geebung station",
+   "lat": -27.368811,
+   "lon": 153.04707,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 91
+ },
+ {
+  "id": "osm-w1052374012",
+  "name": "Glass House Mountains park 'n' ride",
+  "lat": -26.899373,
+  "lon": 152.956676,
+  "perDay": 0,
+  "fillsByHhmm": "08:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Glass House Mountains station",
+   "lat": -26.89911,
+   "lon": 152.956837,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w312869578",
+  "name": "Goodna park 'n' ride",
+  "lat": -27.608352,
+  "lon": 152.900755,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Goodna station",
+   "lat": -27.608543,
+   "lon": 152.901126,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w546940483",
+  "name": "Grovely park 'n' ride",
+  "lat": -27.404318,
+  "lon": 152.962497,
+  "perDay": 0,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Grovely station",
+   "lat": -27.404511,
+   "lon": 152.962508,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w96056173",
+  "name": "Helensvale park 'n' ride",
+  "lat": -27.924829,
+  "lon": 153.33815,
+  "perDay": 0,
+  "fillsByHhmm": "08:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Helensvale station",
+   "lat": -27.925333,
+   "lon": 153.338816,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w123689192",
+  "name": "Holmview park 'n' ride",
+  "lat": -27.710045,
+  "lon": 153.188394,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Holmview station",
+   "lat": -27.710075,
+   "lon": 153.188309,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1474303811",
+  "name": "Hope Island park 'n' ride",
+  "lat": -27.87964,
+  "lon": 153.330745,
+  "perDay": 0,
+  "fillsByHhmm": "08:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Hope Island station",
+   "lat": -27.880118,
+   "lon": 153.331141,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w588829650",
+  "name": "Indooroopilly park 'n' ride",
+  "lat": -27.502861,
+  "lon": 152.976123,
+  "perDay": 0,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Indooroopilly station",
+   "lat": -27.503013,
+   "lon": 152.976083,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-r17082815",
+  "name": "Ipswich park 'n' ride",
+  "lat": -27.612797,
+  "lon": 152.762869,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Ipswich station",
+   "lat": -27.613091,
+   "lon": 152.760317,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w251492040",
+  "name": "Kallangur park 'n' ride",
+  "lat": -27.257366,
+  "lon": 152.999242,
+  "perDay": 0,
+  "fillsByHhmm": "07:55",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Kallangur station",
+   "lat": -27.256716,
+   "lon": 153.000459,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 310
+ },
+ {
+  "id": "osm-w1243153844",
+  "name": "Karrabin park 'n' ride",
+  "lat": -27.603968,
+  "lon": 152.708554,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Karrabin station",
+   "lat": -27.604326,
+   "lon": 152.709258,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w32050415",
+  "name": "Keperra park 'n' ride",
+  "lat": -27.41001,
+  "lon": 152.955988,
+  "perDay": 0,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Keperra station",
+   "lat": -27.409672,
+   "lon": 152.956939,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w80216634",
+  "name": "Kingston park 'n' ride",
+  "lat": -27.656873,
+  "lon": 153.117864,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Kingston station",
+   "lat": -27.656653,
+   "lon": 153.118444,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w251488529",
+  "name": "Kippa-Ring park 'n' ride",
+  "lat": -27.225272,
+  "lon": 153.079479,
+  "perDay": 0,
+  "fillsByHhmm": "07:55",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Kippa-Ring station",
+   "lat": -27.225228,
+   "lon": 153.081902,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 404
+ },
+ {
+  "id": "osm-w32289389",
+  "name": "Kuraby park 'n' ride",
+  "lat": -27.605015,
+  "lon": 153.092331,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Kuraby station",
+   "lat": -27.605115,
+   "lon": 153.09143,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1089986877",
+  "name": "Landsborough park 'n' ride",
+  "lat": -26.808731,
+  "lon": 152.967687,
+  "perDay": 0,
+  "fillsByHhmm": "08:20",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Landsborough station",
+   "lat": -26.808077,
+   "lon": 152.966173,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 307
+ },
+ {
+  "id": "osm-w986837816",
+  "name": "Lawnton park 'n' ride",
+  "lat": -27.279712,
+  "lon": 152.97947,
+  "perDay": 0,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Lawnton station",
+   "lat": -27.281635,
+   "lon": 152.980779,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 250
+ },
+ {
+  "id": "osm-r20173396",
+  "name": "Lindum Park & Ride North",
+  "lat": -27.441561,
+  "lon": 153.145009,
+  "perDay": 0,
+  "fillsByHhmm": "07:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Lindum station",
+   "lat": -27.442275,
+   "lon": 153.145112,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 74
+ },
+ {
+  "id": "osm-w183519674",
+  "name": "Lindum Park & Ride South",
+  "lat": -27.4419,
+  "lon": 153.145589,
+  "perDay": 0,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Lindum station",
+   "lat": -27.442275,
+   "lon": 153.145112,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 138
+ },
+ {
+  "id": "osm-w95772727",
+  "name": "Loganlea park 'n' ride",
+  "lat": -27.670535,
+  "lon": 153.137967,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Loganlea station",
+   "lat": -27.671085,
+   "lon": 153.138078,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w524523215",
+  "name": "Lota park 'n' ride",
+  "lat": -27.469262,
+  "lon": 153.188287,
+  "perDay": 0,
+  "fillsByHhmm": "07:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Lota station",
+   "lat": -27.469709,
+   "lon": 153.188143,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 40
+ },
+ {
+  "id": "osm-w187020185",
+  "name": "Macgregor park 'n' ride",
+  "lat": -27.561967,
+  "lon": 153.076656,
+  "perDay": 0,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Garden City Shopping Centre interchange",
+   "lat": -27.563405,
+   "lon": 153.080473,
+   "modes": [
+    "bus"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-r13019200",
+  "name": "Mango Hill East park 'n' ride",
+  "lat": -27.232581,
+  "lon": 153.03501,
+  "perDay": 0,
+  "fillsByHhmm": "07:55",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Mango Hill East station",
+   "lat": -27.232661,
+   "lon": 153.03602,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 354
+ },
+ {
+  "id": "osm-w251489755",
+  "name": "Mango Hill park 'n' ride",
+  "lat": -27.24689,
+  "lon": 153.026511,
+  "perDay": 0,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Mango Hill station",
+   "lat": -27.245928,
+   "lon": 153.027436,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 206
+ },
+ {
+  "id": "osm-w28086236",
+  "name": "Manly park 'n' ride",
+  "lat": -27.457339,
+  "lon": 153.180078,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Manly station",
+   "lat": -27.456995,
+   "lon": 153.180762,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w32944804",
+  "name": "Mitchelton park 'n' ride",
+  "lat": -27.410835,
+  "lon": 152.975232,
+  "perDay": 0,
+  "fillsByHhmm": "07:15",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Mitchelton station",
+   "lat": -27.411626,
+   "lon": 152.976087,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 142
+ },
+ {
+  "id": "osm-w1396573765",
+  "name": "Mooloolah park 'n' ride",
+  "lat": -26.765723,
+  "lon": 152.963253,
+  "perDay": 0,
+  "fillsByHhmm": "08:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Mooloolah station",
+   "lat": -26.765454,
+   "lon": 152.962979,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w934971112",
+  "name": "Moorooka park 'n' ride",
+  "lat": -27.535783,
+  "lon": 153.015447,
+  "perDay": 0,
+  "fillsByHhmm": "06:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Moorooka station",
+   "lat": -27.535846,
+   "lon": 153.014141,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 18
+ },
+ {
+  "id": "osm-w45890924",
+  "name": "Morayfield park 'n' ride",
+  "lat": -27.110644,
+  "lon": 152.952567,
+  "perDay": 0,
+  "fillsByHhmm": "08:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Morayfield station",
+   "lat": -27.110209,
+   "lon": 152.952745,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w33076553",
+  "name": "Morningside park 'n' ride",
+  "lat": -27.471488,
+  "lon": 153.069389,
+  "perDay": 0,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Morningside station",
+   "lat": -27.470891,
+   "lon": 153.069694,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w207536342",
+  "name": "Murarrie park 'n' ride",
+  "lat": -27.464963,
+  "lon": 153.105798,
+  "perDay": 0,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Murarrie station",
+   "lat": -27.464875,
+   "lon": 153.104883,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w251490844",
+  "name": "Murrumba Downs park 'n' ride",
+  "lat": -27.252322,
+  "lon": 153.010088,
+  "perDay": 0,
+  "fillsByHhmm": "08:20",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Murrumba Downs station",
+   "lat": -27.252047,
+   "lon": 153.011413,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 644
+ },
+ {
+  "id": "osm-w790941185",
+  "name": "Nambour park 'n' ride",
+  "lat": -26.626559,
+  "lon": 152.95702,
+  "perDay": 0,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Nambour station",
+   "lat": -26.625521,
+   "lon": 152.958235,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 28
+ },
+ {
+  "id": "osm-r12866479",
+  "name": "Narangba park 'n' ride",
+  "lat": -27.202211,
+  "lon": 152.960265,
+  "perDay": 0,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Narangba station",
+   "lat": -27.202431,
+   "lon": 152.959821,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 260
+ },
+ {
+  "id": "osm-w14582603",
+  "name": "Nerang park 'n' ride",
+  "lat": -27.993177,
+  "lon": 153.349218,
+  "perDay": 0,
+  "fillsByHhmm": "08:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Nerang station",
+   "lat": -27.994492,
+   "lon": 153.350222,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w565358149",
+  "name": "Noosa Junction park 'n' ride",
+  "lat": -26.399317,
+  "lon": 153.092486,
+  "perDay": 0,
+  "fillsByHhmm": "08:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Noosa Junction station",
+   "lat": -26.398924,
+   "lon": 153.092845,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w40484019",
+  "name": "North Boondall park 'n' ride",
+  "lat": -27.337293,
+  "lon": 153.05993,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "North Boondall station",
+   "lat": -27.33868,
+   "lon": 153.060357,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w9995837",
+  "name": "Northgate park 'n' ride",
+  "lat": -27.392765,
+  "lon": 153.068864,
+  "perDay": 0,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Northgate station",
+   "lat": -27.393276,
+   "lon": 153.068837,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w359998377",
+  "name": "Nudgee park 'n' ride",
+  "lat": -27.365929,
+  "lon": 153.083769,
+  "perDay": 0,
+  "fillsByHhmm": "07:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Nudgee station",
+   "lat": -27.366275,
+   "lon": 153.083684,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 32
+ },
+ {
+  "id": "osm-w33347985",
+  "name": "Nundah park 'n' ride",
+  "lat": -27.40173,
+  "lon": 153.061665,
+  "perDay": 0,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Nundah station",
+   "lat": -27.401045,
+   "lon": 153.061677,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w128978822",
+  "name": "Ormeau park 'n' ride",
+  "lat": -27.7985,
+  "lon": 153.281089,
+  "perDay": 0,
+  "fillsByHhmm": "08:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Ormeau station",
+   "lat": -27.79924,
+   "lon": 153.282383,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w207535219",
+  "name": "Ormiston park 'n' ride",
+  "lat": -27.513583,
+  "lon": 153.256209,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Ormiston station",
+   "lat": -27.514533,
+   "lon": 153.25636,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1207058822",
+  "name": "Oxford Park park 'n' ride",
+  "lat": -27.404146,
+  "lon": 152.968573,
+  "perDay": 0,
+  "fillsByHhmm": "06:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Oxford Park station",
+   "lat": -27.404415,
+   "lon": 152.96895,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 31
+ },
+ {
+  "id": "osm-w15782453",
+  "name": "Oxley park 'n' ride",
+  "lat": -27.553155,
+  "lon": 152.973382,
+  "perDay": 0,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Oxley station",
+   "lat": -27.552624,
+   "lon": 152.973698,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w439245333",
+  "name": "Palmwoods park 'n' ride",
+  "lat": -26.688594,
+  "lon": 152.960794,
+  "perDay": 0,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Palmwoods station",
+   "lat": -26.688513,
+   "lon": 152.961031,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 33
+ },
+ {
+  "id": "osm-w1009748540",
+  "name": "Parkwood park 'n' ride",
+  "lat": -27.953151,
+  "lon": 153.347129,
+  "perDay": 0,
+  "fillsByHhmm": "08:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Parkwood station",
+   "lat": -27.951583,
+   "lon": 153.347323,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 1000
+ },
+ {
+  "id": "osm-w41121391",
+  "name": "Petrie park 'n' ride",
+  "lat": -27.267123,
+  "lon": 152.982126,
+  "perDay": 0,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Petrie station",
+   "lat": -27.268242,
+   "lon": 152.981623,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 131
+ },
+ {
+  "id": "osm-r16308902",
+  "name": "Phillips Lane park 'n' ride",
+  "lat": -27.269189,
+  "lon": 152.982037,
+  "perDay": 0,
+  "fillsByHhmm": "07:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Petrie station",
+   "lat": -27.268242,
+   "lon": 152.981623,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 105
+ },
+ {
+  "id": "osm-w1445886452",
+  "name": "Pimpama park 'n' ride",
+  "lat": -27.816826,
+  "lon": 153.295936,
+  "perDay": 0,
+  "fillsByHhmm": "08:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Pimpama station",
+   "lat": -27.816032,
+   "lon": 153.296222,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1396573767",
+  "name": "Pomona park 'n' ride",
+  "lat": -26.36578,
+  "lon": 152.856525,
+  "perDay": 0,
+  "fillsByHhmm": "08:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Pomona station",
+   "lat": -26.365875,
+   "lon": 152.856807,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w47286594",
+  "name": "Redbank park 'n' ride",
+  "lat": -27.599749,
+  "lon": 152.87342,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Redbank station",
+   "lat": -27.599707,
+   "lon": 152.872361,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w70069270",
+  "name": "Redland Bay Marina park 'n' ride",
+  "lat": -27.617108,
+  "lon": 153.3102,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Redland Bay Marina",
+   "lat": -27.618151,
+   "lon": 153.311457,
+   "modes": [
+    "bus"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w253719559",
+  "name": "Richlands park 'n' ride",
+  "lat": -27.595747,
+  "lon": 152.94804,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Richlands station",
+   "lat": -27.595894,
+   "lon": 152.947269,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w334938448",
+  "name": "Riverview park 'n' ride",
+  "lat": -27.594689,
+  "lon": 152.849862,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Riverview station",
+   "lat": -27.595247,
+   "lon": 152.850344,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w28395144",
+  "name": "Robina park 'n' ride",
+  "lat": -28.070513,
+  "lon": 153.377319,
+  "perDay": 0,
+  "fillsByHhmm": "08:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Robina station",
+   "lat": -28.070986,
+   "lon": 153.377926,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w953412592",
+  "name": "Rochedale busway station park 'n' ride",
+  "lat": -27.592907,
+  "lon": 153.112006,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Rochedale station",
+   "lat": -27.592936,
+   "lon": 153.111153,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1565682684",
+  "name": "Rocklea park 'n' ride",
+  "lat": -27.544499,
+  "lon": 153.013472,
+  "perDay": 0,
+  "fillsByHhmm": "06:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Rocklea station",
+   "lat": -27.544914,
+   "lon": 153.013636,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 5
+ },
+ {
+  "id": "osm-w1243153846",
+  "name": "Rosewood park 'n' ride",
+  "lat": -27.642811,
+  "lon": 152.593119,
+  "perDay": 0,
+  "fillsByHhmm": "08:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Rosewood station",
+   "lat": -27.643077,
+   "lon": 152.592226,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w251486909",
+  "name": "Rothwell park 'n' ride",
+  "lat": -27.223233,
+  "lon": 153.047495,
+  "perDay": 0,
+  "fillsByHhmm": "08:20",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Rothwell station",
+   "lat": -27.223473,
+   "lon": 153.04846,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 614
+ },
+ {
+  "id": "osm-w57766313",
+  "name": "Runcorn park 'n' ride",
+  "lat": -27.591969,
+  "lon": 153.068775,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Runcorn station",
+   "lat": -27.592573,
+   "lon": 153.068547,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w959107586",
+  "name": "Salisbury park 'n' ride",
+  "lat": -27.552212,
+  "lon": 153.021277,
+  "perDay": 0,
+  "fillsByHhmm": "07:15",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Salisbury station",
+   "lat": -27.553262,
+   "lon": 153.022904,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 140
+ },
+ {
+  "id": "osm-w36985037",
+  "name": "Sandgate park 'n' ride",
+  "lat": -27.321685,
+  "lon": 153.068871,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Sandgate bus station",
+   "lat": -27.322082,
+   "lon": 153.068854,
+   "modes": [
+    "bus"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w41172465",
+  "name": "Sandgate park 'n' ride",
+  "lat": -27.322538,
+  "lon": 153.072399,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Sandgate station",
+   "lat": -27.322125,
+   "lon": 153.069025,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1156553188",
+  "name": "Sherwood park 'n' ride",
+  "lat": -27.53171,
+  "lon": 152.979786,
+  "perDay": 0,
+  "fillsByHhmm": "06:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Sherwood station",
+   "lat": -27.531137,
+   "lon": 152.979767,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 17
+ },
+ {
+  "id": "osm-w1231896729",
+  "name": "Shorncliffe park 'n' ride",
+  "lat": -27.327024,
+  "lon": 153.080966,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Shorncliffe station",
+   "lat": -27.327087,
+   "lon": 153.080993,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w307241394",
+  "name": "Springfield Central park 'n' ride",
+  "lat": -27.675172,
+  "lon": 152.903139,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Springfield Central station",
+   "lat": -27.674125,
+   "lon": 152.902793,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w344413283",
+  "name": "Springfield park 'n' ride",
+  "lat": -27.658361,
+  "lon": 152.923027,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Springfield station",
+   "lat": -27.66003,
+   "lon": 152.921309,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w53266177",
+  "name": "Springwood park 'n' ride",
+  "lat": -27.616494,
+  "lon": 153.121571,
+  "perDay": 0,
+  "fillsByHhmm": "07:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Springwood station",
+   "lat": -27.615106,
+   "lon": 153.124894,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 106
+ },
+ {
+  "id": "osm-w37697034",
+  "name": "Strathpine park 'n' ride",
+  "lat": -27.310835,
+  "lon": 152.989764,
+  "perDay": 0,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Strathpine station",
+   "lat": -27.311118,
+   "lon": 152.989659,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 143
+ },
+ {
+  "id": "osm-w207000958",
+  "name": "Sunnybank park 'n' ride",
+  "lat": -27.580941,
+  "lon": 153.054253,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Sunnybank station",
+   "lat": -27.58062,
+   "lon": 153.053996,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w207667717",
+  "name": "Sunshine park 'n' ride",
+  "lat": -27.374962,
+  "lon": 153.055951,
+  "perDay": 0,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Sunshine station",
+   "lat": -27.375434,
+   "lon": 153.055655,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w32256469",
+  "name": "Taringa park 'n' ride",
+  "lat": -27.493308,
+  "lon": 152.982261,
+  "perDay": 0,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Taringa station",
+   "lat": -27.493308,
+   "lon": 152.98186,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w207535875",
+  "name": "Thorneside Park 'n' Ride",
+  "lat": -27.485698,
+  "lon": 153.193754,
+  "perDay": 0,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Thorneside station",
+   "lat": -27.486298,
+   "lon": 153.193068,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 122
+ },
+ {
+  "id": "osm-w54009467",
+  "name": "Toombul Shopping Centre park 'n' ride",
+  "lat": -27.407594,
+  "lon": 153.060452,
+  "perDay": 0,
+  "fillsByHhmm": "06:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Toombul Shopping Centre interchange",
+   "lat": -27.408269,
+   "lon": 153.059963,
+   "modes": [
+    "bus"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 39
+ },
+ {
+  "id": "osm-w35031616",
+  "name": "Toombul park 'n' ride",
+  "lat": -27.406676,
+  "lon": 153.059395,
+  "perDay": 0,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Toombul station",
+   "lat": -27.407447,
+   "lon": 153.05886,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w245610070",
+  "name": "Trinder Park park 'n' ride",
+  "lat": -27.632624,
+  "lon": 153.097921,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Trinder Park station",
+   "lat": -27.631828,
+   "lon": 153.097666,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w45020495",
+  "name": "Varsity Lakes park 'n' ride",
+  "lat": -28.096031,
+  "lon": 153.397965,
+  "perDay": 0,
+  "fillsByHhmm": "08:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Varsity Lakes station",
+   "lat": -28.096782,
+   "lon": 153.399621,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w35034577",
+  "name": "Virginia park 'n' ride",
+  "lat": -27.382292,
+  "lon": 153.06328,
+  "perDay": 0,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Virginia station",
+   "lat": -27.382637,
+   "lon": 153.06311,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w368098672",
+  "name": "Wacol park 'n' ride",
+  "lat": -27.589123,
+  "lon": 152.924095,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Wacol station",
+   "lat": -27.589336,
+   "lon": 152.924464,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1243153845",
+  "name": "Walloon park 'n' ride",
+  "lat": -27.607124,
+  "lon": 152.667383,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Walloon station",
+   "lat": -27.607215,
+   "lon": 152.667634,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w44886720",
+  "name": "Wellington Point park 'n' ride",
+  "lat": -27.494312,
+  "lon": 153.242564,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Wellington Point station",
+   "lat": -27.494266,
+   "lon": 153.242372,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w80915921",
+  "name": "Woodridge park 'n' ride",
+  "lat": -27.637332,
+  "lon": 153.102438,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Woodridge station",
+   "lat": -27.63829,
+   "lon": 153.103625,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w207667463",
+  "name": "Wooloowin park 'n' ride",
+  "lat": -27.420541,
+  "lon": 153.04253,
+  "perDay": 0,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Wooloowin station",
+   "lat": -27.420028,
+   "lon": 153.043557,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w525296211",
+  "name": "Woombye park 'n' ride",
+  "lat": -26.660784,
+  "lon": 152.963064,
+  "perDay": 0,
+  "fillsByHhmm": "08:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Woombye station",
+   "lat": -26.660658,
+   "lon": 152.962924,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w34937083",
+  "name": "Wynnum Central park 'n' ride",
+  "lat": -27.445578,
+  "lon": 153.170166,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Wynnum Central station",
+   "lat": -27.445791,
+   "lon": 153.17073,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w34937072",
+  "name": "Wynnum park 'n' ride",
+  "lat": -27.439454,
+  "lon": 153.166212,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Wynnum station",
+   "lat": -27.43983,
+   "lon": 153.165625,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w207536358",
+  "name": "Wynnym North park 'n' ride",
+  "lat": -27.437451,
+  "lon": 153.159682,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Wynnum North station",
+   "lat": -27.437388,
+   "lon": 153.158586,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w551042529",
+  "name": "Yandina park 'n' ride",
+  "lat": -26.560686,
+  "lon": 152.957884,
+  "perDay": 0,
+  "fillsByHhmm": "08:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Yandina station",
+   "lat": -26.560648,
+   "lon": 152.957699,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w157249305",
+  "name": "Yeronga park 'n' ride",
+  "lat": -27.515973,
+  "lon": 153.018505,
+  "perDay": 0,
+  "fillsByHhmm": "07:15",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Yeronga station",
+   "lat": -27.517815,
+   "lon": 153.017035,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 150
+ },
+ {
+  "id": "osm-w43991028",
+  "name": "Zillmere park 'n' ride",
+  "lat": -27.358339,
+  "lon": 153.036252,
+  "perDay": 0,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Zillmere station",
+   "lat": -27.359268,
+   "lon": 153.037514,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ }
+]
