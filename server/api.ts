@@ -150,7 +150,10 @@ async function assistantTurn(req: IncomingMessage, res: ServerResponse) {
   } catch (e) {
     if (e instanceof Anthropic.AuthenticationError) return send(res, 503, { error: 'Anthropic key rejected' })
     if (e instanceof Anthropic.RateLimitError) return send(res, 429, { error: 'Assistant is busy, try again in a moment' })
-    if (e instanceof Anthropic.BadRequestError) return send(res, 400, { error: e.message })
+    if (e instanceof Anthropic.BadRequestError) {
+      const detail = (e.error as { error?: { message?: string } } | undefined)?.error?.message ?? e.message
+      return send(res, 400, { error: /credit balance/i.test(detail) ? 'The Anthropic account has no credit left. Add credit in the Anthropic Console.' : detail })
+    }
     if (e instanceof Anthropic.APIError) return send(res, 502, { error: `Assistant error ${e.status ?? ''}`.trim() })
     send(res, 502, { error: 'Assistant unavailable' })
   }
