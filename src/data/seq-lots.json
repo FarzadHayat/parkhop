@@ -2943,28 +2943,6 @@
   "source": "OpenStreetMap contributors (ODbL)"
  },
  {
-  "id": "osm-w1240008201",
-  "name": "Albion street parking",
-  "kind": "street",
-  "lat": -27.429683,
-  "lon": 153.041358,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": false,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:25",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Albion station",
-   "lat": -27.429711,
-   "lon": 153.040259,
-   "modes": [
-    "rail"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)"
- },
- {
   "id": "osm-w810343564",
   "name": "Alderley public car park",
   "kind": "carpark",
@@ -2975,50 +2953,6 @@
   "feeKnown": true,
   "extraParkMin": 1,
   "fillsByHhmm": "07:25",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Alderley station",
-   "lat": -27.423431,
-   "lon": 153.000911,
-   "modes": [
-    "rail"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)"
- },
- {
-  "id": "osm-w1078418002",
-  "name": "Alderley street parking",
-  "kind": "street",
-  "lat": -27.420118,
-  "lon": 152.997829,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": false,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:35",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Alderley station",
-   "lat": -27.423431,
-   "lon": 153.000911,
-   "modes": [
-    "rail"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)"
- },
- {
-  "id": "osm-w1078418056",
-  "name": "Alderley street parking",
-  "kind": "street",
-  "lat": -27.420089,
-  "lon": 152.997662,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": false,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:35",
   "fillSource": "estimated",
   "station": {
    "name": "Alderley station",
@@ -3051,7 +2985,8 @@
    ]
   },
   "source": "OpenStreetMap contributors (ODbL)",
-  "capacity": 9
+  "capacity": 9,
+  "notes": "No council time-limit signs mapped within 80 m"
  },
  {
   "id": "osm-r16754990",
@@ -3082,7 +3017,7 @@
   "lat": -27.319846,
   "lon": 153.007654,
   "perDay": 0,
-  "stayKnown": false,
+  "stayKnown": true,
   "feeKnown": false,
   "extraParkMin": 3,
   "fillsByHhmm": "07:55",
@@ -3095,7 +3030,8 @@
     "rail"
    ]
   },
-  "source": "OpenStreetMap contributors (ODbL)"
+  "source": "OpenStreetMap contributors (ODbL); Brisbane City Council parking signs (CC BY 4.0)",
+  "notes": "Council signs: no time limit"
  },
  {
   "id": "osm-w32025500",
@@ -3341,29 +3277,6 @@
   "capacity": 6
  },
  {
-  "id": "osm-w1365461072",
-  "name": "Bretts Wharf ferry terminal street parking",
-  "kind": "street",
-  "lat": -27.439085,
-  "lon": 153.064725,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": true,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:50",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Bretts Wharf ferry terminal",
-   "lat": -27.440234,
-   "lon": 153.064081,
-   "modes": [
-    "ferry"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)",
-  "capacity": 2
- },
- {
   "id": "osm-w1213953965",
   "name": "Brookside Shopping Centre street parking",
   "kind": "street",
@@ -3383,7 +3296,8 @@
     "bus"
    ]
   },
-  "source": "OpenStreetMap contributors (ODbL)"
+  "source": "OpenStreetMap contributors (ODbL)",
+  "notes": "No council time-limit signs mapped within 80 m"
  },
  {
   "id": "osm-w38967759",
@@ -3651,7 +3565,8 @@
    ]
   },
   "source": "OpenStreetMap contributors (ODbL)",
-  "capacity": 9
+  "capacity": 9,
+  "notes": "No council time-limit signs mapped within 80 m"
  },
  {
   "id": "osm-w860951135",
@@ -3673,7 +3588,8 @@
     "rail"
    ]
   },
-  "source": "OpenStreetMap contributors (ODbL)"
+  "source": "OpenStreetMap contributors (ODbL)",
+  "notes": "No council time-limit signs mapped within 80 m"
  },
  {
   "id": "osm-n1108669407",
@@ -3761,7 +3677,8 @@
     "rail"
    ]
   },
-  "source": "OpenStreetMap contributors (ODbL)"
+  "source": "OpenStreetMap contributors (ODbL)",
+  "notes": "No council time-limit signs mapped within 80 m"
  },
  {
   "id": "osm-w1314270222",
@@ -3783,29 +3700,8 @@
     "rail"
    ]
   },
-  "source": "OpenStreetMap contributors (ODbL)"
- },
- {
-  "id": "osm-w1364753689",
-  "name": "Corinda street parking",
-  "kind": "street",
-  "lat": -27.538363,
-  "lon": 152.981784,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": false,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:35",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Corinda station",
-   "lat": -27.53895,
-   "lon": 152.980487,
-   "modes": [
-    "rail"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)"
+  "source": "OpenStreetMap contributors (ODbL)",
+  "notes": "No council time-limit signs mapped within 80 m"
  },
  {
   "id": "osm-w1190739944",
@@ -3963,28 +3859,6 @@
   "source": "OpenStreetMap contributors (ODbL)"
  },
  {
-  "id": "osm-w870732114",
-  "name": "Eight Mile Plains street parking",
-  "kind": "street",
-  "lat": -27.580196,
-  "lon": 153.098992,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": false,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:55",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Eight Mile Plains station",
-   "lat": -27.578382,
-   "lon": 153.101881,
-   "modes": [
-    "rail"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)"
- },
- {
   "id": "osm-w273892834",
   "name": "Elimbah Soldiers Memorial Hall Car Park",
   "kind": "carpark",
@@ -4053,94 +3927,6 @@
   "capacity": 13
  },
  {
-  "id": "osm-w1284115292",
-  "name": "Enoggera street parking",
-  "kind": "street",
-  "lat": -27.421657,
-  "lon": 152.991258,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": false,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:35",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Enoggera interchange",
-   "lat": -27.420627,
-   "lon": 152.992352,
-   "modes": [
-    "bus"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)"
- },
- {
-  "id": "osm-w1284115291",
-  "name": "Enoggera street parking",
-  "kind": "street",
-  "lat": -27.421623,
-  "lon": 152.991079,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": false,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:35",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Enoggera interchange",
-   "lat": -27.420627,
-   "lon": 152.992352,
-   "modes": [
-    "bus"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)"
- },
- {
-  "id": "osm-w1078418028",
-  "name": "Enoggera street parking",
-  "kind": "street",
-  "lat": -27.419703,
-  "lon": 152.993885,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": false,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:50",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Enoggera station",
-   "lat": -27.420349,
-   "lon": 152.992402,
-   "modes": [
-    "rail"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)"
- },
- {
-  "id": "osm-w1078418075",
-  "name": "Enoggera street parking",
-  "kind": "street",
-  "lat": -27.419327,
-  "lon": 152.993899,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": false,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:50",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Enoggera station",
-   "lat": -27.420349,
-   "lon": 152.992402,
-   "modes": [
-    "rail"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)"
- },
- {
   "id": "osm-w1317984817",
   "name": "Fairfield street parking",
   "kind": "street",
@@ -4160,7 +3946,8 @@
     "rail"
    ]
   },
-  "source": "OpenStreetMap contributors (ODbL)"
+  "source": "OpenStreetMap contributors (ODbL)",
+  "notes": "No council time-limit signs mapped within 80 m"
  },
  {
   "id": "osm-w1322809442",
@@ -4182,7 +3969,8 @@
     "rail"
    ]
   },
-  "source": "OpenStreetMap contributors (ODbL)"
+  "source": "OpenStreetMap contributors (ODbL)",
+  "notes": "No council time-limit signs mapped within 80 m"
  },
  {
   "id": "osm-w1015856195",
@@ -4253,28 +4041,6 @@
   "source": "OpenStreetMap contributors (ODbL)"
  },
  {
-  "id": "osm-w1272949134",
-  "name": "Geebung street parking",
-  "kind": "street",
-  "lat": -27.369137,
-  "lon": 153.047244,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": true,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:00",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Geebung station",
-   "lat": -27.368811,
-   "lon": 153.04707,
-   "modes": [
-    "rail"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)"
- },
- {
   "id": "osm-w835908007",
   "name": "Goodna public car park",
   "kind": "carpark",
@@ -4317,7 +4083,8 @@
    ]
   },
   "source": "OpenStreetMap contributors (ODbL)",
-  "capacity": 4
+  "capacity": 4,
+  "notes": "No council time-limit signs mapped within 80 m"
  },
  {
   "id": "osm-w36838044",
@@ -4342,52 +4109,6 @@
   "source": "OpenStreetMap contributors (ODbL)"
  },
  {
-  "id": "osm-w1363563395",
-  "name": "Graceville street parking",
-  "kind": "street",
-  "lat": -27.521635,
-  "lon": 152.975304,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": false,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:50",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Graceville station",
-   "lat": -27.520749,
-   "lon": 152.975727,
-   "modes": [
-    "rail"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)",
-  "capacity": 4
- },
- {
-  "id": "osm-w1363563399",
-  "name": "Graceville street parking",
-  "kind": "street",
-  "lat": -27.521748,
-  "lon": 152.975586,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": false,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:50",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Graceville station",
-   "lat": -27.520749,
-   "lon": 152.975727,
-   "modes": [
-    "rail"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)",
-  "capacity": 4
- },
- {
   "id": "osm-w37446309",
   "name": "Greenslopes public car park",
   "kind": "carpark",
@@ -4403,50 +4124,6 @@
    "name": "Greenslopes station",
    "lat": -27.510939,
    "lon": 153.0403,
-   "modes": [
-    "rail"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)"
- },
- {
-  "id": "osm-w1298961090",
-  "name": "Grovely street parking",
-  "kind": "street",
-  "lat": -27.404466,
-  "lon": 152.96518,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": false,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:35",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Grovely station",
-   "lat": -27.404511,
-   "lon": 152.962508,
-   "modes": [
-    "rail"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)"
- },
- {
-  "id": "osm-w1298961091",
-  "name": "Grovely street parking",
-  "kind": "street",
-  "lat": -27.404564,
-  "lon": 152.965261,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": false,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:35",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Grovely station",
-   "lat": -27.404511,
-   "lon": 152.962508,
    "modes": [
     "rail"
    ]
@@ -4471,50 +4148,6 @@
    "lon": 152.971908,
    "modes": [
     "bus"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)"
- },
- {
-  "id": "osm-w1258900222",
-  "name": "Indooroopilly street parking",
-  "kind": "street",
-  "lat": -27.503192,
-  "lon": 152.97633,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": false,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:35",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Indooroopilly station",
-   "lat": -27.503013,
-   "lon": 152.976083,
-   "modes": [
-    "rail"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)"
- },
- {
-  "id": "osm-w219483915",
-  "name": "Indooroopilly street parking",
-  "kind": "street",
-  "lat": -27.503182,
-  "lon": 152.977118,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": false,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:35",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Indooroopilly station",
-   "lat": -27.503013,
-   "lon": 152.976083,
-   "modes": [
-    "rail"
    ]
   },
   "source": "OpenStreetMap contributors (ODbL)"
@@ -4610,52 +4243,6 @@
   "capacity": 13
  },
  {
-  "id": "osm-w1216116173",
-  "name": "Keperra street parking",
-  "kind": "street",
-  "lat": -27.409166,
-  "lon": 152.95851,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": true,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:35",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Keperra station",
-   "lat": -27.409672,
-   "lon": 152.956939,
-   "modes": [
-    "rail"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)",
-  "capacity": 4
- },
- {
-  "id": "osm-w1216116168",
-  "name": "Keperra street parking",
-  "kind": "street",
-  "lat": -27.409271,
-  "lon": 152.958551,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": false,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:35",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Keperra station",
-   "lat": -27.409672,
-   "lon": 152.956939,
-   "modes": [
-    "rail"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)",
-  "capacity": 4
- },
- {
   "id": "osm-w597596348",
   "name": "Kingston public car park",
   "kind": "carpark",
@@ -4721,7 +4308,8 @@
     "rail"
    ]
   },
-  "source": "OpenStreetMap contributors (ODbL)"
+  "source": "OpenStreetMap contributors (ODbL)",
+  "notes": "No council time-limit signs mapped within 80 m"
  },
  {
   "id": "osm-w1016169847",
@@ -4853,7 +4441,8 @@
     "rail"
    ]
   },
-  "source": "OpenStreetMap contributors (ODbL)"
+  "source": "OpenStreetMap contributors (ODbL)",
+  "notes": "No council time-limit signs mapped within 80 m"
  },
  {
   "id": "osm-w1392452199",
@@ -4877,28 +4466,6 @@
   },
   "source": "OpenStreetMap contributors (ODbL)",
   "capacity": 23
- },
- {
-  "id": "osm-w1368606910",
-  "name": "Lutwyche street parking",
-  "kind": "street",
-  "lat": -27.421033,
-  "lon": 153.03637,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": false,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:50",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Lutwyche station",
-   "lat": -27.419855,
-   "lon": 153.034368,
-   "modes": [
-    "rail"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)"
  },
  {
   "id": "osm-r14488144",
@@ -4970,51 +4537,6 @@
   "capacity": 2
  },
  {
-  "id": "osm-w1224779534",
-  "name": "Mitchelton street parking",
-  "kind": "street",
-  "lat": -27.415433,
-  "lon": 152.97699,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": true,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:25",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Mitchelton station",
-   "lat": -27.411626,
-   "lon": 152.976087,
-   "modes": [
-    "rail"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)"
- },
- {
-  "id": "osm-w1137956624",
-  "name": "Morningside street parking",
-  "kind": "street",
-  "lat": -27.469443,
-  "lon": 153.071275,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": true,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:35",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Morningside station",
-   "lat": -27.470891,
-   "lon": 153.069694,
-   "modes": [
-    "rail"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)",
-  "capacity": 10
- },
- {
   "id": "osm-w569535899",
   "name": "Narangba public car park",
   "kind": "carpark",
@@ -5079,7 +4601,8 @@
     "rail"
    ]
   },
-  "source": "OpenStreetMap contributors (ODbL)"
+  "source": "OpenStreetMap contributors (ODbL)",
+  "notes": "No council time-limit signs mapped within 80 m"
  },
  {
   "id": "osm-w38663116",
@@ -5214,7 +4737,8 @@
    ]
   },
   "source": "OpenStreetMap contributors (ODbL)",
-  "capacity": 13
+  "capacity": 13,
+  "notes": "No council time-limit signs mapped within 80 m"
  },
  {
   "id": "osm-r14724758",
@@ -5237,51 +4761,8 @@
    ]
   },
   "source": "OpenStreetMap contributors (ODbL)",
-  "capacity": 26
- },
- {
-  "id": "osm-w1266709793",
-  "name": "Nundah street parking",
-  "kind": "street",
-  "lat": -27.401263,
-  "lon": 153.062295,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": true,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:35",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Nundah station",
-   "lat": -27.401045,
-   "lon": 153.061677,
-   "modes": [
-    "rail"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)"
- },
- {
-  "id": "osm-w1266709792",
-  "name": "Nundah street parking",
-  "kind": "street",
-  "lat": -27.401474,
-  "lon": 153.062198,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": true,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:35",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Nundah station",
-   "lat": -27.401045,
-   "lon": 153.061677,
-   "modes": [
-    "rail"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)"
+  "capacity": 26,
+  "notes": "No council time-limit signs mapped within 80 m"
  },
  {
   "id": "osm-r4801030",
@@ -5550,50 +5031,6 @@
   "source": "OpenStreetMap contributors (ODbL)"
  },
  {
-  "id": "osm-w1565437886",
-  "name": "Sandgate bus street parking",
-  "kind": "street",
-  "lat": -27.320635,
-  "lon": 153.068008,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": false,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:55",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Sandgate bus station",
-   "lat": -27.322082,
-   "lon": 153.068854,
-   "modes": [
-    "bus"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)"
- },
- {
-  "id": "osm-w1565437885",
-  "name": "Sandgate bus street parking",
-  "kind": "street",
-  "lat": -27.320322,
-  "lon": 153.068304,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": false,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:55",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Sandgate bus station",
-   "lat": -27.322082,
-   "lon": 153.068854,
-   "modes": [
-    "bus"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)"
- },
- {
   "id": "osm-w45422188",
   "name": "Sandgate public car park",
   "kind": "carpark",
@@ -5609,28 +5046,6 @@
    "name": "Sandgate station",
    "lat": -27.322125,
    "lon": 153.069025,
-   "modes": [
-    "rail"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)"
- },
- {
-  "id": "osm-w1364392568",
-  "name": "Sherwood street parking",
-  "kind": "street",
-  "lat": -27.53416,
-  "lon": 152.980241,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": false,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:00",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Sherwood station",
-   "lat": -27.531137,
-   "lon": 152.979767,
    "modes": [
     "rail"
    ]
@@ -5889,7 +5304,7 @@
   "lat": -27.49342,
   "lon": 152.982993,
   "perDay": 0,
-  "stayKnown": false,
+  "stayKnown": true,
   "feeKnown": false,
   "extraParkMin": 3,
   "fillsByHhmm": "07:35",
@@ -5902,7 +5317,8 @@
     "rail"
    ]
   },
-  "source": "OpenStreetMap contributors (ODbL)"
+  "source": "OpenStreetMap contributors (ODbL); Brisbane City Council parking signs (CC BY 4.0)",
+  "notes": "Council signs: no time limit"
  },
  {
   "id": "osm-w868311149",
@@ -5920,28 +5336,6 @@
    "name": "Thorneside station",
    "lat": -27.486298,
    "lon": 153.193068,
-   "modes": [
-    "rail"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)"
- },
- {
-  "id": "osm-w1432443916",
-  "name": "Toombul street parking",
-  "kind": "street",
-  "lat": -27.405011,
-  "lon": 153.06064,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": false,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:35",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Toombul station",
-   "lat": -27.407447,
-   "lon": 153.05886,
    "modes": [
     "rail"
    ]
@@ -5968,7 +5362,8 @@
     "rail"
    ]
   },
-  "source": "OpenStreetMap contributors (ODbL)"
+  "source": "OpenStreetMap contributors (ODbL)",
+  "notes": "No council time-limit signs mapped within 80 m"
  },
  {
   "id": "osm-w550340247",
@@ -6147,50 +5542,6 @@
   "source": "OpenStreetMap contributors (ODbL)"
  },
  {
-  "id": "osm-w1417148404",
-  "name": "Wilston street parking",
-  "kind": "street",
-  "lat": -27.43348,
-  "lon": 153.020465,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": false,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:50",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Wilston station",
-   "lat": -27.436211,
-   "lon": 153.019034,
-   "modes": [
-    "rail"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)"
- },
- {
-  "id": "osm-w1445625743",
-  "name": "Windsor street parking",
-  "kind": "street",
-  "lat": -27.432306,
-  "lon": 153.033017,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": false,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:50",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Windsor station",
-   "lat": -27.434934,
-   "lon": 153.029041,
-   "modes": [
-    "rail"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)"
- },
- {
   "id": "osm-w52974680",
   "name": "Woodridge public car park",
   "kind": "carpark",
@@ -6259,28 +5610,6 @@
   "capacity": 1
  },
  {
-  "id": "osm-w1369579586",
-  "name": "Wooloowin street parking",
-  "kind": "street",
-  "lat": -27.42017,
-  "lon": 153.040383,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": false,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:35",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Wooloowin station",
-   "lat": -27.420028,
-   "lon": 153.043557,
-   "modes": [
-    "rail"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)"
- },
- {
   "id": "osm-w998690328",
   "name": "Wynnum Central street parking",
   "kind": "street",
@@ -6300,7 +5629,8 @@
     "rail"
    ]
   },
-  "source": "OpenStreetMap contributors (ODbL)"
+  "source": "OpenStreetMap contributors (ODbL)",
+  "notes": "No council time-limit signs mapped within 80 m"
  },
  {
   "id": "osm-w986031335",
@@ -6344,7 +5674,8 @@
     "rail"
    ]
   },
-  "source": "OpenStreetMap contributors (ODbL)"
+  "source": "OpenStreetMap contributors (ODbL)",
+  "notes": "No council time-limit signs mapped within 80 m"
  },
  {
   "id": "osm-w1481029829",
@@ -6366,7 +5697,8 @@
     "rail"
    ]
   },
-  "source": "OpenStreetMap contributors (ODbL)"
+  "source": "OpenStreetMap contributors (ODbL)",
+  "notes": "No council time-limit signs mapped within 80 m"
  },
  {
   "id": "osm-w1288578936",
@@ -6379,50 +5711,6 @@
   "feeKnown": false,
   "extraParkMin": 1,
   "fillsByHhmm": "07:45",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Zillmere station",
-   "lat": -27.359268,
-   "lon": 153.037514,
-   "modes": [
-    "rail"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)"
- },
- {
-  "id": "osm-w1248950420",
-  "name": "Zillmere street parking",
-  "kind": "street",
-  "lat": -27.359421,
-  "lon": 153.037,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": true,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:55",
-  "fillSource": "estimated",
-  "station": {
-   "name": "Zillmere station",
-   "lat": -27.359268,
-   "lon": 153.037514,
-   "modes": [
-    "rail"
-   ]
-  },
-  "source": "OpenStreetMap contributors (ODbL)"
- },
- {
-  "id": "osm-w1248950421",
-  "name": "Zillmere street parking",
-  "kind": "street",
-  "lat": -27.359922,
-  "lon": 153.037352,
-  "perDay": 0,
-  "stayKnown": false,
-  "feeKnown": true,
-  "extraParkMin": 3,
-  "fillsByHhmm": "07:55",
   "fillSource": "estimated",
   "station": {
    "name": "Zillmere station",

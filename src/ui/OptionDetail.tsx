@@ -90,7 +90,8 @@ function LotCard({ lot }: { lot: Lot }) {
       <h3>
         {lot.name} <span className="badge">{lot.kind === 'street' ? 'Street parking' : lot.kind === 'carpark' ? 'Public car park' : "Park 'n' ride"}</span>
       </h3>
-      {lot.stayKnown === false && <p className="fine warn">Time limits here are not mapped. Check the signs before leaving your car all day.</p>}
+      {lot.notes && <p className="fine">{lot.notes}</p>}
+      {lot.stayKnown === false && <p className="fine warn">Time limits here are not confirmed. Check the signs before leaving your car all day.</p>}
       <dl className="facts">
         <div>
           <dt>Station</dt>

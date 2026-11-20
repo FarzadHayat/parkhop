@@ -2,7 +2,11 @@
 """Build src/data/seq-lots.json from an Overpass export of SEQ park 'n' ride lots
 and the TransLink GTFS stops.txt (for the station each lot serves).
 
-Usage: python3 -I scripts/build-seq-lots.py pnr.json stops.txt [other-parking.json] > src/data/seq-lots.json
+Usage: python3 -I scripts/build-seq-lots.py pnr.json stops.txt [other-parking.json [bcc-signs.json]] > src/data/seq-lots.json
+
+bcc-signs.json (optional) is Brisbane City Council's parking-sign-locations
+export (CC BY 4.0). Inside Brisbane it tells us whether a street spot is time
+limited (dropped if under 9 hours) or signed "no limit" (kept, confirmed).
 
 other-parking.json (optional) is an Overpass export of amenity=parking without
 park_ride. From it we keep public car parks and kerbside parking within a short
@@ -161,6 +165,73 @@ def other_parking(path, stations, pnr_fill):
     return keep
 
 
+SIGN_RADIUS_KM = 0.08
+LIMIT_RE = re.compile(r'^(\d+)(?:/(\d+))?P\b')
+
+
+def sign_hours(kind):
+    """'2P Parallel' -> 2, '1/4P Parallel' -> 0.25, 'P 10 Minute' -> 1/6, 'P (No Limit)' -> inf, else None."""
+    if 'No Limit' in kind:
+        return float('inf')
+    if kind.startswith('P ') and 'Minute' in kind:
+        m = re.search(r'(\d+)\s*Minute', kind)
+        return int(m.group(1)) / 60 if m else None
+    m = LIMIT_RE.match(kind)
+    if not m:
+        return None
+    return int(m.group(1)) / int(m.group(2)) if m.group(2) else float(m.group(1))
+
+
+def load_signs(path):
+    """Parking-time signs as (lat, lon, hours, metered), weekday-relevant only."""
+    out = []
+    for r in json.load(open(path)):
+        kind = r.get('parkingrestrictiontype') or ''
+        h = sign_hours(kind)
+        if h is None:
+            continue
+        times = (r.get('parkingrestrictiondaysandtimes') or '').upper()
+        # A weekend-only limit doesn't affect a commuter.
+        if times and ('MON' not in times and 'DAILY' not in times and 'ALL' not in times and 'SCHOOL' not in times and not times.startswith(':')):
+            continue
+        g = r.get('geo_point_2d') or {}
+        if 'lat' not in g:
+            continue
+        out.append((g['lat'], g['lon'], h, 'Meter' in kind or 'Pay By App' in kind))
+    return out
+
+
+def apply_signs(spots, signs):
+    """Use council signs near each street spot. Returns (kept, dropped)."""
+    kept, dropped = [], 0
+    for l in spots:
+        if l['kind'] != 'street':
+            kept.append(l)
+            continue
+        near = [s for s in signs if abs(s[0] - l['lat']) < 0.002 and abs(s[1] - l['lon']) < 0.002 and km((l['lat'], l['lon']), (s[0], s[1])) <= SIGN_RADIUS_KM]
+        covered = any(abs(s[0] - l['lat']) < 0.01 and abs(s[1] - l['lon']) < 0.01 for s in signs)
+        limits = [s[2] for s in near if s[2] != float('inf')]
+        if limits and min(limits) < 9:
+            dropped += 1
+            continue
+        if any(s[2] == float('inf') for s in near):
+            l['stayKnown'] = True
+            l['notes'] = 'Council signs: no time limit'
+            l['source'] += '; Brisbane City Council parking signs (CC BY 4.0)'
+        elif limits:
+            l['stayKnown'] = True
+            l['maxStayHours'] = min(limits)
+            l['notes'] = f'Council signs: {min(limits):g} hour limit'
+            l['source'] += '; Brisbane City Council parking signs (CC BY 4.0)'
+        if any(s[3] for s in near):
+            l['perDay'] = l['perDay'] or 10
+            l['feeKnown'] = False
+        if covered and not near:
+            l['notes'] = 'No council time-limit signs mapped within 80 m'
+        kept.append(l)
+    return kept, dropped
+
+
 def main():
     osm = json.load(open(sys.argv[1]))
     stations = []
@@ -232,6 +303,9 @@ def main():
         for l in out:
             pnr_fill.setdefault(l['station']['name'], l['fillsByHhmm'])
         extra = other_parking(sys.argv[3], stations, pnr_fill)
+        if len(sys.argv) > 4:
+            extra, dropped = apply_signs(extra, load_signs(sys.argv[4]))
+            print(f"council signs: dropped {dropped} time-limited street spots", file=sys.stderr)
         print(f"{len(extra)} street and car park spots", file=sys.stderr)
         out += sorted(extra, key=lambda l: l['name'])
     json.dump(out, sys.stdout, indent=1)
