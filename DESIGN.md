@@ -50,7 +50,11 @@ Launch region: South East Queensland (Brisbane, TransLink). Research notes with 
   - The tools run in the browser, so the app visibly changes while Claude works. The server holds the key and adds prompt caching and a refusal fallback.
   - Claude answers only from tool results.
   - Voice input and spoken replies use the Web Speech API.
-- **Street parking:** 95 kerbside areas and 63 public car parks within 500 m of a station, from OpenStreetMap. Customer-only, permit and private parking are left out, and so are spots with a mapped limit under 9 hours. None of the rest has a mapped time limit, so the app says "check the signs". Spots at one station share one timetable query. Parkopedia is commercial, not open data.
+- **Street parking:** kerbside areas and public car parks within 500 m of a station, from OpenStreetMap. Customer-only, permit and private parking are left out.
+  - Inside Brisbane, Brisbane City Council's parking-sign data (52,000 signs, CC BY 4.0) is checked against each kerbside spot. 33 spots near a 2P or shorter limit are dropped, and 2 signed "no limit" are confirmed. 62 kerbside spots and 63 car parks remain.
+  - Elsewhere, limits are unknown, so the app says "check the signs".
+  - Spots at one station share one timetable query.
+  - Parkopedia is commercial, not open data. Notes: [docs/street-parking-research.md](docs/street-parking-research.md).
 - **Brisbane tuning:**
   - Paid parking by precinct, used as the default price at each stop.
   - Linkt toll prices. A toll road is chosen only when the minutes saved are worth the toll at your value of time.

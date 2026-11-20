@@ -32,5 +32,7 @@ All planning data comes from free public services (Transitous, OSRM, Photon, Ope
 # 2. Unzip stops.txt from https://gtfsrt.api.translink.com.au/GTFS/SEQ_GTFS.zip
 # 3. Optional: other parking (street, public car parks) from Overpass to other.json
 #    query: nwr["amenity"="parking"][!"park_ride"](-27.75,152.6,-27.0,153.3);out center tags;
-python3 -I scripts/build-seq-lots.py overpass.json stops.txt other.json > src/data/seq-lots.json
+# 4. Optional: Brisbane City Council parking signs (CC BY 4.0) to signs.json
+#    https://data.brisbane.qld.gov.au/api/explore/v2.1/catalog/datasets/parking-sign-locations/exports/json
+python3 -I scripts/build-seq-lots.py overpass.json stops.txt other.json signs.json > src/data/seq-lots.json
 ```
