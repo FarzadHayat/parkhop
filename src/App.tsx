@@ -7,7 +7,9 @@ import { Gear } from './ui/icons'
 import { MapView } from './ui/MapView'
 import { OptionDetail, RuledOut } from './ui/OptionDetail'
 import { OptionList, PriorityBar, TradeoffChart } from './ui/Results'
+import { AssistantBar } from './ui/AssistantBar'
 import { SettingsDialog } from './ui/SettingsDialog'
+import { Shifts } from './ui/Shifts'
 import { WeatherChip } from './ui/WeatherChip'
 
 type Sheet = 'peek' | 'half' | 'full'
@@ -82,6 +84,7 @@ export default function App() {
   const notes = useApp((s) => s.result?.dataNotes) ?? NO_NOTES
   const run = useApp((s) => s.plan_)
   const { sheet, setSheet, dragPx, onPointerDown, onPointerMove, endDrag, panel } = useSheet()
+  const [tab, setTab] = useState<'day' | 'shifts'>('day')
 
   // Plan once on first open so there is something to look at.
   useEffect(() => {
@@ -114,7 +117,12 @@ export default function App() {
 
       <MapView />
 
-      <aside ref={panel} className={`panel sheet-${sheet} ${dragPx !== null ? 'dragging' : ''}`} style={dragPx !== null ? { height: dragPx } : undefined} aria-label="Trip planner">
+      <aside
+        ref={panel}
+        className={`panel sheet-${sheet} ${dragPx !== null ? 'dragging' : ''}`}
+        style={dragPx !== null ? { height: dragPx } : undefined}
+        aria-label="Trip planner"
+      >
         <button
           type="button"
           className="sheet-handle"
@@ -144,30 +152,44 @@ export default function App() {
           <span aria-hidden="true" />
         </button>
         <div className="panel-scroll">
-          <nav className="presets" aria-label="Example days">
-            {presets.map((p) => (
-              <button key={p.id} type="button" className="chip" onClick={() => loadPreset(p.id)}>
-                {p.name}
-              </button>
-            ))}
-          </nav>
-          <DayEditor />
-          <PlanButton />
-          {options.length > 0 && (
-            <section aria-labelledby="options-heading" className="results">
-              <div className="results-head">
-                <h2 id="options-heading" className="section-title">
-                  Options
-                </h2>
-                <PriorityBar />
-              </div>
-              <TradeoffChart />
-              <OptionList />
-              <OptionDetail />
-              <RuledOut />
-              {notes.length > 0 && <p className="fine">{notes.join(' · ')}</p>}
-            </section>
-          )}
+          <AssistantBar onShowShifts={() => setTab('shifts')} onShowDay={() => setTab('day')} />
+          <div className="tabs" role="tablist" aria-label="Plan">
+            <button type="button" role="tab" id="tab-day" aria-controls="panel-day" aria-selected={tab === 'day'} onClick={() => setTab('day')}>
+              My day
+            </button>
+            <button type="button" role="tab" id="tab-shifts" aria-controls="panel-shifts" aria-selected={tab === 'shifts'} onClick={() => setTab('shifts')}>
+              My shifts <span className="badge tanda">Tanda</span>
+            </button>
+          </div>
+          <div role="tabpanel" id="panel-shifts" aria-labelledby="tab-shifts" hidden={tab !== 'shifts'}>
+            <Shifts onOpenDay={() => setTab('day')} />
+          </div>
+          <div role="tabpanel" id="panel-day" aria-labelledby="tab-day" hidden={tab !== 'day'}>
+            <nav className="presets" aria-label="Example days">
+              {presets.map((p) => (
+                <button key={p.id} type="button" className="chip" onClick={() => loadPreset(p.id)}>
+                  {p.name}
+                </button>
+              ))}
+            </nav>
+            <DayEditor />
+            <PlanButton />
+            {options.length > 0 && (
+              <section aria-labelledby="options-heading" className="results">
+                <div className="results-head">
+                  <h2 id="options-heading" className="section-title">
+                    Options
+                  </h2>
+                  <PriorityBar />
+                </div>
+                <TradeoffChart />
+                <OptionList />
+                <OptionDetail />
+                <RuledOut />
+                {notes.length > 0 && <p className="fine">{notes.join(' · ')}</p>}
+              </section>
+            )}
+          </div>
           <p className="fine attribution">
             Estimates, not guarantees. Timetables via Transitous, routes via OSRM, maps © OpenStreetMap contributors and OpenFreeMap, weather by Open-Meteo.
           </p>

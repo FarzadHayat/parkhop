@@ -1,0 +1,13 @@
+{
+  "source": "https://www.linkt.com.au/using-toll-roads/news/toll-and-fee-changes-1-july-2026 and https://www.linkt.com.au/using-toll-roads/about-brisbane-toll-roads/toll-pricing (fetched 2026-11-21). Class 2 (car), GST incl. Non-AirportlinkM7 tolls change each 1 July, AirportlinkM7 each 1 January (next: 2027-01-01, so its price will rise).",
+  "roads": [
+    {"id":"gateway-murarrie","name":"Gateway Motorway (Murarrie toll point, covers Gateway Bridge)","osrmNames":["Gateway Motorway","Gateway Bridge","Sir Leo Hielscher Bridges","Gateway Arterial Road"],"carPrice":6.02,"note":"Linkt lists a single Gateway Motorway point at Murarrie. No separate Gateway Extension price was found; treat it as covered by this point.","confidence":"high"},
+    {"id":"logan-kuraby-compton","name":"Logan Motorway (Kuraby / Compton Road)","osrmNames":["Logan Motorway","Logan Motorway Extension"],"carPrice":3.55,"note":"Linkt page lists this point without naming the road; it is on the Logan Motorway corridor (assignment from general knowledge).","confidence":"medium"},
+    {"id":"logan-loganlea","name":"Logan Motorway (Loganlea)","osrmNames":["Logan Motorway"],"carPrice":2.28,"note":"Price verified; road assignment inferred.","confidence":"medium"},
+    {"id":"logan-heathwood-paradise","name":"Logan Motorway (Heathwood / Paradise Road)","osrmNames":["Logan Motorway","Gateway Motorway"],"carPrice":3.76,"note":"Linkt lists Heathwood and Paradise Road at the same $3.76; road assignment inferred. Which points a route crosses depends on direction and entry, so a route-level match by name is approximate.","confidence":"medium"},
+    {"id":"clem7","name":"Clem7 (Clem Jones Tunnel)","osrmNames":["Clem Jones Tunnel","Clem7","Clem 7"],"carPrice":6.77,"note":"From 1 July 2026.","confidence":"high"},
+    {"id":"go-between-bridge","name":"Go Between Bridge","osrmNames":["Go Between Bridge"],"carPrice":4.22,"note":"From 1 July 2026.","confidence":"high"},
+    {"id":"legacy-way","name":"Legacy Way","osrmNames":["Legacy Way","Legacy Way Tunnel"],"carPrice":7.30,"note":"From 1 July 2026.","confidence":"high"},
+    {"id":"airportlinkm7","name":"AirportlinkM7 (Bowen Hills to Kedron or Toombul)","osrmNames":["AirportlinkM7","Airport Link","Airportlink M7","Airport Link M7"],"carPrice":7.16,"note":"Bowen Hills to Kedron or Toombul $7.16; Kedron to Toombul only $5.36. Adjusts on 1 January 2027.","confidence":"medium"}
+  ]
+}

@@ -43,6 +43,21 @@ Launch region: South East Queensland (Brisbane, TransLink). Research notes with 
 - Explains what it rejected, for example "Car would be left at Work overnight" or "Car can't stay at School".
 - Installable PWA (phone, tablet, desktop), light and dark themes, keyboard and screen reader support. Data stays on the device.
 
+## Added for the Tanda hackathon
+
+- **Tanda rosters:** reads the person's next 7 days of published shifts through the Tanda API v2 (`users/me`, `schedules`, `departments`, `locations`). It plans each shift home, to work 10 minutes early, and home after the finish, then flags shifts that public transport can't cover, lots that are full at the arrival time, and options that are rarely on time. Calls go through the ParkHop server because Tanda does not allow browser calls from other sites, and the token stays in the browser tab.
+- **Claude assistant:** Claude Opus 5.5 with tool use (`set_day`, `plan_options`, `select_option`, `plan_shifts`).
+  - The tools run in the browser, so the app visibly changes while Claude works. The server holds the key and adds prompt caching and a refusal fallback.
+  - Claude answers only from tool results.
+  - Voice input and spoken replies use the Web Speech API.
+- **Street parking:** 95 kerbside areas and 63 public car parks within 500 m of a station, from OpenStreetMap. Customer-only, permit and private parking are left out, and so are spots with a mapped limit under 9 hours. None of the rest has a mapped time limit, so the app says "check the signs". Spots at one station share one timetable query. Parkopedia is commercial, not open data.
+- **Brisbane tuning:**
+  - Paid parking by precinct, used as the default price at each stop.
+  - Linkt toll prices. A toll road is chosen only when the minutes saved are worth the toll at your value of time.
+  - QLD school terms and public holidays: school holidays lighten the peaks, and public holidays use the weekend profile.
+  - Lots that stay full until about 3:45 pm on weekdays and are mostly free at weekends. Afternoon-shift workers hit this.
+- **Caching proxy:** timetable and road answers are cached on disk. A future-dated timetable stays fresh for a day and a near-term one for 60 s, and the last good answer is served if the network fails.
+
 ## Data sources
 
 | Need | Source | Notes |

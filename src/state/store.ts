@@ -2,13 +2,9 @@ import { create } from 'zustand'
 import { defaultSettings, planDay, rerank } from '../engine/planner'
 import { nextWeekday } from '../engine/time'
 import type { DayOption, DayPlan, LegRule, Lot, Place, PlanResult, Settings, Stop } from '../engine/types'
-import { osrmProvider } from '../providers/osrm'
-import { transitousProvider } from '../providers/transitous'
-import { openMeteoProvider } from '../providers/weather'
 import { region, presets } from '../data/seq'
 import { km } from '../engine/geo'
-
-const deps = { drive: osrmProvider(), transit: transitousProvider(), weather: openMeteoProvider() }
+import { getDeps, health } from './deps'
 
 export type Status = { kind: 'idle' } | { kind: 'planning'; done: number; total: number } | { kind: 'error'; message: string } | { kind: 'done' }
 
@@ -44,9 +40,12 @@ function save(s: StoredState) {
 let idSeq = 0
 export const newId = () => `s${Date.now().toString(36)}${(idSeq++).toString(36)}`
 
+/** Usual all-day parking price where a place is: CBD, a paid precinct (hospital, uni, inner suburb), or free. */
 export function defaultParkingFor(place: Place | null) {
   if (!place) return undefined
-  return km(place, region.centre) < region.cityRadiusKm ? { perDay: region.cityParkingPerDay } : { perDay: 0 }
+  if (km(place, region.centre) < region.cityRadiusKm) return { perDay: region.cityParkingPerDay }
+  const precinct = (region.precincts ?? []).find((p) => km(place, p) <= p.radiusKm)
+  return { perDay: precinct ? precinct.perDay : 0 }
 }
 
 function freshDate(plan: DayPlan): DayPlan {
@@ -67,6 +66,8 @@ interface AppState extends StoredState {
   focusLotId: string | null
   /** Bumped when the plan changes after a result, to flag results as stale. */
   stale: boolean
+  /** The server has an Anthropic key, so the assistant can run. */
+  assistantReady: boolean
   setPlan(plan: DayPlan): void
   updateStop(id: string, patch: Partial<Stop>): void
   setRule(index: number, rule: LegRule): void
@@ -107,6 +108,7 @@ export const useApp = create<AppState>((set, get) => {
     pickingStopId: null,
     focusLotId: null,
     stale: false,
+    assistantReady: false,
 
     setPlan: (plan) => changed(plan),
     updateStop(id, patch) {
@@ -175,7 +177,7 @@ export const useApp = create<AppState>((set, get) => {
       }
       set({ status: { kind: 'planning', done: 0, total: 1 } })
       try {
-        const result = await planDay(plan, { ...region, lots: lotsWithReports(fillReports) }, settings, deps, {
+        const result = await planDay(plan, { ...region, lots: lotsWithReports(fillReports) }, settings, await getDeps(), {
           onProgress: (done, total) => {
             if (token === runToken) set({ status: { kind: 'planning', done, total } })
           },
@@ -212,3 +214,5 @@ export function selectedOption(s: Pick<AppState, 'options' | 'selectedId'>): Day
 }
 
 export { region }
+
+void health.then((h) => useApp.setState({ assistantReady: !!h?.assistant }))

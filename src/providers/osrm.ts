@@ -5,7 +5,12 @@ import type { DriveProvider, DriveRoute } from './types'
 
 interface OsrmResponse {
   code: string
-  routes: { duration: number; distance: number; geometry: { coordinates: [number, number][] } }[]
+  routes: {
+    duration: number
+    distance: number
+    geometry: { coordinates: [number, number][] }
+    legs?: { steps?: { name?: string; ref?: string }[] }[]
+  }[]
 }
 
 /** Straight-line fallback when the router is unreachable. Clearly marked as an estimate. */
@@ -30,13 +35,19 @@ export function osrmProvider(base = 'https://router.project-osrm.org'): DrivePro
       const coords = `${a.lon.toFixed(5)},${a.lat.toFixed(5)};${b.lon.toFixed(5)},${b.lat.toFixed(5)}`
       try {
         const res = await run(() =>
-          getJson<OsrmResponse>(`${base}/route/v1/driving/${coords}?overview=simplified&geometries=geojson`, {
+          getJson<OsrmResponse>(`${base}/route/v1/driving/${coords}?overview=simplified&geometries=geojson&steps=true&alternatives=2`, {
             timeoutMs: 12_000,
           }),
         )
         const r = res.routes?.[0]
         if (res.code !== 'Ok' || !r) return guessDrive(a, b)
-        return { durationMin: r.duration / 60, distanceKm: r.distance / 1000, geometry: r.geometry.coordinates }
+        const toRoute = (x: OsrmResponse['routes'][number]): DriveRoute => ({
+          durationMin: x.duration / 60,
+          distanceKm: x.distance / 1000,
+          geometry: x.geometry.coordinates,
+          roadNames: [...new Set((x.legs ?? []).flatMap((l) => (l.steps ?? []).flatMap((st) => [st.name, st.ref]).filter((n): n is string => !!n)))],
+        })
+        return { ...toRoute(r), alternatives: res.routes.slice(1).map(toRoute) }
       } catch {
         return guessDrive(a, b)
       }

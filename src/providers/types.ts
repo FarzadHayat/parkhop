@@ -5,8 +5,12 @@ export interface DriveRoute {
   durationMin: number
   distanceKm: number
   geometry?: [number, number][]
+  /** Names of the roads used, for toll detection. */
+  roadNames?: string[]
   /** True when the router failed and this is a straight-line guess. */
   estimated?: boolean
+  /** Other routes the router found (e.g. one that avoids a toll road). */
+  alternatives?: DriveRoute[]
 }
 
 export interface DriveProvider {

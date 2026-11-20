@@ -2,7 +2,7 @@ import type { DriveProvider, DriveRoute, TransitItinerary, TransitProvider, Weat
 import { km, shortlistLots } from './geo'
 import { checkLotStay, lotFullProbability, stopParkingCost } from './parking'
 import { legOnTimeProb, simulateDay } from './simulate'
-import { formatHhmm, localToEpoch } from './time'
+import { formatHhmm, localHour, localToEpoch } from './time'
 import { rainAt, trafficAt } from './traffic'
 import type {
   CarLocation,
@@ -18,7 +18,9 @@ import type {
   Region,
   Segment,
   Settings,
+  Station,
   Stop,
+  TollRoad,
   TransitAlternative,
   TransitMode,
   Warning,
@@ -79,15 +81,43 @@ function zeroCost(): CostBreakdown {
 }
 
 export function addCost(a: CostBreakdown, b: CostBreakdown): CostBreakdown {
-  return { fuel: a.fuel + b.fuel, wear: a.wear + b.wear, parking: a.parking + b.parking, fares: a.fares + b.fares }
+  return { fuel: a.fuel + b.fuel, wear: a.wear + b.wear, parking: a.parking + b.parking, fares: a.fares + b.fares, tolls: (a.tolls ?? 0) + (b.tolls ?? 0) }
 }
 
 export function costTotal(c: CostBreakdown): number {
-  return c.fuel + c.wear + c.parking + c.fares
+  return c.fuel + c.wear + c.parking + c.fares + (c.tolls ?? 0)
 }
 
-function driveCost(kmDriven: number, s: Settings): CostBreakdown {
-  return { fuel: (kmDriven * s.fuelLPer100km * s.fuelPricePerL) / 100, wear: kmDriven * s.wearPerKm, parking: 0, fares: 0 }
+/** Toll roads on a route, matched by road name. Each road is charged once per drive. */
+export function tollsOn(roads: TollRoad[] | undefined, roadNames: string[] | undefined): TollRoad[] {
+  if (!roads?.length || !roadNames?.length) return []
+  const names = roadNames.map((n) => n.toLowerCase())
+  return roads.filter((t) => t.roadNames.some((rn) => names.includes(rn.toLowerCase())))
+}
+
+/**
+ * Choose between the router's routes: take a toll road only when the minutes it
+ * saves are worth more than the toll at your value of time.
+ */
+export function pickRoute(r: DriveRoute, tolls: TollRoad[] | undefined, valuePerHour: number): DriveRoute {
+  const all = [r, ...(r.alternatives ?? [])]
+  const generalised = (x: DriveRoute) => (x.durationMin / 60) * valuePerHour + tollsOn(tolls, x.roadNames).reduce((s, t) => s + t.carPrice, 0)
+  return all.reduce((best, x) => (generalised(x) < generalised(best) ? x : best))
+}
+
+async function routeFor(ctx: Ctx, a: LatLon, b: LatLon): Promise<DriveRoute> {
+  return pickRoute(await ctx.deps.drive.route(a, b), ctx.region.tolls, ctx.settings.valuePerHour)
+}
+
+function driveCost(r: DriveRoute, ctx: Ctx): CostBreakdown {
+  const s = ctx.settings
+  const tolls = tollsOn(ctx.region.tolls, r.roadNames).reduce((sum, t) => sum + t.carPrice, 0)
+  return { fuel: (r.distanceKm * s.fuelLPer100km * s.fuelPricePerL) / 100, wear: r.distanceKm * s.wearPerKm, parking: 0, fares: 0, tolls }
+}
+
+/** Walking minutes between a parking spot and its station (straight line, with a detour factor). */
+export function walkMinutes(a: LatLon, b: LatLon): number {
+  return Math.max(1, Math.round((km(a, b) * 1.3 * 1000) / 80))
 }
 
 const DELAY_SD: Record<TransitMode, number> = { rail: 1.6, metro: 1.2, tram: 1.8, ferry: 2, bus: 2.8 }
@@ -101,11 +131,12 @@ function mainMode(it: TransitItinerary): TransitMode {
   return (best?.mode as TransitMode) ?? 'bus'
 }
 
-function toAlternatives(its: TransitItinerary[]): TransitAlternative[] {
+/** `leadMin` is time needed before the itinerary starts (e.g. the walk from the car to the station). */
+function toAlternatives(its: TransitItinerary[], leadMin = 0): TransitAlternative[] {
   const alts = its
     .map((it, index) => {
       const firstRide = it.segments.find((s) => s.mode !== 'walk')
-      return { readyBy: it.start, board: firstRide?.start ?? it.start, arrive: it.end, index, mainMode: mainMode(it) }
+      return { readyBy: it.start - leadMin * MIN, board: firstRide?.start ?? it.start, arrive: it.end, index, mainMode: mainMode(it) }
     })
     .sort((a, b) => a.readyBy - b.readyBy || a.arrive - b.arrive)
   // Drop alternatives dominated by one you could catch at the same time or later.
@@ -163,8 +194,8 @@ function leaveAfterOf(ctx: Ctx, stopIndex: number): number | undefined {
 }
 
 function driveAt(ctx: Ctx, r: DriveRoute, from: LatLon, to: LatLon, depart: number) {
-  const t = trafficAt(depart, from, to, ctx.region.centre, ctx.tz, ctx.weather)
-  return { min: r.durationMin * t.factor + 1, cv: t.cv, label: t.label, rain: t.rain }
+  const t = trafficAt(depart, from, to, ctx.region.centre, ctx.tz, ctx.weather, ctx.region.calendar)
+  return { min: r.durationMin * t.factor + 1, cv: t.cv, label: t.label, rain: t.rain, day: t.day }
 }
 
 /** Latest departure that still arrives by `deadline` with the target probability. */
@@ -179,7 +210,8 @@ function latestDriveDepart(ctx: Ctx, r: DriveRoute, from: LatLon, to: LatLon, de
   return deadline - (minMin * 4 + 60) * MIN
 }
 
-function driveSegment(fromName: string, toName: string, start: number, min: number, r: DriveRoute): Segment {
+function driveSegment(fromName: string, toName: string, start: number, min: number, r: DriveRoute, tolls?: TollRoad[]): Segment {
+  const used = tollsOn(tolls, r.roadNames)
   return {
     mode: 'drive',
     fromName,
@@ -188,6 +220,7 @@ function driveSegment(fromName: string, toName: string, start: number, min: numb
     end: start + min * MIN,
     distanceM: r.distanceKm * 1000,
     geometry: r.geometry,
+    note: used.length ? 'via ' + used.map((t) => t.name + ' ($' + t.carPrice.toFixed(2) + ' toll)').join(', ') : undefined,
   }
 }
 
@@ -264,6 +297,16 @@ async function transitQuery(ctx: Ctx, from: LatLon, to: LatLon, opts: { arriveBy
   return ctx.deps.transit.plan({ from, to, time: t, arriveBy: false, windowMin: 60, maxWalkMin: ctx.settings.maxWalkMin })
 }
 
+function parkingWarnings(lot: Lot): Warning[] {
+  const out: Warning[] = []
+  if (lot.kind === 'street' || lot.kind === 'carpark') {
+    if (!lot.stayKnown) out.push({ level: 'caution', text: `${lot.name}: time limits are not mapped, check the signs before leaving the car all day` })
+    if (lot.kind === 'street') out.push({ level: 'info', text: 'Street parking: allow a few extra minutes to find a space' })
+  }
+  if (lot.feeKnown === false) out.push({ level: 'info', text: `${lot.name}: price is an estimate` })
+  return out
+}
+
 function carryWarnings(ctx: Ctx, segs: Segment[]): Warning[] {
   return [...alertWarnings(segs), ...rainWarnings(ctx, segs)]
 }
@@ -277,7 +320,7 @@ function lateWarning(deadline: number | undefined, prob: number | undefined, sto
 async function planDriveLeg(ctx: Ctx, i: number, ready: number | null, leaveNow = false): Promise<LegResult> {
   const A = ctx.plan.stops[i]
   const B = ctx.plan.stops[i + 1]
-  const r = await ctx.deps.drive.route(A.place!, B.place!)
+  const r = await routeFor(ctx, A.place!, B.place!)
   const D = deadlineOf(ctx, i)
   const after = leaveAfterOf(ctx, i)
   const destParkMin = B.parking && B.dwellMin > DROP_OFF_MAX_MIN ? (km(B.place!, ctx.region.centre) < ctx.region.cityRadiusKm ? 6 : 2) : 0
@@ -290,7 +333,7 @@ async function planDriveLeg(ctx: Ctx, i: number, ready: number | null, leaveNow 
     if (!Number.isFinite(depart)) depart = localToEpoch(ctx.plan.date, '07:30', ctx.tz)
   }
   const d = driveAt(ctx, r, A.place!, B.place!, depart)
-  const segs: Segment[] = [driveSegment(A.label, B.label, depart, d.min, r)]
+  const segs: Segment[] = [driveSegment(A.label, B.label, depart, d.min, r, ctx.region.tolls)]
   if (destParkMin) segs.push({ mode: 'park', fromName: 'Park', toName: B.label, start: segs[0].end, end: segs[0].end + destParkMin * MIN })
   const arrive = segs[segs.length - 1].end
   const sim: LegSimInput = {
@@ -313,7 +356,7 @@ async function planDriveLeg(ctx: Ctx, i: number, ready: number | null, leaveNow 
   warnings.push(...lateWarning(D, prob, B))
   return {
     ok: true,
-    leg: { legIndex: i, kind: 'drive', segments: segs, depart, arrive, cost: driveCost(r.distanceKm, ctx.settings), driveKm: r.distanceKm, sim, warnings },
+    leg: { legIndex: i, kind: 'drive', segments: segs, depart, arrive, cost: driveCost(r, ctx), driveKm: r.distanceKm, sim, warnings },
   }
 }
 
@@ -394,23 +437,27 @@ async function planParkRideLeg(ctx: Ctx, i: number, lot: Lot, ready: number | nu
   const D = deadlineOf(ctx, i)
   const after = leaveAfterOf(ctx, i)
   const start = Math.max(ready ?? -Infinity, after ?? -Infinity)
-  const r = await ctx.deps.drive.route(A.place!, lot)
-  const buffer = ctx.settings.parkToPlatformMin
+  const r = await routeFor(ctx, A.place!, lot)
+  // Kerbside parking takes longer to find a space.
+  const buffer = ctx.settings.parkToPlatformMin + (lot.extraParkMin ?? 0)
   const backup = backupFor(ctx, lot)
+  // Every spot near a station shares one timetable query from the station itself.
+  const station = lot.station
+  const walkMin = walkMinutes(lot, station)
 
   let its: TransitItinerary[]
   try {
-    if (D !== undefined) its = await transitQuery(ctx, lot, B.place!, { arriveBy: D })
+    if (D !== undefined) its = await transitQuery(ctx, station, B.place!, { arriveBy: D })
     else {
       const s0 = Number.isFinite(start) ? start : localToEpoch(ctx.plan.date, '07:00', ctx.tz)
-      const atLot = s0 + (driveAt(ctx, r, A.place!, lot, s0).min + buffer) * MIN
-      its = await transitQuery(ctx, lot, B.place!, { departAfter: atLot })
+      const atStation = s0 + (driveAt(ctx, r, A.place!, lot, s0).min + buffer + walkMin) * MIN
+      its = await transitQuery(ctx, station, B.place!, { departAfter: atStation })
     }
   } catch {
     return { ok: false, reason: 'Public transport planner did not respond' }
   }
   if (!its.length) return { ok: false, reason: `No service from ${lot.station.name} to ${B.label}` }
-  let { alts, headwayMin } = withTail(toAlternatives(its))
+  let { alts, headwayMin } = withTail(toAlternatives(its, walkMin))
 
   const build = (alt: TransitAlternative | null, departFixed?: number) => {
     let dep = departFixed ?? alt!.readyBy - (buffer + r.durationMin * 1.3) * MIN
@@ -460,8 +507,8 @@ async function planParkRideLeg(ctx: Ctx, i: number, lot: Lot, ready: number | nu
     const readyAt = pre.atLot + buffer * MIN
     chosen = alts.find((a) => a.index >= 0 && a.readyBy >= readyAt)
     if (!chosen && D !== undefined) {
-      its = await transitQuery(ctx, lot, B.place!, { departAfter: readyAt }).catch(() => [])
-      ;({ alts, headwayMin } = withTail(toAlternatives(its)))
+      its = await transitQuery(ctx, station, B.place!, { departAfter: readyAt + walkMin * MIN }).catch(() => [])
+      ;({ alts, headwayMin } = withTail(toAlternatives(its, walkMin)))
       chosen = alts.find((a) => a.index >= 0 && a.readyBy >= readyAt)
       pre = build(null, dep)
     }
@@ -471,23 +518,24 @@ async function planParkRideLeg(ctx: Ctx, i: number, lot: Lot, ready: number | nu
   }
 
   const it = its[chosen.index]
-  const drive = driveSegment(A.label, lot.name, built!.depart, built!.d.min, r)
+  const drive = driveSegment(A.label, lot.name, built!.depart, built!.d.min, r, ctx.region.tolls)
   const park: Segment = { mode: 'park', fromName: lot.name, toName: lot.station.name, start: drive.end, end: drive.end + buffer * MIN }
-  const segs: Segment[] = [drive, park]
-  if (it.start > park.end + MIN) segs.push({ mode: 'wait', fromName: lot.name, toName: '', start: park.end, end: it.start })
+  const walk: Segment = { mode: 'walk', fromName: lot.name, toName: station.name, start: park.end, end: park.end + walkMin * MIN, geometry: [[lot.lon, lot.lat], [station.lon, station.lat]] }
+  const segs: Segment[] = [drive, park, walk]
+  if (it.start > walk.end + MIN) segs.push({ mode: 'wait', fromName: station.name, toName: '', start: walk.end, end: it.start })
   segs.push(...stamp(it.segments, headwayMin))
 
   const warnings: Warning[] = []
   if (built!.pFull >= 0.2) {
     warnings.push({
       level: built!.pFull >= 0.5 ? 'caution' : 'info',
-      text: `${lot.name} is often full by ${lot.fillsByHhmm}; you arrive ~${formatHhmm(built!.atLot, ctx.tz)} (${Math.round(built!.pFull * 100)}% chance full)${backup.lot ? `. Backup: ${backup.lot.name}, +${Math.round(backup.penaltyMin)} min` : ''}`,
+      text: `${lot.name} is often full ${localHour(built!.atLot, ctx.tz) >= 11 ? `from ${lot.fillsByHhmm} until mid-afternoon` : `by ${lot.fillsByHhmm}`}; you arrive ~${formatHhmm(built!.atLot, ctx.tz)} (${Math.round(built!.pFull * 100)}% chance full)${backup.lot ? `. Backup: ${backup.lot.name}, +${Math.round(backup.penaltyMin)} min` : ''}`,
     })
   }
   if (r.estimated) warnings.push({ level: 'info', text: 'Road router unavailable: drive time is a straight-line estimate' })
-  warnings.push(...carryWarnings(ctx, segs), ...lateWarning(D, prob, B))
+  warnings.push(...parkingWarnings(lot), ...carryWarnings(ctx, segs), ...lateWarning(D, prob, B))
 
-  const cost = driveCost(r.distanceKm, ctx.settings)
+  const cost = driveCost(r, ctx)
   cost.fares = ctx.region.farePerJourney
   return {
     ok: true,
@@ -495,21 +543,24 @@ async function planParkRideLeg(ctx: Ctx, i: number, lot: Lot, ready: number | nu
   }
 }
 
-async function planRetrieveLeg(ctx: Ctx, i: number, carAt: { place: LatLon; name: string; lotId?: string }, ready: number | null): Promise<LegResult> {
+async function planRetrieveLeg(ctx: Ctx, i: number, carAt: CarSpot, ready: number | null): Promise<LegResult> {
   const A = ctx.plan.stops[i]
   const B = ctx.plan.stops[i + 1]
   const D = deadlineOf(ctx, i)
   const after = leaveAfterOf(ctx, i)
   const start = Math.max(ready ?? -Infinity, after ?? -Infinity)
-  const r = await ctx.deps.drive.route(carAt.place, B.place!)
+  const r = await routeFor(ctx, carAt.place, B.place!)
   const unpark = 3
+  // Ride to the station, then walk to the car.
+  const target = carAt.station ?? carAt.place
+  const walkMin = carAt.station ? walkMinutes(carAt.station, carAt.place) : 0
   let its: TransitItinerary[]
   try {
     if (D !== undefined) {
       const est = driveAt(ctx, r, carAt.place, B.place!, D - r.durationMin * 1.5 * MIN)
-      its = await transitQuery(ctx, A.place!, carAt.place, { arriveBy: Math.floor((D - (est.min * 1.15 + unpark) * MIN) / (5 * MIN)) * 5 * MIN })
+      its = await transitQuery(ctx, A.place!, target, { arriveBy: Math.floor((D - (est.min * 1.15 + unpark + walkMin) * MIN) / (5 * MIN)) * 5 * MIN })
     } else {
-      its = await transitQuery(ctx, A.place!, carAt.place, { departAfter: Number.isFinite(start) ? start : localToEpoch(ctx.plan.date, '17:00', ctx.tz) })
+      its = await transitQuery(ctx, A.place!, target, { departAfter: Number.isFinite(start) ? start : localToEpoch(ctx.plan.date, '17:00', ctx.tz) })
     }
   } catch {
     return { ok: false, reason: 'Public transport planner did not respond' }
@@ -531,7 +582,7 @@ async function planRetrieveLeg(ctx: Ctx, i: number, carAt: { place: LatLon; name
         lotFullProb: 0,
         lotFullPenaltyMin: 0,
         alternatives: alts,
-        driveAfterMin: d.min + unpark,
+        driveAfterMin: d.min + unpark + walkMin,
         driveAfterCv: d.cv,
         walkBeforeMin: firstWalk,
         transitDelaySdMin: DELAY_SD[alt.mainMode],
@@ -559,7 +610,7 @@ async function planRetrieveLeg(ctx: Ctx, i: number, carAt: { place: LatLon; name
   }
   if (!chosen) chosen = alts.find((a) => a.index >= 0 && (!Number.isFinite(start) || a.readyBy >= start))
   if (!chosen && D !== undefined && Number.isFinite(start)) {
-    its = await transitQuery(ctx, A.place!, carAt.place, { departAfter: start }).catch(() => [])
+    its = await transitQuery(ctx, A.place!, target, { departAfter: start }).catch(() => [])
     ;({ alts, headwayMin } = withTail(toAlternatives(its)))
     chosen = alts.find((a) => a.index >= 0 && a.readyBy >= start)
     if (chosen) prob = legOnTimeProb(simFor(chosen).sim, D)
@@ -568,10 +619,15 @@ async function planRetrieveLeg(ctx: Ctx, i: number, carAt: { place: LatLon; name
   const it = its[chosen.index]
   const { sim, d } = simFor(chosen)
   const segs: Segment[] = stamp(it.segments, headwayMin)
-  const unparkSeg: Segment = { mode: 'park', fromName: carAt.name, toName: 'Car', start: it.end, end: it.end + unpark * MIN }
-  const drive = driveSegment(carAt.name, B.label, unparkSeg.end, d.min, r)
+  let reachCar = it.end
+  if (carAt.station && walkMin > 0) {
+    segs.push({ mode: 'walk', fromName: carAt.station.name, toName: carAt.name, start: it.end, end: it.end + walkMin * MIN, geometry: [[carAt.station.lon, carAt.station.lat], [carAt.place.lon, carAt.place.lat]] })
+    reachCar = it.end + walkMin * MIN
+  }
+  const unparkSeg: Segment = { mode: 'park', fromName: carAt.name, toName: 'Car', start: reachCar, end: reachCar + unpark * MIN }
+  const drive = driveSegment(carAt.name, B.label, unparkSeg.end, d.min, r, ctx.region.tolls)
   segs.push(unparkSeg, drive)
-  const cost = driveCost(r.distanceKm, ctx.settings)
+  const cost = driveCost(r, ctx)
   cost.fares = ctx.region.farePerJourney
   return {
     ok: true,
@@ -603,10 +659,18 @@ interface State {
   notes: Warning[]
 }
 
-function carPlace(ctx: Ctx, car: CarLocation): { place: LatLon; name: string; lotId?: string } {
+interface CarSpot {
+  place: LatLon
+  name: string
+  lotId?: string
+  /** The station you return to, for spots near one. */
+  station?: Station
+}
+
+function carPlace(ctx: Ctx, car: CarLocation): CarSpot {
   if (car.kind === 'lot') {
     const lot = ctx.lots.get(car.lotId)!
-    return { place: lot, name: lot.name, lotId: lot.id }
+    return { place: lot, name: lot.name, lotId: lot.id, station: lot.station }
   }
   const s = ctx.plan.stops[car.stopIndex]
   return { place: s.place!, name: s.label }
@@ -653,7 +717,7 @@ export async function planDay(plan: DayPlan, region: Region, settings: Settings,
   const lotsPerLeg = opts.lotsPerLeg ?? 4
   const candidates: Lot[][] = []
   for (let i = 0; i < n; i++) {
-    candidates.push(plan.legRules[i] === 'any' ? shortlistLots(stops[i].place!, stops[i + 1].place!, region.lots, lotsPerLeg).map((c) => c.lot) : [])
+    candidates.push(plan.legRules[i] === 'any' ? candidateSpots(stops[i].place!, stops[i + 1].place!, region.lots, lotsPerLeg) : [])
   }
 
   let total = 0
@@ -812,7 +876,17 @@ export async function planDay(plan: DayPlan, region: Region, settings: Settings,
     const prev = seen.get(sig)
     if (!prev || o.score < prev.score) seen.set(sig, o)
   }
-  const ranked = [...seen.values()].sort((a, b) => a.score - b.score)
+  // At most two options per station, so one busy station doesn't crowd the list.
+  const perStation = new Map<string, number>()
+  const ranked = [...seen.values()]
+    .sort((a, b) => a.score - b.score)
+    .filter((o) => {
+      const st = o.lotIds.map((id) => ctx.lots.get(id)!.station.name).join('+')
+      if (!st) return true
+      const n = (perStation.get(st) ?? 0) + 1
+      perStation.set(st, n)
+      return n <= 2
+    })
   // Always keep the plain baselines for comparison, even if they rank low.
   const top = ranked.slice(0, 6)
   for (const strat of ['drive', 'transit'] as const) {
@@ -837,14 +911,41 @@ export async function planDay(plan: DayPlan, region: Region, settings: Settings,
   }
 }
 
+/**
+ * Pick stations worth trying, then every parking spot at those stations (park 'n'
+ * ride, public car park, street). Spots at one station share one timetable query,
+ * so street parking adds options without adding network calls.
+ */
+export function candidateSpots(a: LatLon, b: LatLon, lots: Lot[], stations: number): Lot[] {
+  const shortlist = shortlistLots(a, b, lots, stations * 3)
+  const keys: string[] = []
+  for (const c of shortlist) {
+    const k = c.lot.station.name
+    if (!keys.includes(k)) keys.push(k)
+    if (keys.length >= stations) break
+  }
+  const rank = (l: Lot) => (l.kind === 'street' ? 2 : l.kind === 'carpark' ? 1 : 0)
+  return keys.flatMap((k) =>
+    lots
+      .filter((l) => l.station.name === k)
+      .sort((x, y) => rank(x) - rank(y) || km(x, x.station) - km(y, y.station))
+      .slice(0, 3),
+  )
+}
+
+export function spotTitle(lot: Lot): string {
+  if (lot.kind === 'street') return `Street parking near ${lot.station.name}`
+  if (lot.kind === 'carpark') return `${lot.name}, then ${lot.station.name}`
+  return `Park & ride at ${lot.name}`
+}
+
 function classify(ctx: Ctx, legs: LegPlan[]): { strategy: DayOption['strategy']; title: string; lotIds: string[] } {
   const kinds = new Set<LegKind>(legs.map((l) => l.kind))
   const lotIds = [...new Set(legs.map((l) => l.lotId).filter((x): x is string => !!x))]
   if (kinds.size === 1 && kinds.has('drive')) return { strategy: 'drive', title: 'Drive all the way', lotIds }
   if (kinds.size === 1 && kinds.has('transit')) return { strategy: 'transit', title: 'Public transport only', lotIds }
   if (lotIds.length) {
-    const names = lotIds.map((id) => ctx.lots.get(id)!.name)
-    return { strategy: 'parkride', title: `Park & ride at ${names.join(' + ')}`, lotIds }
+    return { strategy: 'parkride', title: lotIds.map((id) => spotTitle(ctx.lots.get(id)!)).join(' + '), lotIds }
   }
   return { strategy: 'mixed', title: 'Drive some legs, ride others', lotIds }
 }
@@ -896,6 +997,8 @@ function buildOption(ctx: Ctx, st: State): DayOption {
     if (gap < -1) warnings.push({ level: 'caution', text: `Tight: ${ctx.plan.stops[legs[k].legIndex].label} needs ${Math.round(-gap)} more min than you have` })
   }
   const blockers = warnings.some((w) => w.level === 'blocker')
+  // Circling full lots is time and stress the on-time figure doesn't show.
+  const parkingHassleMin = legs.reduce((sum, l) => sum + l.sim.lotFullProb * l.sim.lotFullPenaltyMin * 2, 0)
   return {
     id: legs.map((l) => `${l.kind}${l.lotId ? `@${l.lotId}` : ''}`).join('-'),
     title: cls.title,
@@ -904,11 +1007,12 @@ function buildOption(ctx: Ctx, st: State): DayOption {
     lotIds: cls.lotIds,
     leaveBy: legs[0].depart,
     totalTravelMin: travelMin,
+    parkingHassleMin,
     cost,
     costTotal: total,
     reliability,
     warnings,
-    score: scoreOf(ctx.settings, total, travelMin, reliability.onTimeProb) + (blockers ? 1e6 : 0),
+    score: scoreOf(ctx.settings, total, travelMin + parkingHassleMin, reliability.onTimeProb) + (blockers ? 1e6 : 0),
     feasible: !blockers,
   }
 }
@@ -916,6 +1020,6 @@ function buildOption(ctx: Ctx, st: State): DayOption {
 /** Re-rank already planned options under a new priority without new network calls. */
 export function rerank(options: DayOption[], settings: Settings): DayOption[] {
   return options
-    .map((o) => ({ ...o, score: scoreOf(settings, o.costTotal, o.totalTravelMin, o.reliability.onTimeProb) + (o.feasible ? 0 : 1e6) }))
+    .map((o) => ({ ...o, score: scoreOf(settings, o.costTotal, o.totalTravelMin + (o.parkingHassleMin ?? 0), o.reliability.onTimeProb) + (o.feasible ? 0 : 1e6) }))
     .sort((a, b) => a.score - b.score)
 }

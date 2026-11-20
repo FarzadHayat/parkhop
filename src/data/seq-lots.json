@@ -2,6 +2,9 @@
  {
   "id": "osm-w207667467",
   "name": "Albion park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.430084,
   "lon": 153.040247,
   "perDay": 0,
@@ -21,6 +24,9 @@
  {
   "id": "osm-w310317237",
   "name": "Alderley park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.423548,
   "lon": 153.000883,
   "perDay": 0,
@@ -39,6 +45,9 @@
  {
   "id": "osm-w392906024",
   "name": "Altandi park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.581957,
   "lon": 153.062787,
   "perDay": 0,
@@ -57,6 +66,9 @@
  {
   "id": "osm-r16754991",
   "name": "Aspley bus station park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.363336,
   "lon": 153.015294,
   "perDay": 0,
@@ -76,6 +88,9 @@
  {
   "id": "osm-w445894835",
   "name": "Bald Hills park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.32025,
   "lon": 153.010588,
   "perDay": 0,
@@ -94,6 +109,9 @@
  {
   "id": "osm-w206998701",
   "name": "Banoon park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.57742,
   "lon": 153.047231,
   "perDay": 0,
@@ -112,6 +130,9 @@
  {
   "id": "osm-w33113175",
   "name": "Banyo park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.37585,
   "lon": 153.077283,
   "perDay": 0,
@@ -130,6 +151,9 @@
  {
   "id": "osm-w113158242",
   "name": "Beenleigh park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.717187,
   "lon": 153.204928,
   "perDay": 0,
@@ -148,6 +172,9 @@
  {
   "id": "osm-w1243153847",
   "name": "Beerburrum park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -26.959948,
   "lon": 152.958741,
   "perDay": 0,
@@ -166,6 +193,9 @@
  {
   "id": "osm-w1396573764",
   "name": "Beerwah park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -26.857448,
   "lon": 152.958675,
   "perDay": 0,
@@ -184,6 +214,9 @@
  {
   "id": "osm-w97193921",
   "name": "Bethania park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.688014,
   "lon": 153.157653,
   "perDay": 0,
@@ -202,6 +235,9 @@
  {
   "id": "osm-w18859636",
   "name": "Birkdale park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.493552,
   "lon": 153.217137,
   "perDay": 0,
@@ -221,6 +257,9 @@
  {
   "id": "osm-w529323407",
   "name": "Boondall park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.347503,
   "lon": 153.069108,
   "perDay": 0,
@@ -239,6 +278,9 @@
  {
   "id": "osm-w347206523",
   "name": "Booval park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.609705,
   "lon": 152.789251,
   "perDay": 0,
@@ -258,6 +300,9 @@
  {
   "id": "osm-w284409101",
   "name": "Bray Park park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.299504,
   "lon": 152.98581,
   "perDay": 0,
@@ -277,6 +322,9 @@
  {
   "id": "osm-w64369943",
   "name": "Bundamba park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.60687,
   "lon": 152.804685,
   "perDay": 0,
@@ -296,6 +344,9 @@
  {
   "id": "osm-w32886999",
   "name": "Burpengary park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.161861,
   "lon": 152.957527,
   "perDay": 0,
@@ -314,6 +365,9 @@
  {
   "id": "osm-w34058704",
   "name": "Caboolture park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.081911,
   "lon": 152.954049,
   "perDay": 0,
@@ -333,6 +387,9 @@
  {
   "id": "osm-w46051663",
   "name": "Caboolture park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.083543,
   "lon": 152.953721,
   "perDay": 0,
@@ -351,6 +408,9 @@
  {
   "id": "osm-w775807761",
   "name": "Cannon Hill interchange park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.470683,
   "lon": 153.096384,
   "perDay": 0,
@@ -369,6 +429,9 @@
  {
   "id": "osm-w23172668",
   "name": "Cannon Hill park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.4652,
   "lon": 153.087848,
   "perDay": 0,
@@ -387,6 +450,9 @@
  {
   "id": "osm-r16380866",
   "name": "Capalaba park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.525227,
   "lon": 153.195565,
   "perDay": 0,
@@ -406,6 +472,9 @@
  {
   "id": "osm-w330348243",
   "name": "Capalaba station park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.524012,
   "lon": 153.193468,
   "perDay": 0,
@@ -424,6 +493,9 @@
  {
   "id": "osm-w1211509380",
   "name": "Carseldine park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.345654,
   "lon": 153.02846,
   "perDay": 0,
@@ -443,6 +515,9 @@
  {
   "id": "osm-w300606494",
   "name": "Chelmer park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.512288,
   "lon": 152.973264,
   "perDay": 0,
@@ -461,6 +536,9 @@
  {
   "id": "osm-w44878256",
   "name": "Cleveland park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.523957,
   "lon": 153.265728,
   "perDay": 0,
@@ -479,6 +557,9 @@
  {
   "id": "osm-w45520712",
   "name": "Coomera park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.853882,
   "lon": 153.317882,
   "perDay": 0,
@@ -497,6 +578,9 @@
  {
   "id": "osm-w32967277",
   "name": "Coopers Plains park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.567387,
   "lon": 153.036414,
   "perDay": 0,
@@ -516,6 +600,9 @@
  {
   "id": "osm-w722070992",
   "name": "Cooroy park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -26.417449,
   "lon": 152.911349,
   "perDay": 0,
@@ -534,6 +621,9 @@
  {
   "id": "osm-w329793381",
   "name": "Corinda park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.539266,
   "lon": 152.980852,
   "perDay": 0,
@@ -552,6 +642,9 @@
  {
   "id": "osm-w1061027878",
   "name": "Dakabin park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.229906,
   "lon": 152.975381,
   "perDay": 0,
@@ -571,6 +664,9 @@
  {
   "id": "osm-w35185926",
   "name": "Darra park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.566815,
   "lon": 152.95108,
   "perDay": 0,
@@ -589,6 +685,9 @@
  {
   "id": "osm-w45468676",
   "name": "Deagon park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.32754,
   "lon": 153.063164,
   "perDay": 0,
@@ -607,6 +706,9 @@
  {
   "id": "osm-w174195752",
   "name": "Dinmore park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.595853,
   "lon": 152.833995,
   "perDay": 0,
@@ -625,6 +727,9 @@
  {
   "id": "osm-w34684898",
   "name": "Eagle Junction park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.415116,
   "lon": 153.04962,
   "perDay": 0,
@@ -643,6 +748,9 @@
  {
   "id": "osm-w890967727",
   "name": "East Ipswich park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.609907,
   "lon": 152.775575,
   "perDay": 0,
@@ -662,6 +770,9 @@
  {
   "id": "osm-w65618376",
   "name": "Ebbw Vale park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.603378,
   "lon": 152.822321,
   "perDay": 0,
@@ -680,6 +791,9 @@
  {
   "id": "osm-w123689193",
   "name": "Edens Landing park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.69851,
   "lon": 153.170492,
   "perDay": 0,
@@ -698,6 +812,9 @@
  {
   "id": "osm-w51654006",
   "name": "Eight Mile Plains park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.578087,
   "lon": 153.102288,
   "perDay": 0,
@@ -716,6 +833,9 @@
  {
   "id": "osm-w525276048",
   "name": "Elimbah park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.011103,
   "lon": 152.945342,
   "perDay": 0,
@@ -735,6 +855,9 @@
  {
   "id": "osm-w18563899",
   "name": "Enoggera park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.421048,
   "lon": 152.993593,
   "perDay": 0,
@@ -753,6 +876,9 @@
  {
   "id": "osm-w1396573766",
   "name": "Euldo park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -26.725827,
   "lon": 152.957005,
   "perDay": 0,
@@ -771,6 +897,9 @@
  {
   "id": "osm-w1314254483",
   "name": "Eumundi park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -26.480043,
   "lon": 152.954505,
   "perDay": 0,
@@ -789,6 +918,9 @@
  {
   "id": "osm-w358570006",
   "name": "Ferny Grove park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.400796,
   "lon": 152.935213,
   "perDay": 0,
@@ -808,6 +940,9 @@
  {
   "id": "osm-w392437595",
   "name": "Fruitgrove park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.597543,
   "lon": 153.079987,
   "perDay": 0,
@@ -826,6 +961,9 @@
  {
   "id": "osm-w1243153839",
   "name": "Gailes park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.602181,
   "lon": 152.918924,
   "perDay": 0,
@@ -844,6 +982,9 @@
  {
   "id": "osm-w17598093",
   "name": "Gaythorne park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.419582,
   "lon": 152.985362,
   "perDay": 0,
@@ -862,6 +1003,9 @@
  {
   "id": "osm-w207667731",
   "name": "Geebung park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.368208,
   "lon": 153.047142,
   "perDay": 0,
@@ -881,6 +1025,9 @@
  {
   "id": "osm-w1052374012",
   "name": "Glass House Mountains park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -26.899373,
   "lon": 152.956676,
   "perDay": 0,
@@ -899,6 +1046,9 @@
  {
   "id": "osm-w312869578",
   "name": "Goodna park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.608352,
   "lon": 152.900755,
   "perDay": 0,
@@ -917,6 +1067,9 @@
  {
   "id": "osm-w546940483",
   "name": "Grovely park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.404318,
   "lon": 152.962497,
   "perDay": 0,
@@ -935,6 +1088,9 @@
  {
   "id": "osm-w96056173",
   "name": "Helensvale park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.924829,
   "lon": 153.33815,
   "perDay": 0,
@@ -953,6 +1109,9 @@
  {
   "id": "osm-w123689192",
   "name": "Holmview park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.710045,
   "lon": 153.188394,
   "perDay": 0,
@@ -971,6 +1130,9 @@
  {
   "id": "osm-w1474303811",
   "name": "Hope Island park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.87964,
   "lon": 153.330745,
   "perDay": 0,
@@ -989,6 +1151,9 @@
  {
   "id": "osm-w588829650",
   "name": "Indooroopilly park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.502861,
   "lon": 152.976123,
   "perDay": 0,
@@ -1007,6 +1172,9 @@
  {
   "id": "osm-r17082815",
   "name": "Ipswich park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.612797,
   "lon": 152.762869,
   "perDay": 0,
@@ -1025,6 +1193,9 @@
  {
   "id": "osm-w251492040",
   "name": "Kallangur park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.257366,
   "lon": 152.999242,
   "perDay": 0,
@@ -1044,6 +1215,9 @@
  {
   "id": "osm-w1243153844",
   "name": "Karrabin park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.603968,
   "lon": 152.708554,
   "perDay": 0,
@@ -1062,6 +1236,9 @@
  {
   "id": "osm-w32050415",
   "name": "Keperra park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.41001,
   "lon": 152.955988,
   "perDay": 0,
@@ -1080,6 +1257,9 @@
  {
   "id": "osm-w80216634",
   "name": "Kingston park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.656873,
   "lon": 153.117864,
   "perDay": 0,
@@ -1098,6 +1278,9 @@
  {
   "id": "osm-w251488529",
   "name": "Kippa-Ring park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.225272,
   "lon": 153.079479,
   "perDay": 0,
@@ -1117,6 +1300,9 @@
  {
   "id": "osm-w32289389",
   "name": "Kuraby park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.605015,
   "lon": 153.092331,
   "perDay": 0,
@@ -1135,6 +1321,9 @@
  {
   "id": "osm-w1089986877",
   "name": "Landsborough park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -26.808731,
   "lon": 152.967687,
   "perDay": 0,
@@ -1154,6 +1343,9 @@
  {
   "id": "osm-w986837816",
   "name": "Lawnton park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.279712,
   "lon": 152.97947,
   "perDay": 0,
@@ -1173,6 +1365,9 @@
  {
   "id": "osm-r20173396",
   "name": "Lindum Park & Ride North",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.441561,
   "lon": 153.145009,
   "perDay": 0,
@@ -1192,6 +1387,9 @@
  {
   "id": "osm-w183519674",
   "name": "Lindum Park & Ride South",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.4419,
   "lon": 153.145589,
   "perDay": 0,
@@ -1211,6 +1409,9 @@
  {
   "id": "osm-w95772727",
   "name": "Loganlea park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.670535,
   "lon": 153.137967,
   "perDay": 0,
@@ -1229,6 +1430,9 @@
  {
   "id": "osm-w524523215",
   "name": "Lota park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.469262,
   "lon": 153.188287,
   "perDay": 0,
@@ -1248,6 +1452,9 @@
  {
   "id": "osm-w187020185",
   "name": "Macgregor park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.561967,
   "lon": 153.076656,
   "perDay": 0,
@@ -1266,6 +1473,9 @@
  {
   "id": "osm-r13019200",
   "name": "Mango Hill East park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.232581,
   "lon": 153.03501,
   "perDay": 0,
@@ -1285,6 +1495,9 @@
  {
   "id": "osm-w251489755",
   "name": "Mango Hill park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.24689,
   "lon": 153.026511,
   "perDay": 0,
@@ -1304,6 +1517,9 @@
  {
   "id": "osm-w28086236",
   "name": "Manly park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.457339,
   "lon": 153.180078,
   "perDay": 0,
@@ -1322,6 +1538,9 @@
  {
   "id": "osm-w32944804",
   "name": "Mitchelton park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.410835,
   "lon": 152.975232,
   "perDay": 0,
@@ -1341,6 +1560,9 @@
  {
   "id": "osm-w1396573765",
   "name": "Mooloolah park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -26.765723,
   "lon": 152.963253,
   "perDay": 0,
@@ -1359,6 +1581,9 @@
  {
   "id": "osm-w934971112",
   "name": "Moorooka park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.535783,
   "lon": 153.015447,
   "perDay": 0,
@@ -1378,6 +1603,9 @@
  {
   "id": "osm-w45890924",
   "name": "Morayfield park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.110644,
   "lon": 152.952567,
   "perDay": 0,
@@ -1396,6 +1624,9 @@
  {
   "id": "osm-w33076553",
   "name": "Morningside park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.471488,
   "lon": 153.069389,
   "perDay": 0,
@@ -1414,6 +1645,9 @@
  {
   "id": "osm-w207536342",
   "name": "Murarrie park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.464963,
   "lon": 153.105798,
   "perDay": 0,
@@ -1432,6 +1666,9 @@
  {
   "id": "osm-w251490844",
   "name": "Murrumba Downs park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.252322,
   "lon": 153.010088,
   "perDay": 0,
@@ -1451,6 +1688,9 @@
  {
   "id": "osm-w790941185",
   "name": "Nambour park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -26.626559,
   "lon": 152.95702,
   "perDay": 0,
@@ -1470,6 +1710,9 @@
  {
   "id": "osm-r12866479",
   "name": "Narangba park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.202211,
   "lon": 152.960265,
   "perDay": 0,
@@ -1489,6 +1732,9 @@
  {
   "id": "osm-w14582603",
   "name": "Nerang park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.993177,
   "lon": 153.349218,
   "perDay": 0,
@@ -1507,6 +1753,9 @@
  {
   "id": "osm-w565358149",
   "name": "Noosa Junction park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -26.399317,
   "lon": 153.092486,
   "perDay": 0,
@@ -1525,6 +1774,9 @@
  {
   "id": "osm-w40484019",
   "name": "North Boondall park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.337293,
   "lon": 153.05993,
   "perDay": 0,
@@ -1543,6 +1795,9 @@
  {
   "id": "osm-w9995837",
   "name": "Northgate park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.392765,
   "lon": 153.068864,
   "perDay": 0,
@@ -1561,6 +1816,9 @@
  {
   "id": "osm-w359998377",
   "name": "Nudgee park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.365929,
   "lon": 153.083769,
   "perDay": 0,
@@ -1580,6 +1838,9 @@
  {
   "id": "osm-w33347985",
   "name": "Nundah park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.40173,
   "lon": 153.061665,
   "perDay": 0,
@@ -1598,6 +1859,9 @@
  {
   "id": "osm-w128978822",
   "name": "Ormeau park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.7985,
   "lon": 153.281089,
   "perDay": 0,
@@ -1616,6 +1880,9 @@
  {
   "id": "osm-w207535219",
   "name": "Ormiston park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.513583,
   "lon": 153.256209,
   "perDay": 0,
@@ -1634,6 +1901,9 @@
  {
   "id": "osm-w1207058822",
   "name": "Oxford Park park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.404146,
   "lon": 152.968573,
   "perDay": 0,
@@ -1653,6 +1923,9 @@
  {
   "id": "osm-w15782453",
   "name": "Oxley park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.553155,
   "lon": 152.973382,
   "perDay": 0,
@@ -1671,6 +1944,9 @@
  {
   "id": "osm-w439245333",
   "name": "Palmwoods park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -26.688594,
   "lon": 152.960794,
   "perDay": 0,
@@ -1690,6 +1966,9 @@
  {
   "id": "osm-w1009748540",
   "name": "Parkwood park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.953151,
   "lon": 153.347129,
   "perDay": 0,
@@ -1709,6 +1988,9 @@
  {
   "id": "osm-w41121391",
   "name": "Petrie park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.267123,
   "lon": 152.982126,
   "perDay": 0,
@@ -1728,6 +2010,9 @@
  {
   "id": "osm-r16308902",
   "name": "Phillips Lane park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.269189,
   "lon": 152.982037,
   "perDay": 0,
@@ -1747,6 +2032,9 @@
  {
   "id": "osm-w1445886452",
   "name": "Pimpama park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": false,
   "lat": -27.816826,
   "lon": 153.295936,
   "perDay": 0,
@@ -1765,6 +2053,9 @@
  {
   "id": "osm-w1396573767",
   "name": "Pomona park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -26.36578,
   "lon": 152.856525,
   "perDay": 0,
@@ -1783,6 +2074,9 @@
  {
   "id": "osm-w47286594",
   "name": "Redbank park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.599749,
   "lon": 152.87342,
   "perDay": 0,
@@ -1801,6 +2095,9 @@
  {
   "id": "osm-w70069270",
   "name": "Redland Bay Marina park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.617108,
   "lon": 153.3102,
   "perDay": 0,
@@ -1819,6 +2116,9 @@
  {
   "id": "osm-w253719559",
   "name": "Richlands park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.595747,
   "lon": 152.94804,
   "perDay": 0,
@@ -1837,6 +2137,9 @@
  {
   "id": "osm-w334938448",
   "name": "Riverview park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.594689,
   "lon": 152.849862,
   "perDay": 0,
@@ -1855,6 +2158,9 @@
  {
   "id": "osm-w28395144",
   "name": "Robina park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -28.070513,
   "lon": 153.377319,
   "perDay": 0,
@@ -1873,6 +2179,9 @@
  {
   "id": "osm-w953412592",
   "name": "Rochedale busway station park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.592907,
   "lon": 153.112006,
   "perDay": 0,
@@ -1891,6 +2200,9 @@
  {
   "id": "osm-w1565682684",
   "name": "Rocklea park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.544499,
   "lon": 153.013472,
   "perDay": 0,
@@ -1910,6 +2222,9 @@
  {
   "id": "osm-w1243153846",
   "name": "Rosewood park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.642811,
   "lon": 152.593119,
   "perDay": 0,
@@ -1928,6 +2243,9 @@
  {
   "id": "osm-w251486909",
   "name": "Rothwell park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.223233,
   "lon": 153.047495,
   "perDay": 0,
@@ -1947,6 +2265,9 @@
  {
   "id": "osm-w57766313",
   "name": "Runcorn park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.591969,
   "lon": 153.068775,
   "perDay": 0,
@@ -1965,6 +2286,9 @@
  {
   "id": "osm-w959107586",
   "name": "Salisbury park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.552212,
   "lon": 153.021277,
   "perDay": 0,
@@ -1984,6 +2308,9 @@
  {
   "id": "osm-w36985037",
   "name": "Sandgate park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.321685,
   "lon": 153.068871,
   "perDay": 0,
@@ -2002,6 +2329,9 @@
  {
   "id": "osm-w41172465",
   "name": "Sandgate park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.322538,
   "lon": 153.072399,
   "perDay": 0,
@@ -2020,6 +2350,9 @@
  {
   "id": "osm-w1156553188",
   "name": "Sherwood park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.53171,
   "lon": 152.979786,
   "perDay": 0,
@@ -2039,6 +2372,9 @@
  {
   "id": "osm-w1231896729",
   "name": "Shorncliffe park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.327024,
   "lon": 153.080966,
   "perDay": 0,
@@ -2057,6 +2393,9 @@
  {
   "id": "osm-w307241394",
   "name": "Springfield Central park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.675172,
   "lon": 152.903139,
   "perDay": 0,
@@ -2075,6 +2414,9 @@
  {
   "id": "osm-w344413283",
   "name": "Springfield park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.658361,
   "lon": 152.923027,
   "perDay": 0,
@@ -2093,6 +2435,9 @@
  {
   "id": "osm-w53266177",
   "name": "Springwood park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.616494,
   "lon": 153.121571,
   "perDay": 0,
@@ -2112,6 +2457,9 @@
  {
   "id": "osm-w37697034",
   "name": "Strathpine park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.310835,
   "lon": 152.989764,
   "perDay": 0,
@@ -2131,6 +2479,9 @@
  {
   "id": "osm-w207000958",
   "name": "Sunnybank park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.580941,
   "lon": 153.054253,
   "perDay": 0,
@@ -2149,6 +2500,9 @@
  {
   "id": "osm-w207667717",
   "name": "Sunshine park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.374962,
   "lon": 153.055951,
   "perDay": 0,
@@ -2167,6 +2521,9 @@
  {
   "id": "osm-w32256469",
   "name": "Taringa park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.493308,
   "lon": 152.982261,
   "perDay": 0,
@@ -2185,6 +2542,9 @@
  {
   "id": "osm-w207535875",
   "name": "Thorneside Park 'n' Ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.485698,
   "lon": 153.193754,
   "perDay": 0,
@@ -2204,6 +2564,9 @@
  {
   "id": "osm-w54009467",
   "name": "Toombul Shopping Centre park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.407594,
   "lon": 153.060452,
   "perDay": 0,
@@ -2223,6 +2586,9 @@
  {
   "id": "osm-w35031616",
   "name": "Toombul park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.406676,
   "lon": 153.059395,
   "perDay": 0,
@@ -2241,6 +2607,9 @@
  {
   "id": "osm-w245610070",
   "name": "Trinder Park park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.632624,
   "lon": 153.097921,
   "perDay": 0,
@@ -2259,6 +2628,9 @@
  {
   "id": "osm-w45020495",
   "name": "Varsity Lakes park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -28.096031,
   "lon": 153.397965,
   "perDay": 0,
@@ -2277,6 +2649,9 @@
  {
   "id": "osm-w35034577",
   "name": "Virginia park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.382292,
   "lon": 153.06328,
   "perDay": 0,
@@ -2295,6 +2670,9 @@
  {
   "id": "osm-w368098672",
   "name": "Wacol park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.589123,
   "lon": 152.924095,
   "perDay": 0,
@@ -2313,6 +2691,9 @@
  {
   "id": "osm-w1243153845",
   "name": "Walloon park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.607124,
   "lon": 152.667383,
   "perDay": 0,
@@ -2331,6 +2712,9 @@
  {
   "id": "osm-w44886720",
   "name": "Wellington Point park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.494312,
   "lon": 153.242564,
   "perDay": 0,
@@ -2349,6 +2733,9 @@
  {
   "id": "osm-w80915921",
   "name": "Woodridge park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.637332,
   "lon": 153.102438,
   "perDay": 0,
@@ -2367,6 +2754,9 @@
  {
   "id": "osm-w207667463",
   "name": "Wooloowin park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.420541,
   "lon": 153.04253,
   "perDay": 0,
@@ -2385,6 +2775,9 @@
  {
   "id": "osm-w525296211",
   "name": "Woombye park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -26.660784,
   "lon": 152.963064,
   "perDay": 0,
@@ -2403,6 +2796,9 @@
  {
   "id": "osm-w34937083",
   "name": "Wynnum Central park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.445578,
   "lon": 153.170166,
   "perDay": 0,
@@ -2421,6 +2817,9 @@
  {
   "id": "osm-w34937072",
   "name": "Wynnum park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.439454,
   "lon": 153.166212,
   "perDay": 0,
@@ -2439,6 +2838,9 @@
  {
   "id": "osm-w207536358",
   "name": "Wynnym North park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.437451,
   "lon": 153.159682,
   "perDay": 0,
@@ -2457,6 +2859,9 @@
  {
   "id": "osm-w551042529",
   "name": "Yandina park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -26.560686,
   "lon": 152.957884,
   "perDay": 0,
@@ -2475,6 +2880,9 @@
  {
   "id": "osm-w157249305",
   "name": "Yeronga park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.515973,
   "lon": 153.018505,
   "perDay": 0,
@@ -2494,10 +2902,3527 @@
  {
   "id": "osm-w43991028",
   "name": "Zillmere park 'n' ride",
+  "kind": "pnr",
+  "stayKnown": true,
+  "feeKnown": true,
   "lat": -27.358339,
   "lon": 153.036252,
   "perDay": 0,
   "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Zillmere station",
+   "lat": -27.359268,
+   "lon": 153.037514,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1291930079",
+  "name": "Albion public car park",
+  "kind": "carpark",
+  "lat": -27.4302,
+  "lon": 153.039172,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:15",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Albion station",
+   "lat": -27.429711,
+   "lon": 153.040259,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1240008201",
+  "name": "Albion street parking",
+  "kind": "street",
+  "lat": -27.429683,
+  "lon": 153.041358,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Albion station",
+   "lat": -27.429711,
+   "lon": 153.040259,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w810343564",
+  "name": "Alderley public car park",
+  "kind": "carpark",
+  "lat": -27.424097,
+  "lon": 152.999601,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Alderley station",
+   "lat": -27.423431,
+   "lon": 153.000911,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1078418002",
+  "name": "Alderley street parking",
+  "kind": "street",
+  "lat": -27.420118,
+  "lon": 152.997829,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Alderley station",
+   "lat": -27.423431,
+   "lon": 153.000911,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1078418056",
+  "name": "Alderley street parking",
+  "kind": "street",
+  "lat": -27.420089,
+  "lon": 152.997662,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Alderley station",
+   "lat": -27.423431,
+   "lon": 153.000911,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1339704182",
+  "name": "Altandi street parking",
+  "kind": "street",
+  "lat": -27.58192,
+  "lon": 153.0636,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:55",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Altandi station",
+   "lat": -27.582693,
+   "lon": 153.063932,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 9
+ },
+ {
+  "id": "osm-r16754990",
+  "name": "Aspley Hypermarket public car park",
+  "kind": "carpark",
+  "lat": -27.361897,
+  "lon": 153.014749,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "06:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Aspley Hypermarket interchange",
+   "lat": -27.363154,
+   "lon": 153.012923,
+   "modes": [
+    "bus"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1133338360",
+  "name": "Bald Hills street parking",
+  "kind": "street",
+  "lat": -27.319846,
+  "lon": 153.007654,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:55",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Bald Hills station",
+   "lat": -27.320729,
+   "lon": 153.011395,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w32025500",
+  "name": "Banyo public car park",
+  "kind": "carpark",
+  "lat": -27.374614,
+  "lon": 153.077823,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Banyo station",
+   "lat": -27.374743,
+   "lon": 153.077142,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w142438469",
+  "name": "Beenleigh public car park",
+  "kind": "carpark",
+  "lat": -27.717949,
+  "lon": 153.203859,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Beenleigh station",
+   "lat": -27.717573,
+   "lon": 153.204452,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1409366196",
+  "name": "Beenleigh street parking",
+  "kind": "street",
+  "lat": -27.718034,
+  "lon": 153.204441,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:55",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Beenleigh station",
+   "lat": -27.717573,
+   "lon": 153.204452,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1056844292",
+  "name": "Beenleigh street parking",
+  "kind": "street",
+  "lat": -27.71432,
+  "lon": 153.20376,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:55",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Beenleigh station",
+   "lat": -27.717573,
+   "lon": 153.204452,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w778759322",
+  "name": "Bethania public car park",
+  "kind": "carpark",
+  "lat": -27.687673,
+  "lon": 153.157136,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Bethania station",
+   "lat": -27.687931,
+   "lon": 153.157951,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w778759323",
+  "name": "Bethania street parking",
+  "kind": "street",
+  "lat": -27.687559,
+  "lon": 153.156895,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:55",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Bethania station",
+   "lat": -27.687931,
+   "lon": 153.157951,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-r5011897",
+  "name": "Birkdale public car park",
+  "kind": "carpark",
+  "lat": -27.491467,
+  "lon": 153.218358,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Birkdale station",
+   "lat": -27.493704,
+   "lon": 153.218464,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1408260796",
+  "name": "Birkdale street parking",
+  "kind": "street",
+  "lat": -27.495067,
+  "lon": 153.217531,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:20",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Birkdale station",
+   "lat": -27.493704,
+   "lon": 153.218464,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1408260795",
+  "name": "Birkdale street parking",
+  "kind": "street",
+  "lat": -27.496526,
+  "lon": 153.217299,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:20",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Birkdale station",
+   "lat": -27.493704,
+   "lon": 153.218464,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w36984117",
+  "name": "Boondall public car park",
+  "kind": "carpark",
+  "lat": -27.346414,
+  "lon": 153.068832,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Boondall station",
+   "lat": -27.346387,
+   "lon": 153.067519,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1365406547",
+  "name": "Bretts Wharf ferry terminal public car park",
+  "kind": "carpark",
+  "lat": -27.438791,
+  "lon": 153.068506,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Bretts Wharf ferry terminal",
+   "lat": -27.440234,
+   "lon": 153.064081,
+   "modes": [
+    "ferry"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 6
+ },
+ {
+  "id": "osm-w1365461072",
+  "name": "Bretts Wharf ferry terminal street parking",
+  "kind": "street",
+  "lat": -27.439085,
+  "lon": 153.064725,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Bretts Wharf ferry terminal",
+   "lat": -27.440234,
+   "lon": 153.064081,
+   "modes": [
+    "ferry"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 2
+ },
+ {
+  "id": "osm-w1213953965",
+  "name": "Brookside Shopping Centre street parking",
+  "kind": "street",
+  "lat": -27.412529,
+  "lon": 152.980279,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Brookside Shopping Centre",
+   "lat": -27.409659,
+   "lon": 152.977977,
+   "modes": [
+    "bus"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w38967759",
+  "name": "Browns Plains public car park",
+  "kind": "carpark",
+  "lat": -27.661439,
+  "lon": 153.04103,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Browns Plains station",
+   "lat": -27.661429,
+   "lon": 153.041828,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w246975639",
+  "name": "Bundamba public car park",
+  "kind": "carpark",
+  "lat": -27.610833,
+  "lon": 152.807018,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Bundamba station",
+   "lat": -27.607189,
+   "lon": 152.804927,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1212915963",
+  "name": "Bundamba street parking",
+  "kind": "street",
+  "lat": -27.610916,
+  "lon": 152.80354,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:20",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Bundamba station",
+   "lat": -27.607189,
+   "lon": 152.804927,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w552240486",
+  "name": "Caboolture bus public car park",
+  "kind": "carpark",
+  "lat": -27.083726,
+  "lon": 152.953037,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 1,
+  "fillsByHhmm": "08:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Caboolture bus station",
+   "lat": -27.082994,
+   "lon": 152.953607,
+   "modes": [
+    "bus"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 126
+ },
+ {
+  "id": "osm-w1393795665",
+  "name": "Caboolture bus street parking",
+  "kind": "street",
+  "lat": -27.084127,
+  "lon": 152.952635,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "08:20",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Caboolture bus station",
+   "lat": -27.082994,
+   "lon": 152.953607,
+   "modes": [
+    "bus"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 14
+ },
+ {
+  "id": "osm-w1568744623",
+  "name": "Caboolture bus street parking",
+  "kind": "street",
+  "lat": -27.085997,
+  "lon": 152.952909,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "08:20",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Caboolture bus station",
+   "lat": -27.082994,
+   "lon": 152.953607,
+   "modes": [
+    "bus"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w681299004",
+  "name": "Caboolture street parking",
+  "kind": "street",
+  "lat": -27.078666,
+  "lon": 152.954471,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "08:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Caboolture station",
+   "lat": -27.082646,
+   "lon": 152.953449,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1149382448",
+  "name": "Capalaba public car park",
+  "kind": "carpark",
+  "lat": -27.523895,
+  "lon": 153.193733,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Capalaba station",
+   "lat": -27.523468,
+   "lon": 153.192402,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w810758249",
+  "name": "Capalaba street parking",
+  "kind": "street",
+  "lat": -27.519852,
+  "lon": 153.193318,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Capalaba station",
+   "lat": -27.523468,
+   "lon": 153.192402,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-r12886711",
+  "name": "Carpark 2",
+  "kind": "carpark",
+  "lat": -27.232984,
+  "lon": 153.034116,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:55",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Mango Hill East station",
+   "lat": -27.232661,
+   "lon": 153.03602,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 75
+ },
+ {
+  "id": "osm-w860951129",
+  "name": "Carseldine public car park",
+  "kind": "carpark",
+  "lat": -27.351072,
+  "lon": 153.029663,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Carseldine station",
+   "lat": -27.347367,
+   "lon": 153.028682,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1424492352",
+  "name": "Carseldine street parking",
+  "kind": "street",
+  "lat": -27.350619,
+  "lon": 153.028767,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Carseldine station",
+   "lat": -27.347367,
+   "lon": 153.028682,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 9
+ },
+ {
+  "id": "osm-w860951135",
+  "name": "Carseldine street parking",
+  "kind": "street",
+  "lat": -27.350693,
+  "lon": 153.028552,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Carseldine station",
+   "lat": -27.347367,
+   "lon": 153.028682,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-n1108669407",
+  "name": "Chelmer public car park",
+  "kind": "carpark",
+  "lat": -27.513742,
+  "lon": 152.97404,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Chelmer station",
+   "lat": -27.511948,
+   "lon": 152.972555,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w871731194",
+  "name": "Cleveland public car park",
+  "kind": "carpark",
+  "lat": -27.525035,
+  "lon": 153.265225,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Cleveland station",
+   "lat": -27.524498,
+   "lon": 153.265865,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w245030115",
+  "name": "Coopers Plains public car park",
+  "kind": "carpark",
+  "lat": -27.565061,
+  "lon": 153.040021,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "06:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Coopers Plains station",
+   "lat": -27.56708,
+   "lon": 153.035928,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1314270221",
+  "name": "Coopers Plains street parking",
+  "kind": "street",
+  "lat": -27.568029,
+  "lon": 153.039016,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:00",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Coopers Plains station",
+   "lat": -27.56708,
+   "lon": 153.035928,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1314270222",
+  "name": "Coopers Plains street parking",
+  "kind": "street",
+  "lat": -27.56803,
+  "lon": 153.039071,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:00",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Coopers Plains station",
+   "lat": -27.56708,
+   "lon": 153.035928,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1364753689",
+  "name": "Corinda street parking",
+  "kind": "street",
+  "lat": -27.538363,
+  "lon": 152.981784,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Corinda station",
+   "lat": -27.53895,
+   "lon": 152.980487,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1190739944",
+  "name": "Dakabin street parking",
+  "kind": "street",
+  "lat": -27.230818,
+  "lon": 152.976053,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:20",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Dakabin station",
+   "lat": -27.230347,
+   "lon": 152.975517,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1190739945",
+  "name": "Dakabin street parking",
+  "kind": "street",
+  "lat": -27.229708,
+  "lon": 152.97578,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:20",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Dakabin station",
+   "lat": -27.230347,
+   "lon": 152.975517,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w975229048",
+  "name": "Dinmore public car park",
+  "kind": "carpark",
+  "lat": -27.597572,
+  "lon": 152.831805,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Dinmore station",
+   "lat": -27.596208,
+   "lon": 152.833321,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1497834970",
+  "name": "Dinmore street parking",
+  "kind": "street",
+  "lat": -27.595691,
+  "lon": 152.833299,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:55",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Dinmore station",
+   "lat": -27.596208,
+   "lon": 152.833321,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w251466108",
+  "name": "Doomben public car park",
+  "kind": "carpark",
+  "lat": -27.431347,
+  "lon": 153.071467,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Doomben station",
+   "lat": -27.431294,
+   "lon": 153.074765,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w890967726",
+  "name": "East Ipswich street parking",
+  "kind": "street",
+  "lat": -27.609853,
+  "lon": 152.775081,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:20",
+  "fillSource": "estimated",
+  "station": {
+   "name": "East Ipswich station",
+   "lat": -27.609875,
+   "lon": 152.774919,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 4
+ },
+ {
+  "id": "osm-w165161754",
+  "name": "Edens Landing public car park",
+  "kind": "carpark",
+  "lat": -27.699703,
+  "lon": 153.170235,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Edens Landing station",
+   "lat": -27.698286,
+   "lon": 153.170107,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w870732114",
+  "name": "Eight Mile Plains street parking",
+  "kind": "street",
+  "lat": -27.580196,
+  "lon": 153.098992,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:55",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Eight Mile Plains station",
+   "lat": -27.578382,
+   "lon": 153.101881,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w273892834",
+  "name": "Elimbah Soldiers Memorial Hall Car Park",
+  "kind": "carpark",
+  "lat": -27.012425,
+  "lon": 152.94454,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Elimbah station",
+   "lat": -27.011262,
+   "lon": 152.945471,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w273892884",
+  "name": "Elimbah street parking",
+  "kind": "street",
+  "lat": -27.012602,
+  "lon": 152.943095,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Elimbah station",
+   "lat": -27.011262,
+   "lon": 152.945471,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 18
+ },
+ {
+  "id": "osm-w1229854839",
+  "name": "Elimbah street parking",
+  "kind": "street",
+  "lat": -27.012677,
+  "lon": 152.943019,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Elimbah station",
+   "lat": -27.011262,
+   "lon": 152.945471,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 13
+ },
+ {
+  "id": "osm-w1284115292",
+  "name": "Enoggera street parking",
+  "kind": "street",
+  "lat": -27.421657,
+  "lon": 152.991258,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Enoggera interchange",
+   "lat": -27.420627,
+   "lon": 152.992352,
+   "modes": [
+    "bus"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1284115291",
+  "name": "Enoggera street parking",
+  "kind": "street",
+  "lat": -27.421623,
+  "lon": 152.991079,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Enoggera interchange",
+   "lat": -27.420627,
+   "lon": 152.992352,
+   "modes": [
+    "bus"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1078418028",
+  "name": "Enoggera street parking",
+  "kind": "street",
+  "lat": -27.419703,
+  "lon": 152.993885,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Enoggera station",
+   "lat": -27.420349,
+   "lon": 152.992402,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1078418075",
+  "name": "Enoggera street parking",
+  "kind": "street",
+  "lat": -27.419327,
+  "lon": 152.993899,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Enoggera station",
+   "lat": -27.420349,
+   "lon": 152.992402,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1317984817",
+  "name": "Fairfield street parking",
+  "kind": "street",
+  "lat": -27.509469,
+  "lon": 153.026711,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Fairfield station",
+   "lat": -27.509731,
+   "lon": 153.028054,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1322809442",
+  "name": "Fairfield street parking",
+  "kind": "street",
+  "lat": -27.509567,
+  "lon": 153.02641,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Fairfield station",
+   "lat": -27.509731,
+   "lon": 153.028054,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1015856195",
+  "name": "Fruitgrove public car park",
+  "kind": "carpark",
+  "lat": -27.598972,
+  "lon": 153.076224,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Fruitgrove station",
+   "lat": -27.598461,
+   "lon": 153.079996,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 3
+ },
+ {
+  "id": "osm-w27885436",
+  "name": "Gaythorne public car park",
+  "kind": "carpark",
+  "lat": -27.416485,
+  "lon": 152.987438,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Gaythorne station",
+   "lat": -27.41907,
+   "lon": 152.984639,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 24
+ },
+ {
+  "id": "osm-w1041332870",
+  "name": "Geebung public car park",
+  "kind": "carpark",
+  "lat": -27.369713,
+  "lon": 153.048286,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "06:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Geebung station",
+   "lat": -27.368811,
+   "lon": 153.04707,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1272949134",
+  "name": "Geebung street parking",
+  "kind": "street",
+  "lat": -27.369137,
+  "lon": 153.047244,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:00",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Geebung station",
+   "lat": -27.368811,
+   "lon": 153.04707,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w835908007",
+  "name": "Goodna public car park",
+  "kind": "carpark",
+  "lat": -27.607127,
+  "lon": 152.899273,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Goodna station",
+   "lat": -27.608543,
+   "lon": 152.901126,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1278030892",
+  "name": "Goodna street parking",
+  "kind": "street",
+  "lat": -27.609492,
+  "lon": 152.899636,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:55",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Goodna station",
+   "lat": -27.608543,
+   "lon": 152.901126,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 4
+ },
+ {
+  "id": "osm-w36838044",
+  "name": "Graceville public car park",
+  "kind": "carpark",
+  "lat": -27.518566,
+  "lon": 152.977973,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Graceville station",
+   "lat": -27.520749,
+   "lon": 152.975727,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1363563395",
+  "name": "Graceville street parking",
+  "kind": "street",
+  "lat": -27.521635,
+  "lon": 152.975304,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Graceville station",
+   "lat": -27.520749,
+   "lon": 152.975727,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 4
+ },
+ {
+  "id": "osm-w1363563399",
+  "name": "Graceville street parking",
+  "kind": "street",
+  "lat": -27.521748,
+  "lon": 152.975586,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Graceville station",
+   "lat": -27.520749,
+   "lon": 152.975727,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 4
+ },
+ {
+  "id": "osm-w37446309",
+  "name": "Greenslopes public car park",
+  "kind": "carpark",
+  "lat": -27.507493,
+  "lon": 153.04124,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Greenslopes station",
+   "lat": -27.510939,
+   "lon": 153.0403,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1298961090",
+  "name": "Grovely street parking",
+  "kind": "street",
+  "lat": -27.404466,
+  "lon": 152.96518,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Grovely station",
+   "lat": -27.404511,
+   "lon": 152.962508,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1298961091",
+  "name": "Grovely street parking",
+  "kind": "street",
+  "lat": -27.404564,
+  "lon": 152.965261,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Grovely station",
+   "lat": -27.404511,
+   "lon": 152.962508,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w554778889",
+  "name": "Indooroopilly Shopping Centre public car park",
+  "kind": "carpark",
+  "lat": -27.499051,
+  "lon": 152.972405,
+  "perDay": 8,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Indooroopilly Shopping Centre station",
+   "lat": -27.501253,
+   "lon": 152.971908,
+   "modes": [
+    "bus"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1258900222",
+  "name": "Indooroopilly street parking",
+  "kind": "street",
+  "lat": -27.503192,
+  "lon": 152.97633,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Indooroopilly station",
+   "lat": -27.503013,
+   "lon": 152.976083,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w219483915",
+  "name": "Indooroopilly street parking",
+  "kind": "street",
+  "lat": -27.503182,
+  "lon": 152.977118,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Indooroopilly station",
+   "lat": -27.503013,
+   "lon": 152.976083,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w890762125",
+  "name": "Ipswich Health Centre Carpark",
+  "kind": "carpark",
+  "lat": -27.613022,
+  "lon": 152.760754,
+  "perDay": 8,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Ipswich station",
+   "lat": -27.613091,
+   "lon": 152.760317,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w890762045",
+  "name": "Ipswich, Bell Street public car park",
+  "kind": "carpark",
+  "lat": -27.613505,
+  "lon": 152.757375,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Ipswich, Bell Street",
+   "lat": -27.613555,
+   "lon": 152.760104,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1360827244",
+  "name": "Ipswich, Bell Street street parking",
+  "kind": "street",
+  "lat": -27.615368,
+  "lon": 152.758597,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Ipswich, Bell Street",
+   "lat": -27.613555,
+   "lon": 152.760104,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 5
+ },
+ {
+  "id": "osm-w1360827243",
+  "name": "Ipswich, Bell Street street parking",
+  "kind": "street",
+  "lat": -27.615416,
+  "lon": 152.758496,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Ipswich, Bell Street",
+   "lat": -27.613555,
+   "lon": 152.760104,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 13
+ },
+ {
+  "id": "osm-w1216116173",
+  "name": "Keperra street parking",
+  "kind": "street",
+  "lat": -27.409166,
+  "lon": 152.95851,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Keperra station",
+   "lat": -27.409672,
+   "lon": 152.956939,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 4
+ },
+ {
+  "id": "osm-w1216116168",
+  "name": "Keperra street parking",
+  "kind": "street",
+  "lat": -27.409271,
+  "lon": 152.958551,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Keperra station",
+   "lat": -27.409672,
+   "lon": 152.956939,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 4
+ },
+ {
+  "id": "osm-w597596348",
+  "name": "Kingston public car park",
+  "kind": "carpark",
+  "lat": -27.658417,
+  "lon": 153.119101,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Kingston station",
+   "lat": -27.656653,
+   "lon": 153.118444,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 85
+ },
+ {
+  "id": "osm-w1011226774",
+  "name": "Kuraby public car park",
+  "kind": "carpark",
+  "lat": -27.606543,
+  "lon": 153.095186,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Kuraby station",
+   "lat": -27.605115,
+   "lon": 153.09143,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 20
+ },
+ {
+  "id": "osm-w1296607110",
+  "name": "Langlands Park street parking",
+  "kind": "street",
+  "lat": -27.496627,
+  "lon": 153.054143,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Langlands Park station",
+   "lat": -27.498628,
+   "lon": 153.049652,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1016169847",
+  "name": "Logan Central public car park",
+  "kind": "carpark",
+  "lat": -27.642467,
+  "lon": 153.114699,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Logan Central station",
+   "lat": -27.642132,
+   "lon": 153.114744,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1016424348",
+  "name": "Loganholme public car park",
+  "kind": "carpark",
+  "lat": -27.660619,
+  "lon": 153.174007,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Loganholme station",
+   "lat": -27.660351,
+   "lon": 153.173474,
+   "modes": [
+    "bus"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1521096687",
+  "name": "Loganholme street parking",
+  "kind": "street",
+  "lat": -27.662629,
+  "lon": 153.170537,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Loganholme station",
+   "lat": -27.660351,
+   "lon": 153.173474,
+   "modes": [
+    "bus"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1521096688",
+  "name": "Loganholme street parking",
+  "kind": "street",
+  "lat": -27.662575,
+  "lon": 153.170189,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Loganholme station",
+   "lat": -27.660351,
+   "lon": 153.173474,
+   "modes": [
+    "bus"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1066569741",
+  "name": "Loganlea public car park",
+  "kind": "carpark",
+  "lat": -27.670755,
+  "lon": 153.140122,
+  "perDay": 8,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Loganlea station",
+   "lat": -27.671085,
+   "lon": 153.138078,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1474394871",
+  "name": "Lota street parking",
+  "kind": "street",
+  "lat": -27.467219,
+  "lon": 153.186233,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:20",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Lota station",
+   "lat": -27.469709,
+   "lon": 153.188143,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1392452199",
+  "name": "Lutwyche public car park",
+  "kind": "carpark",
+  "lat": -27.421256,
+  "lon": 153.032542,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Lutwyche station",
+   "lat": -27.419855,
+   "lon": 153.034368,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 23
+ },
+ {
+  "id": "osm-w1368606910",
+  "name": "Lutwyche street parking",
+  "kind": "street",
+  "lat": -27.421033,
+  "lon": 153.03637,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Lutwyche station",
+   "lat": -27.419855,
+   "lon": 153.034368,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-r14488144",
+  "name": "Mango Hill East street parking",
+  "kind": "street",
+  "lat": -27.234517,
+  "lon": 153.036722,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "08:05",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Mango Hill East station",
+   "lat": -27.232661,
+   "lon": 153.03602,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 5
+ },
+ {
+  "id": "osm-r14488143",
+  "name": "Mango Hill East street parking",
+  "kind": "street",
+  "lat": -27.234644,
+  "lon": 153.036663,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "08:05",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Mango Hill East station",
+   "lat": -27.232661,
+   "lon": 153.03602,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 6
+ },
+ {
+  "id": "osm-n2478483072",
+  "name": "Mango Hill public car park",
+  "kind": "carpark",
+  "lat": -27.243186,
+  "lon": 153.02378,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Mango Hill station",
+   "lat": -27.245928,
+   "lon": 153.027436,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 2
+ },
+ {
+  "id": "osm-w1224779534",
+  "name": "Mitchelton street parking",
+  "kind": "street",
+  "lat": -27.415433,
+  "lon": 152.97699,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Mitchelton station",
+   "lat": -27.411626,
+   "lon": 152.976087,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1137956624",
+  "name": "Morningside street parking",
+  "kind": "street",
+  "lat": -27.469443,
+  "lon": 153.071275,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Morningside station",
+   "lat": -27.470891,
+   "lon": 153.069694,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 10
+ },
+ {
+  "id": "osm-w569535899",
+  "name": "Narangba public car park",
+  "kind": "carpark",
+  "lat": -27.203494,
+  "lon": 152.96228,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Narangba station",
+   "lat": -27.202431,
+   "lon": 152.959821,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 16
+ },
+ {
+  "id": "osm-w17503506",
+  "name": "Newmarket public car park",
+  "kind": "carpark",
+  "lat": -27.430006,
+  "lon": 153.007815,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Newmarket station",
+   "lat": -27.43302,
+   "lon": 153.010165,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1049520465",
+  "name": "Norman Park street parking",
+  "kind": "street",
+  "lat": -27.480473,
+  "lon": 153.066057,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Norman Park station",
+   "lat": -27.481707,
+   "lon": 153.061639,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w38663116",
+  "name": "North Boondall public car park",
+  "kind": "carpark",
+  "lat": -27.338318,
+  "lon": 153.055539,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "North Boondall station",
+   "lat": -27.33868,
+   "lon": 153.060357,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-r13825265",
+  "name": "North Lakes public car park",
+  "kind": "carpark",
+  "lat": -27.240339,
+  "lon": 153.018783,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "North Lakes station",
+   "lat": -27.238029,
+   "lon": 153.017458,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-r13827892",
+  "name": "North Lakes street parking",
+  "kind": "street",
+  "lat": -27.238437,
+  "lon": 153.017273,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "North Lakes station",
+   "lat": -27.238029,
+   "lon": 153.017458,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 11
+ },
+ {
+  "id": "osm-r13827891",
+  "name": "North Lakes street parking",
+  "kind": "street",
+  "lat": -27.238264,
+  "lon": 153.016597,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "North Lakes station",
+   "lat": -27.238029,
+   "lon": 153.017458,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 2
+ },
+ {
+  "id": "osm-w9995884",
+  "name": "Northgate public car park",
+  "kind": "carpark",
+  "lat": -27.391471,
+  "lon": 153.068821,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Northgate station",
+   "lat": -27.393276,
+   "lon": 153.068837,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-r14724753",
+  "name": "Northshore Hamilton ferry terminal street parking",
+  "kind": "street",
+  "lat": -27.449628,
+  "lon": 153.083476,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Northshore Hamilton ferry terminal",
+   "lat": -27.445456,
+   "lon": 153.083784,
+   "modes": [
+    "ferry"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 13
+ },
+ {
+  "id": "osm-r14724758",
+  "name": "Northshore Hamilton ferry terminal street parking",
+  "kind": "street",
+  "lat": -27.449799,
+  "lon": 153.083518,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Northshore Hamilton ferry terminal",
+   "lat": -27.445456,
+   "lon": 153.083784,
+   "modes": [
+    "ferry"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 26
+ },
+ {
+  "id": "osm-w1266709793",
+  "name": "Nundah street parking",
+  "kind": "street",
+  "lat": -27.401263,
+  "lon": 153.062295,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Nundah station",
+   "lat": -27.401045,
+   "lon": 153.061677,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1266709792",
+  "name": "Nundah street parking",
+  "kind": "street",
+  "lat": -27.401474,
+  "lon": 153.062198,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Nundah station",
+   "lat": -27.401045,
+   "lon": 153.061677,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-r4801030",
+  "name": "Ormiston public car park",
+  "kind": "carpark",
+  "lat": -27.511572,
+  "lon": 153.254606,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Ormiston station",
+   "lat": -27.514533,
+   "lon": 153.25636,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w857761355",
+  "name": "Ormiston street parking",
+  "kind": "street",
+  "lat": -27.516044,
+  "lon": 153.257608,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:55",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Ormiston station",
+   "lat": -27.514533,
+   "lon": 153.25636,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1121675754",
+  "name": "Ormiston street parking",
+  "kind": "street",
+  "lat": -27.516133,
+  "lon": 153.25758,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:55",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Ormiston station",
+   "lat": -27.514533,
+   "lon": 153.25636,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1227083635",
+  "name": "Rail Trail parking",
+  "kind": "carpark",
+  "lat": -27.0793,
+  "lon": 152.950214,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 1,
+  "fillsByHhmm": "08:00",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Caboolture station",
+   "lat": -27.082646,
+   "lon": 152.953449,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 16
+ },
+ {
+  "id": "osm-w48541339",
+  "name": "Redbank street parking",
+  "kind": "street",
+  "lat": -27.599782,
+  "lon": 152.8715,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:55",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Redbank station",
+   "lat": -27.599707,
+   "lon": 152.872361,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w441909985",
+  "name": "RiverLink Shopping Centre public car park",
+  "kind": "carpark",
+  "lat": -27.608573,
+  "lon": 152.760108,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "RiverLink Shopping Centre",
+   "lat": -27.606649,
+   "lon": 152.758657,
+   "modes": [
+    "bus"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1251874271",
+  "name": "RiverLink Shopping Centre street parking",
+  "kind": "street",
+  "lat": -27.607144,
+  "lon": 152.760887,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "RiverLink Shopping Centre",
+   "lat": -27.606649,
+   "lon": 152.758657,
+   "modes": [
+    "bus"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w999330966",
+  "name": "RiverLink Shopping Centre street parking",
+  "kind": "street",
+  "lat": -27.606049,
+  "lon": 152.761089,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "RiverLink Shopping Centre",
+   "lat": -27.606649,
+   "lon": 152.758657,
+   "modes": [
+    "bus"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 15
+ },
+ {
+  "id": "osm-w579837045",
+  "name": "Rochedale public car park",
+  "kind": "carpark",
+  "lat": -27.596255,
+  "lon": 153.108498,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Rochedale station",
+   "lat": -27.592936,
+   "lon": 153.111153,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w953616670",
+  "name": "Rochedale street parking",
+  "kind": "street",
+  "lat": -27.593097,
+  "lon": 153.109987,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:55",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Rochedale station",
+   "lat": -27.592936,
+   "lon": 153.111153,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w953616672",
+  "name": "Rochedale street parking",
+  "kind": "street",
+  "lat": -27.593136,
+  "lon": 153.109871,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:55",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Rochedale station",
+   "lat": -27.592936,
+   "lon": 153.111153,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w675546609",
+  "name": "Runcorn public car park",
+  "kind": "carpark",
+  "lat": -27.590761,
+  "lon": 153.069259,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Runcorn station",
+   "lat": -27.592573,
+   "lon": 153.068547,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1565437886",
+  "name": "Sandgate bus street parking",
+  "kind": "street",
+  "lat": -27.320635,
+  "lon": 153.068008,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:55",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Sandgate bus station",
+   "lat": -27.322082,
+   "lon": 153.068854,
+   "modes": [
+    "bus"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1565437885",
+  "name": "Sandgate bus street parking",
+  "kind": "street",
+  "lat": -27.320322,
+  "lon": 153.068304,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:55",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Sandgate bus station",
+   "lat": -27.322082,
+   "lon": 153.068854,
+   "modes": [
+    "bus"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w45422188",
+  "name": "Sandgate public car park",
+  "kind": "carpark",
+  "lat": -27.323662,
+  "lon": 153.073087,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Sandgate station",
+   "lat": -27.322125,
+   "lon": 153.069025,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1364392568",
+  "name": "Sherwood street parking",
+  "kind": "street",
+  "lat": -27.53416,
+  "lon": 152.980241,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:00",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Sherwood station",
+   "lat": -27.531137,
+   "lon": 152.979767,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w33332090",
+  "name": "Shorncliffe public car park",
+  "kind": "carpark",
+  "lat": -27.325352,
+  "lon": 153.08548,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Shorncliffe station",
+   "lat": -27.327087,
+   "lon": 153.080993,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w309210931",
+  "name": "Sparkes Place",
+  "kind": "carpark",
+  "lat": -27.42912,
+  "lon": 153.033065,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Truro Street station",
+   "lat": -27.42682,
+   "lon": 153.032908,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 28
+ },
+ {
+  "id": "osm-w530720221",
+  "name": "Springfield Central public car park",
+  "kind": "carpark",
+  "lat": -27.67588,
+  "lon": 152.898889,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Springfield Central station",
+   "lat": -27.674125,
+   "lon": 152.902793,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w395993520",
+  "name": "Springfield public car park",
+  "kind": "carpark",
+  "lat": -27.659734,
+  "lon": 152.920733,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Springfield station",
+   "lat": -27.66003,
+   "lon": 152.921309,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w186583504",
+  "name": "Springwood public car park",
+  "kind": "carpark",
+  "lat": -27.615205,
+  "lon": 153.125685,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:10",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Springwood station",
+   "lat": -27.615106,
+   "lon": 153.124894,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1232836807",
+  "name": "Springwood street parking",
+  "kind": "street",
+  "lat": -27.615866,
+  "lon": 153.122289,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:20",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Springwood station",
+   "lat": -27.615106,
+   "lon": 153.124894,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 8
+ },
+ {
+  "id": "osm-w1199324020",
+  "name": "Springwood street parking",
+  "kind": "street",
+  "lat": -27.617707,
+  "lon": 153.127591,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:20",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Springwood station",
+   "lat": -27.615106,
+   "lon": 153.124894,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 3
+ },
+ {
+  "id": "osm-w1080515970",
+  "name": "Strathpine street parking",
+  "kind": "street",
+  "lat": -27.310662,
+  "lon": 152.990001,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Strathpine station",
+   "lat": -27.311118,
+   "lon": 152.989659,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1080515971",
+  "name": "Strathpine street parking",
+  "kind": "street",
+  "lat": -27.310236,
+  "lon": 152.989917,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Strathpine station",
+   "lat": -27.311118,
+   "lon": 152.989659,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w309002006",
+  "name": "Sunnybank public car park",
+  "kind": "carpark",
+  "lat": -27.583768,
+  "lon": 153.052777,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Sunnybank station",
+   "lat": -27.58062,
+   "lon": 153.053996,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w460009256",
+  "name": "Taringa public car park",
+  "kind": "carpark",
+  "lat": -27.491666,
+  "lon": 152.979147,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:25",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Taringa station",
+   "lat": -27.493308,
+   "lon": 152.98186,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1260443367",
+  "name": "Taringa street parking",
+  "kind": "street",
+  "lat": -27.49342,
+  "lon": 152.982993,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Taringa station",
+   "lat": -27.493308,
+   "lon": 152.98186,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w868311149",
+  "name": "Thorneside public car park",
+  "kind": "carpark",
+  "lat": -27.483381,
+  "lon": 153.192663,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Thorneside station",
+   "lat": -27.486298,
+   "lon": 153.193068,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1432443916",
+  "name": "Toombul street parking",
+  "kind": "street",
+  "lat": -27.405011,
+  "lon": 153.06064,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Toombul station",
+   "lat": -27.407447,
+   "lon": 153.05886,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1242711791",
+  "name": "Toombul street parking",
+  "kind": "street",
+  "lat": -27.409119,
+  "lon": 153.056171,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Toombul station",
+   "lat": -27.407447,
+   "lon": 153.05886,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w550340247",
+  "name": "Trinder Park street parking",
+  "kind": "street",
+  "lat": -27.63492,
+  "lon": 153.097064,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:55",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Trinder Park station",
+   "lat": -27.631828,
+   "lon": 153.097666,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w550340249",
+  "name": "Trinder Park street parking",
+  "kind": "street",
+  "lat": -27.635881,
+  "lon": 153.096866,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:55",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Trinder Park station",
+   "lat": -27.631828,
+   "lon": 153.097666,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w26160036",
+  "name": "Upper Mt Gravatt public car park",
+  "kind": "carpark",
+  "lat": -27.565507,
+  "lon": 153.083386,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Upper Mt Gravatt station",
+   "lat": -27.564009,
+   "lon": 153.081386,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w986186029",
+  "name": "Victoria Point Central public car park",
+  "kind": "carpark",
+  "lat": -27.586455,
+  "lon": 153.28182,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Victoria Point Central",
+   "lat": -27.585866,
+   "lon": 153.282032,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w776859185",
+  "name": "Victoria Point Central street parking",
+  "kind": "street",
+  "lat": -27.5854,
+  "lon": 153.280075,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Victoria Point Central",
+   "lat": -27.585866,
+   "lon": 153.282032,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w776859182",
+  "name": "Victoria Point Central street parking",
+  "kind": "street",
+  "lat": -27.585455,
+  "lon": 153.279953,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Victoria Point Central",
+   "lat": -27.585866,
+   "lon": 153.282032,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1062251118",
+  "name": "Walloon public car park",
+  "kind": "carpark",
+  "lat": -27.606152,
+  "lon": 152.664168,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Walloon station",
+   "lat": -27.607215,
+   "lon": 152.667634,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1062251117",
+  "name": "Walloon street parking",
+  "kind": "street",
+  "lat": -27.605609,
+  "lon": 152.664566,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:55",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Walloon station",
+   "lat": -27.607215,
+   "lon": 152.667634,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1417148404",
+  "name": "Wilston street parking",
+  "kind": "street",
+  "lat": -27.43348,
+  "lon": 153.020465,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Wilston station",
+   "lat": -27.436211,
+   "lon": 153.019034,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1445625743",
+  "name": "Windsor street parking",
+  "kind": "street",
+  "lat": -27.432306,
+  "lon": 153.033017,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Windsor station",
+   "lat": -27.434934,
+   "lon": 153.029041,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w52974680",
+  "name": "Woodridge public car park",
+  "kind": "carpark",
+  "lat": -27.641946,
+  "lon": 153.104824,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Woodridge station",
+   "lat": -27.63829,
+   "lon": 153.103625,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1581690696",
+  "name": "Woodridge street parking",
+  "kind": "street",
+  "lat": -27.637783,
+  "lon": 153.103829,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:55",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Woodridge station",
+   "lat": -27.63829,
+   "lon": 153.103625,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 5
+ },
+ {
+  "id": "osm-w1581690695",
+  "name": "Woodridge street parking",
+  "kind": "street",
+  "lat": -27.637652,
+  "lon": 153.1035,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:55",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Woodridge station",
+   "lat": -27.63829,
+   "lon": 153.103625,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)",
+  "capacity": 1
+ },
+ {
+  "id": "osm-w1369579586",
+  "name": "Wooloowin street parking",
+  "kind": "street",
+  "lat": -27.42017,
+  "lon": 153.040383,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:35",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Wooloowin station",
+   "lat": -27.420028,
+   "lon": 153.043557,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w998690328",
+  "name": "Wynnum Central street parking",
+  "kind": "street",
+  "lat": -27.443444,
+  "lon": 153.167698,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:55",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Wynnum Central station",
+   "lat": -27.445791,
+   "lon": 153.17073,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w986031335",
+  "name": "Yeerongpilly public car park",
+  "kind": "carpark",
+  "lat": -27.52437,
+  "lon": 153.013373,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Yeerongpilly station",
+   "lat": -27.525324,
+   "lon": 153.014186,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1481029827",
+  "name": "Yeerongpilly street parking",
+  "kind": "street",
+  "lat": -27.52547,
+  "lon": 153.014144,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Yeerongpilly station",
+   "lat": -27.525324,
+   "lon": 153.014186,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1481029829",
+  "name": "Yeerongpilly street parking",
+  "kind": "street",
+  "lat": -27.52581,
+  "lon": 153.01403,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:50",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Yeerongpilly station",
+   "lat": -27.525324,
+   "lon": 153.014186,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1288578936",
+  "name": "Zillmere public car park",
+  "kind": "carpark",
+  "lat": -27.361238,
+  "lon": 153.040703,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": false,
+  "extraParkMin": 1,
+  "fillsByHhmm": "07:45",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Zillmere station",
+   "lat": -27.359268,
+   "lon": 153.037514,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1248950420",
+  "name": "Zillmere street parking",
+  "kind": "street",
+  "lat": -27.359421,
+  "lon": 153.037,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:55",
+  "fillSource": "estimated",
+  "station": {
+   "name": "Zillmere station",
+   "lat": -27.359268,
+   "lon": 153.037514,
+   "modes": [
+    "rail"
+   ]
+  },
+  "source": "OpenStreetMap contributors (ODbL)"
+ },
+ {
+  "id": "osm-w1248950421",
+  "name": "Zillmere street parking",
+  "kind": "street",
+  "lat": -27.359922,
+  "lon": 153.037352,
+  "perDay": 0,
+  "stayKnown": false,
+  "feeKnown": true,
+  "extraParkMin": 3,
+  "fillsByHhmm": "07:55",
   "fillSource": "estimated",
   "station": {
    "name": "Zillmere station",

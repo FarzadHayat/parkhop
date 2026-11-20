@@ -56,9 +56,20 @@ export interface Station {
   modes: TransitMode[]
 }
 
+/** pnr = signed park 'n' ride; carpark = other public car park; street = kerbside parking. */
+export type ParkingKind = 'pnr' | 'carpark' | 'street'
+
 export interface Lot extends LatLon {
   id: string
   name: string
+  /** Defaults to 'pnr'. */
+  kind?: ParkingKind
+  /** False when nobody has mapped the time limit: tell people to check the signs. */
+  stayKnown?: boolean
+  /** False when the price is a guess. */
+  feeKnown?: boolean
+  /** Extra minutes to find a space (kerbside parking means circling). */
+  extraParkMin?: number
   capacity?: number
   /** Daily fee; 0 for free. */
   perDay: number
@@ -93,6 +104,33 @@ export interface Region {
   fareNote: string
   defaultFuelPrice: number
   lots: Lot[]
+  /** Paid-parking areas outside the city centre (hospitals, universities, inner suburbs). */
+  precincts?: Precinct[]
+  /** Toll roads, matched by road name on the driving route. */
+  tolls?: TollRoad[]
+  /** School terms and public holidays, for the traffic model. */
+  calendar?: TravelCalendar
+}
+
+export interface Precinct extends LatLon {
+  id: string
+  name: string
+  radiusKm: number
+  perDay: number
+  confidence: 'high' | 'medium' | 'low'
+}
+
+export interface TollRoad {
+  id: string
+  name: string
+  roadNames: string[]
+  carPrice: number
+}
+
+export interface TravelCalendar {
+  /** Inclusive local date ranges (YYYY-MM-DD) when schools are open. */
+  schoolTerms: { start: string; end: string }[]
+  publicHolidays: string[]
 }
 
 export interface Settings {
@@ -131,6 +169,8 @@ export interface Segment {
   /** Minutes between services on this route around this time. */
   headwayMin?: number
   alerts?: string[]
+  /** Extra detail to show with the step, e.g. a toll road used. */
+  note?: string
 }
 
 export interface CostBreakdown {
@@ -138,6 +178,7 @@ export interface CostBreakdown {
   wear: number
   parking: number
   fares: number
+  tolls?: number
 }
 
 export type LegKind = 'drive' | 'transit' | 'parkride' | 'retrieve'
@@ -215,6 +256,8 @@ export interface DayOption {
   lotIds: string[]
   leaveBy: number
   totalTravelMin: number
+  /** Expected minutes lost hunting for parking when the lot is full. Counts against the option. */
+  parkingHassleMin?: number
   cost: CostBreakdown
   costTotal: number
   reliability: Reliability

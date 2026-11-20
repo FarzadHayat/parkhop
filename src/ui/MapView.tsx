@@ -39,6 +39,7 @@ function lotsGeo(candidates: Set<string>, used: Set<string>): FC {
           fills: l.fillsByHhmm ?? 'rarely',
           // 0 = fills very early, 1 = mid, 2 = later
           tier: mins < 7 * 60 + 20 ? 0 : mins < 7 * 60 + 50 ? 1 : 2,
+          street: l.kind === 'street' || l.kind === 'carpark' ? 1 : 0,
           cand: candidates.has(l.id) ? 1 : 0,
           used: used.has(l.id) ? 1 : 0,
         },
@@ -152,10 +153,10 @@ export function MapView() {
         type: 'circle',
         source: 'lots',
         paint: {
-          'circle-radius': ['case', ['==', ['get', 'used'], 1], 9, ['==', ['get', 'cand'], 1], 6, 4],
+          'circle-radius': ['case', ['==', ['get', 'used'], 1], 9, ['==', ['get', 'cand'], 1], 6, ['==', ['get', 'street'], 1], 2.5, 4],
           'circle-color': ['match', ['get', 'tier'], 0, '#dc2626', 1, '#d97706', '#16a34a'],
           'circle-opacity': ['case', ['==', ['get', 'cand'], 1], 1, 0.55],
-          'circle-stroke-width': ['case', ['==', ['get', 'used'], 1], 3, 1],
+          'circle-stroke-width': ['case', ['==', ['get', 'used'], 1], 3, ['==', ['get', 'street'], 1], 0, 1],
           'circle-stroke-color': mode === 'dark' ? '#fafaf9' : '#1c1917',
         },
       })
@@ -266,6 +267,10 @@ export function MapView() {
         <span>
           <i style={{ background: '#16a34a' }} />
           later
+        </span>
+        <span>
+          <i className="small-dot" />
+          small dots: street or other parking
         </span>
       </div>
     </div>

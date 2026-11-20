@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# local API caches and secrets
+.cache
+.env*.local

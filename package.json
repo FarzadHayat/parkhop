@@ -12,6 +12,7 @@
     "smoke": "LIVE=1 vitest run scripts/live-smoke.test.ts --silent=false"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^1.12.0",
     "maplibre-gl": "^6.19.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",

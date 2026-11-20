@@ -1,4 +1,7 @@
-import type { DayPlan, Lot, Region } from '../engine/types'
+import type { DayPlan, Lot, Precinct, Region, TollRoad } from '../engine/types'
+import precincts from './brisbane-precincts.json'
+import tollData from './brisbane-tolls.json'
+import calendar from './qld-school-terms.json'
 import rawLots from './seq-lots.json'
 
 // South East Queensland. Sources and caveats: docs/research.md.
@@ -14,6 +17,19 @@ const lots: Lot[] = (rawLots as Lot[]).map((l) => {
   return hit ? { ...l, fillsByHhmm: REPORTED_FULL[hit], fillSource: 'reported' as const } : l
 })
 
+/**
+ * Toll roads, matched by the road names OSRM reports. Gateway tolls are charged
+ * only on the bridges (the motorway north of the river is free), and the Logan
+ * Motorway has several gantries, so we charge one typical gantry.
+ */
+const NAME_OVERRIDES: Record<string, string[]> = {
+  'gateway-murarrie': ['Sir Leo Hielscher Bridges', 'Gateway Bridge'],
+  'logan-kuraby-compton': ['Logan Motorway'],
+}
+const tolls: TollRoad[] = tollData.roads
+  .filter((t) => !['logan-loganlea', 'logan-heathwood-paradise'].includes(t.id))
+  .map((t) => ({ id: t.id, name: t.name, carPrice: t.carPrice, roadNames: NAME_OVERRIDES[t.id] ?? t.osrmNames }))
+
 export const region: Region = {
   id: 'seq',
   name: 'South East Queensland',
@@ -28,6 +44,9 @@ export const region: Region = {
   fareNote: '50c flat fare on all TransLink services (permanent by law), except Airtrain',
   defaultFuelPrice: 1.95,
   lots,
+  precincts: (precincts as Precinct[]).filter((p) => p.id !== 'cbd'),
+  tolls,
+  calendar: { schoolTerms: calendar.terms, publicHolidays: calendar.publicHolidays },
 }
 
 const date = '2026-11-23'

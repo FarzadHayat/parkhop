@@ -1,6 +1,6 @@
 import { inboundFraction } from './geo'
 import { localHour, localWeekday } from './time'
-import type { LatLon, Weather } from './types'
+import type { LatLon, TravelCalendar, Weather } from './types'
 
 /**
  * Free-flow router times (OSRM) ignore traffic. Without a live traffic feed we
@@ -22,6 +22,25 @@ function bump(hour: number, centre: number, width: number): number {
   return Math.exp(-x * x)
 }
 
+export type DayType = 'school' | 'holiday' | 'public-holiday' | 'weekend'
+
+function localDate(epoch: number, timeZone: string): string {
+  return new Intl.DateTimeFormat('en-CA', { timeZone, year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(epoch))
+}
+
+/** What kind of day it is for traffic. Without a calendar every weekday counts as a school day. */
+export function dayType(epoch: number, timeZone: string, calendar?: TravelCalendar): DayType {
+  const wd = localWeekday(epoch, timeZone)
+  if (wd === 0 || wd === 6) return 'weekend'
+  if (!calendar) return 'school'
+  const d = localDate(epoch, timeZone)
+  if (calendar.publicHolidays.includes(d)) return 'public-holiday'
+  // Only judge school holidays inside the years the calendar covers.
+  const years = new Set(calendar.schoolTerms.map((t) => t.start.slice(0, 4)))
+  if (!years.has(d.slice(0, 4))) return 'school'
+  return calendar.schoolTerms.some((t) => d >= t.start && d <= t.end) ? 'school' : 'holiday'
+}
+
 export interface TrafficEstimate {
   /** Multiplier on free-flow time. */
   factor: number
@@ -29,6 +48,7 @@ export interface TrafficEstimate {
   cv: number
   label: 'light' | 'moderate' | 'heavy'
   rain: boolean
+  day: DayType
 }
 
 export function rainAt(weather: Weather | undefined, epoch: number): { mm: number; prob: number } {
@@ -46,10 +66,11 @@ export function trafficAt(
   centre: LatLon,
   timeZone: string,
   weather?: Weather,
+  calendar?: TravelCalendar,
 ): TrafficEstimate {
   const h = localHour(epoch, timeZone)
-  const wd = localWeekday(epoch, timeZone)
-  const weekend = wd === 0 || wd === 6
+  const day = dayType(epoch, timeZone, calendar)
+  const weekend = day === 'weekend' || day === 'public-holiday'
   const inbound = inboundFraction(from, to, centre)
 
   let factor: number
@@ -60,8 +81,10 @@ export function trafficAt(
     const pm = bump(h, 17, 1.3)
     const amPeak = inbound * PEAK_INBOUND_AM + (1 - inbound) * COUNTER_PEAK
     const pmPeak = (1 - inbound) * PEAK_OUTBOUND_PM + inbound * COUNTER_PEAK
-    const day = h >= 6 && h <= 20 ? DAYTIME : NIGHT
-    factor = Math.max(day, 1 + (amPeak - 1) * am, 1 + (pmPeak - 1) * pm)
+    // School holidays take the school run off the road: peaks are noticeably lighter.
+    const peakScale = day === 'holiday' ? 0.7 : 1
+    const base = h >= 6 && h <= 20 ? DAYTIME : NIGHT
+    factor = Math.max(base, 1 + (amPeak - 1) * am * peakScale, 1 + (pmPeak - 1) * pm * peakScale)
   }
 
   // Rain slows urban traffic roughly 5-15% and makes it less predictable.
@@ -72,5 +95,5 @@ export function trafficAt(
   const congestion = Math.max(0, factor - 1)
   const cv = 0.07 + congestion * 0.22 + (raining ? 0.04 : 0)
   const label = factor >= 1.4 ? 'heavy' : factor >= 1.15 ? 'moderate' : 'light'
-  return { factor, cv, label, rain: raining }
+  return { factor, cv, label, rain: raining, day }
 }

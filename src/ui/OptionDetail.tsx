@@ -12,7 +12,7 @@ function stepText(s: Segment, leg: LegPlan, toLabel: string, lot?: Lot): string 
   const mins = Math.round((s.end - s.start) / 60000)
   switch (s.mode) {
     case 'drive':
-      return `Drive ${s.distanceM ? `${(s.distanceM / 1000).toFixed(0)} km ` : ''}to ${s.toName}`
+      return `Drive ${s.distanceM ? `${(s.distanceM / 1000).toFixed(0)} km ` : ''}to ${s.toName}${s.note ? `, ${s.note}` : ''}`
     case 'park':
       if (leg.kind === 'retrieve') return `Back to your car at ${s.fromName}`
       return lot ? `Park at ${lot.name}, head to ${lot.station.name}` : `Park near ${s.toName}`
@@ -87,7 +87,10 @@ function LotCard({ lot }: { lot: Lot }) {
   const source = { reported: 'commuter reports', estimated: 'estimate', user: 'your report', unknown: 'unknown' }[reported ? 'user' : lot.fillSource]
   return (
     <section className="lot-card" aria-label={lot.name}>
-      <h3>{lot.name}</h3>
+      <h3>
+        {lot.name} <span className="badge">{lot.kind === 'street' ? 'Street parking' : lot.kind === 'carpark' ? 'Public car park' : "Park 'n' ride"}</span>
+      </h3>
+      {lot.stayKnown === false && <p className="fine warn">Time limits here are not mapped. Check the signs before leaving your car all day.</p>}
       <dl className="facts">
         <div>
           <dt>Station</dt>
@@ -95,7 +98,10 @@ function LotCard({ lot }: { lot: Lot }) {
         </div>
         <div>
           <dt>Cost</dt>
-          <dd>{lot.perDay ? `${money(lot.perDay)}/day` : 'Free'}</dd>
+          <dd>
+            {lot.perDay ? `${money(lot.perDay)}/day` : 'Free'}
+            {lot.feeKnown === false && <span className="muted"> (estimate)</span>}
+          </dd>
         </div>
         <div>
           <dt>Spaces</dt>
@@ -204,6 +210,7 @@ export function OptionDetail() {
       </div>
       <p className="cost-line">
         Fuel {money(c.fuel, 2)} · Car wear {money(c.wear, 2)} · Parking {money(c.parking, 2)} · Fares {money(c.fares, 2)}
+        {c.tolls ? ` · Tolls ${money(c.tolls, 2)}` : ''}
         {drive && drive.id !== o.id && (
           <>
             <br />

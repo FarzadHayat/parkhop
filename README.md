@@ -14,7 +14,15 @@ npm run smoke      # live end-to-end plan against the real APIs
 npm run build      # installable PWA in dist/
 ```
 
-No API keys needed. All data comes from free public services (Transitous, OSRM, Photon, Open-Meteo, OpenFreeMap). They are fair-use and non-commercial, so read DESIGN.md before shipping anything commercial.
+The planner needs no API keys. Optional:
+
+- **Claude assistant:** put `ANTHROPIC_API_KEY=...` in `.env.local` (never committed). The server keeps the key, and the browser never sees it.
+- **Tanda:** in My shifts, paste a Tanda access token (scopes `me`, `roster`, `department`), or use the demo roster. The token stays in that browser tab.
+- **Phone preview over Tailscale:** `tailscale serve --bg --https=8443 http://127.0.0.1:5191` with `npm run dev -- --port 5191`.
+
+The dev and preview servers cache timetable and road answers in `.cache/`, so a repeat plan is instant and a demo survives a flaky network. Demo notes are in [PITCH.md](PITCH.md).
+
+All planning data comes from free public services (Transitous, OSRM, Photon, Open-Meteo, OpenFreeMap). They are fair-use and non-commercial, so read DESIGN.md before shipping anything commercial.
 
 ## Refresh the park 'n' ride data
 
@@ -22,5 +30,7 @@ No API keys needed. All data comes from free public services (Transitous, OSRM, 
 # 1. Export SEQ park 'n' ride lots from Overpass to overpass.json
 #    query: nwr["amenity"="parking"]["park_ride"]["park_ride"!="no"](-28.25,152.55,-26.35,153.6);out center tags;
 # 2. Unzip stops.txt from https://gtfsrt.api.translink.com.au/GTFS/SEQ_GTFS.zip
-python3 -I scripts/build-seq-lots.py overpass.json stops.txt > src/data/seq-lots.json
+# 3. Optional: other parking (street, public car parks) from Overpass to other.json
+#    query: nwr["amenity"="parking"][!"park_ride"](-27.75,152.6,-27.0,153.3);out center tags;
+python3 -I scripts/build-seq-lots.py overpass.json stops.txt other.json > src/data/seq-lots.json
 ```
