@@ -17,6 +17,8 @@ const FIELDS: { key: NumKey; label: string; unit: string; step: number; min: num
 export const SettingsDialog = forwardRef<HTMLDialogElement>(function SettingsDialog(_, ref) {
   const settings = useApp((s) => s.settings)
   const setSettings = useApp((s) => s.setSettings)
+  const myParking = useApp((s) => s.myParking)
+  const forgetParking = useApp((s) => s.forgetParking)
   return (
     <dialog ref={ref} className="settings" aria-labelledby="settings-title" {...({ closedby: 'any' } as object)}>
       <form method="dialog">
@@ -61,6 +63,25 @@ export const SettingsDialog = forwardRef<HTMLDialogElement>(function SettingsDia
         <button type="button" className="btn ghost small" onClick={() => setSettings({ ...defaultSettings, priority: settings.priority })}>
           Reset to defaults
         </button>
+        <section className="about">
+          <h3>Your parking</h3>
+          {myParking.length === 0 ? (
+            <p className="fine">Set a stop's parking to "My permit" and ParkHop remembers it for that place, including for your shifts.</p>
+          ) : (
+            <ul className="my-parking">
+              {myParking.map((p, i) => (
+                <li key={`${p.lat},${p.lon}`}>
+                  <span>
+                    {p.name} · {p.perDay ? `$${p.perDay}/day` : 'free'}
+                  </span>
+                  <button type="button" className="btn small ghost" onClick={() => forgetParking(i)} aria-label={`Forget parking permit at ${p.name}`}>
+                    Forget
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
+        </section>
         <section className="about">
           <h3>Where the numbers come from</h3>
           <ul>

@@ -13,6 +13,7 @@ How to work:
 - When the person describes a day or a trip, call set_day with every stop in order, then call plan_options, then answer.
 - The first and last stop are home unless they say otherwise. If a stop is already set in <app_state> and they did not change it, pass "keep" as its place.
 - A school drop-off is a short stop: stay 5 minutes, no parking. Work stops usually have an arrive-by time and a leave-after time.
+- If they have a parking permit, a staff car park or free parking at a place, set that stop's parking to "permit" (ParkHop remembers it). "default" already uses a saved permit.
 - For "I need the car for pickup" or similar, set that leg's rule to "car". For "no driving" use "transit".
 - If they ask about their Tanda shifts, roster or week, call plan_shifts.
 - If something is ambiguous, make a sensible Brisbane assumption, act, and say what you assumed in a few words.
@@ -55,10 +56,10 @@ export const TOOLS: ToolDef[] = [
               leave_after: { ...nullable({ type: 'string' }), description: 'Earliest departure from this stop, 24 hour HH:MM.' },
               stay_min: { ...nullable({ type: 'integer' }), description: 'Minimum minutes spent at the stop.' },
               parking: {
-                enum: ['default', 'none', 'free', 'paid'],
-                description: 'Parking at this stop. "default" uses the usual price for the area.',
+                enum: ['default', 'none', 'free', 'paid', 'permit'],
+                description: 'Parking at this stop. "default" uses a saved permit or the usual price for the area. "permit" means they have their own parking there.',
               },
-              parking_per_day: { ...nullable({ type: 'number' }), description: 'Daily price when parking is "paid".' },
+              parking_per_day: { ...nullable({ type: 'number' }), description: 'Daily price when parking is "paid", or what a permit costs per day (null = free).' },
             },
             required: ['label', 'place', 'arrive_by', 'leave_after', 'stay_min', 'parking', 'parking_per_day'],
             additionalProperties: false,

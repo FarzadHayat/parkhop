@@ -42,7 +42,7 @@ interface StopInput {
   arrive_by: string | null
   leave_after: string | null
   stay_min: number | null
-  parking: 'default' | 'none' | 'free' | 'paid'
+  parking: 'default' | 'none' | 'free' | 'paid' | 'permit'
   parking_per_day: number | null
 }
 
@@ -71,7 +71,9 @@ async function setDay(input: { date: string | null; stops: StopInput[]; leg_rule
           ? { perDay: 0 }
           : s.parking === 'paid'
             ? { perDay: s.parking_per_day ?? 20 }
-            : i === 0
+            : s.parking === 'permit'
+              ? { perDay: s.parking_per_day ?? 0, permit: true }
+              : i === 0
               ? { perDay: 0 }
               : defaultParkingFor(place)
     stops.push({
@@ -88,6 +90,8 @@ async function setDay(input: { date: string | null; stops: StopInput[]; leg_rule
   const rules = stops.slice(1).map((_, i) => (['any', 'car', 'transit'].includes(input.leg_rules?.[i]) ? input.leg_rules[i] : 'any'))
   const date = input.date && /^\d{4}-\d{2}-\d{2}$/.test(input.date) ? input.date : current.date
   useApp.getState().setPlan({ date, stops, legRules: rules })
+  // Remember permits the person mentioned, the same way the parking menu does.
+  for (const st of stops) if (st.parking?.permit) useApp.getState().updateStop(st.id, { parking: st.parking })
   useApp.setState({ result: null, options: [], selectedId: null, stale: false, status: { kind: 'idle' } })
   return { date, stops: found }
 }

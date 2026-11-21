@@ -27,7 +27,7 @@ function TimeChip({ label, value, onChange }: { label: string; value?: string; o
 function ParkingField({ stop }: { stop: Stop }) {
   const id = useId()
   const updateStop = useApp((s) => s.updateStop)
-  const mode = !stop.parking ? 'none' : stop.parking.perDay === 0 && !stop.parking.perHour ? 'free' : 'paid'
+  const mode = !stop.parking ? 'none' : stop.parking.permit ? 'permit' : stop.parking.perDay === 0 && !stop.parking.perHour ? 'free' : 'paid'
   return (
     <span className="chip chip-parking">
       <label htmlFor={id}>Parking</label>
@@ -36,13 +36,32 @@ function ParkingField({ stop }: { stop: Stop }) {
         value={mode}
         onChange={(e) => {
           const v = e.target.value
-          updateStop(stop.id, { parking: v === 'none' ? undefined : v === 'free' ? { perDay: 0 } : { perDay: stop.parking?.perDay || 25 } })
+          updateStop(stop.id, {
+            parking: v === 'none' ? undefined : v === 'free' ? { perDay: 0 } : v === 'permit' ? { perDay: 0, permit: true } : { perDay: stop.parking?.perDay || 25 },
+          })
         }}
       >
         <option value="none">None</option>
         <option value="free">Free</option>
+        <option value="permit">My permit</option>
         <option value="paid">Paid</option>
       </select>
+      {mode === 'permit' && (
+        <>
+          <span aria-hidden="true">$</span>
+          <input
+            type="number"
+            inputMode="decimal"
+            min={0}
+            step={1}
+            aria-label="What your permit costs per day, dollars"
+            title="What your permit costs you per day (0 if free)"
+            value={stop.parking!.perDay}
+            onChange={(e) => updateStop(stop.id, { parking: { perDay: Math.max(0, Number(e.target.value) || 0), permit: true } })}
+          />
+          <span className="muted">/day</span>
+        </>
+      )}
       {mode === 'paid' && (
         <>
           <span aria-hidden="true">$</span>

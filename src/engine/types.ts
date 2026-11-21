@@ -23,6 +23,8 @@ export interface StopParking {
   perHour?: number
   /** Longest legal stay in minutes (time-limited street parking). */
   maxStayMin?: number
+  /** You hold a permit or staff space here, so the price is yours, not the area's. */
+  permit?: boolean
 }
 
 export interface Stop {

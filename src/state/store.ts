@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 import { defaultSettings, planDay, rerank } from '../engine/planner'
 import { nextWeekday } from '../engine/time'
-import type { DayOption, DayPlan, LegRule, Lot, Place, PlanResult, Settings, Stop } from '../engine/types'
+import type { DayOption, DayPlan, LegRule, Lot, Place, PlanResult, Settings, Stop, StopParking } from '../engine/types'
 import { region, presets } from '../data/seq'
 import { km } from '../engine/geo'
 import { getDeps, health } from './deps'
@@ -13,6 +13,20 @@ interface StoredState {
   settings: Settings
   /** Fill times the user has reported, by lot id (HH:MM). */
   fillReports: Record<string, string>
+  /** Places where you have your own parking (a work permit, a staff space). */
+  myParking: SavedParking[]
+}
+
+export interface SavedParking {
+  name: string
+  lat: number
+  lon: number
+  perDay: number
+}
+
+/** Saved parking within ~250 m counts as the same place. */
+export function savedParkingAt(place: Place, saved: SavedParking[]): SavedParking | undefined {
+  return saved.find((p) => km(place, p) <= 0.25)
 }
 
 const STORAGE_KEY = 'parkhop:v1'
@@ -40,9 +54,19 @@ function save(s: StoredState) {
 let idSeq = 0
 export const newId = () => `s${Date.now().toString(36)}${(idSeq++).toString(36)}`
 
-/** Usual all-day parking price where a place is: CBD, a paid precinct (hospital, uni, inner suburb), or free. */
-export function defaultParkingFor(place: Place | null) {
+/**
+ * Parking price at a place: your own permit if you saved one there, otherwise the
+ * usual all-day price for the area (CBD, a paid precinct such as a hospital or
+ * uni, or free).
+ */
+export function defaultParkingFor(place: Place | null): StopParking | undefined {
   if (!place) return undefined
+  const mine = savedParkingAt(place, useApp.getState().myParking)
+  if (mine) return { perDay: mine.perDay, permit: true }
+  return defaultParkingForArea(place)
+}
+
+function defaultParkingForArea(place: Place): StopParking {
   if (km(place, region.centre) < region.cityRadiusKm) return { perDay: region.cityParkingPerDay }
   const precinct = (region.precincts ?? []).find((p) => km(place, p) <= p.radiusKm)
   return { perDay: precinct ? precinct.perDay : 0 }
@@ -81,6 +105,7 @@ interface AppState extends StoredState {
   setPicking(id: string | null): void
   focusLot(id: string | null): void
   reportFill(lotId: string, hhmm: string | null): void
+  forgetParking(index: number): void
 }
 
 const initial = load()
@@ -90,8 +115,8 @@ let runToken = 0
 
 export const useApp = create<AppState>((set, get) => {
   const persist = () => {
-    const { plan, settings, fillReports } = get()
-    save({ plan, settings, fillReports })
+    const { plan, settings, fillReports, myParking } = get()
+    save({ plan, settings, fillReports, myParking })
   }
   const changed = (plan: DayPlan) => {
     set({ plan, stale: get().result !== null })
@@ -101,6 +126,7 @@ export const useApp = create<AppState>((set, get) => {
     plan: firstPlan,
     settings: { ...defaultSettings, ...initial?.settings },
     fillReports: initial?.fillReports ?? {},
+    myParking: initial?.myParking ?? [],
     result: null,
     options: [],
     status: { kind: 'idle' },
@@ -120,6 +146,13 @@ export const useApp = create<AppState>((set, get) => {
         if (patch.place && !('parking' in patch)) next.parking = defaultParkingFor(patch.place)
         return next
       })
+      // Remember (or forget) a permit for this place, so shifts and later plans use it.
+      const stop = stops.find((s) => s.id === id)
+      if ('parking' in patch && stop?.place) {
+        const others = get().myParking.filter((p) => km(p, stop.place!) > 0.25)
+        const myParking = patch.parking?.permit ? [...others, { name: stop.place.name, lat: stop.place.lat, lon: stop.place.lon, perDay: patch.parking.perDay }] : others
+        set({ myParking })
+      }
       changed({ ...plan, stops })
     },
     setRule(index, rule) {
@@ -205,6 +238,16 @@ export const useApp = create<AppState>((set, get) => {
       else delete fillReports[lotId]
       set({ fillReports, stale: get().result !== null })
       persist()
+    },
+    forgetParking(index) {
+      const gone = get().myParking[index]
+      if (!gone) return
+      const myParking = get().myParking.filter((_, i) => i !== index)
+      // Stops at that place go back to the area's usual price.
+      const plan = get().plan
+      const stops = plan.stops.map((s) => (s.parking?.permit && s.place && km(s.place, gone) <= 0.25 ? { ...s, parking: defaultParkingForArea(s.place) } : s))
+      set({ myParking })
+      changed({ ...plan, stops })
     },
   }
 })
