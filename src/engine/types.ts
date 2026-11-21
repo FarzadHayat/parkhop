@@ -148,6 +148,8 @@ export interface Settings {
   parkToPlatformMin: number
   maxWalkMin: number
   priority: Priority
+  /** Never take a toll road when the router offers a toll-free route. */
+  avoidTolls?: boolean
 }
 
 export type Priority = 'balanced' | 'cheapest' | 'fastest' | 'reliable'

@@ -3,7 +3,7 @@ import { defaultSettings } from '../engine/planner'
 import type { Settings } from '../engine/types'
 import { region, useApp } from '../state/store'
 
-type NumKey = { [K in keyof Settings]: Settings[K] extends number ? K : never }[keyof Settings]
+type NumKey = { [K in keyof Settings]-?: Settings[K] extends number ? K : never }[keyof Settings]
 
 const FIELDS: { key: NumKey; label: string; unit: string; step: number; min: number; max: number }[] = [
   { key: 'fuelLPer100km', label: 'Fuel use', unit: 'L/100 km', step: 0.1, min: 0, max: 30 },
@@ -57,6 +57,12 @@ export const SettingsDialog = forwardRef<HTMLDialogElement>(function SettingsDia
                 <option value={0.9}>9 in 10 days on time</option>
                 <option value={0.95}>19 in 20 days on time</option>
               </select>
+            </span>
+          </label>
+          <label className="setting">
+            <span>Avoid toll roads</span>
+            <span className="setting-input">
+              <input type="checkbox" className="switch" checked={!!settings.avoidTolls} onChange={(e) => setSettings({ avoidTolls: e.target.checked })} />
             </span>
           </label>
         </div>

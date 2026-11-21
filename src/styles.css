@@ -1443,3 +1443,10 @@ dialog::backdrop {
   border-bottom: 1px solid var(--line);
   padding: 4px 0;
 }
+
+.setting-input input.switch {
+  width: 22px;
+  height: 22px;
+  min-height: 0;
+  accent-color: var(--brand);
+}

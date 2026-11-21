@@ -99,14 +99,19 @@ export function tollsOn(roads: TollRoad[] | undefined, roadNames: string[] | und
  * Choose between the router's routes: take a toll road only when the minutes it
  * saves are worth more than the toll at your value of time.
  */
-export function pickRoute(r: DriveRoute, tolls: TollRoad[] | undefined, valuePerHour: number): DriveRoute {
+export function pickRoute(r: DriveRoute, tolls: TollRoad[] | undefined, valuePerHour: number, avoidTolls = false): DriveRoute {
   const all = [r, ...(r.alternatives ?? [])]
-  const generalised = (x: DriveRoute) => (x.durationMin / 60) * valuePerHour + tollsOn(tolls, x.roadNames).reduce((s, t) => s + t.carPrice, 0)
+  const tollOf = (x: DriveRoute) => tollsOn(tolls, x.roadNames).reduce((s, t) => s + t.carPrice, 0)
+  if (avoidTolls) {
+    // Fewest tolls first (ideally none), then the fastest of those.
+    return all.reduce((best, x) => (tollOf(x) < tollOf(best) || (tollOf(x) === tollOf(best) && x.durationMin < best.durationMin) ? x : best))
+  }
+  const generalised = (x: DriveRoute) => (x.durationMin / 60) * valuePerHour + tollOf(x)
   return all.reduce((best, x) => (generalised(x) < generalised(best) ? x : best))
 }
 
 async function routeFor(ctx: Ctx, a: LatLon, b: LatLon): Promise<DriveRoute> {
-  return pickRoute(await ctx.deps.drive.route(a, b), ctx.region.tolls, ctx.settings.valuePerHour)
+  return pickRoute(await ctx.deps.drive.route(a, b), ctx.region.tolls, ctx.settings.valuePerHour, ctx.settings.avoidTolls)
 }
 
 function driveCost(r: DriveRoute, ctx: Ctx): CostBreakdown {
@@ -995,6 +1000,9 @@ function buildOption(ctx: Ctx, st: State): DayOption {
   for (let k = 1; k < legs.length; k++) {
     const gap = (legs[k].depart - legs[k - 1].arrive) / MIN - ctx.plan.stops[legs[k].legIndex].dwellMin
     if (gap < -1) warnings.push({ level: 'caution', text: `Tight: ${ctx.plan.stops[legs[k].legIndex].label} needs ${Math.round(-gap)} more min than you have` })
+  }
+  if (ctx.settings.avoidTolls && (cost.tolls ?? 0) > 0) {
+    warnings.push({ level: 'info', text: 'No toll-free route found for part of this trip' })
   }
   const blockers = warnings.some((w) => w.level === 'blocker')
   // Circling full lots is time and stress the on-time figure doesn't show.
