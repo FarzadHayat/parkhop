@@ -26,3 +26,6 @@ dist-ssr
 # local API caches and secrets
 .cache
 .env*.local
+
+# Cloudflare local state
+.wrangler
