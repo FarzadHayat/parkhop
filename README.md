@@ -23,6 +23,10 @@ The planner needs no API keys. Optional:
 
 The dev and preview servers cache timetable and road answers in `.cache/`, so a repeat plan is instant and a flaky network does not stop you.
 
+## Deploy
+
+ParkHop runs on Cloudflare Pages, with the API as a Pages Function: `pnpm build && pnpm dlx wrangler pages deploy --branch main`. Proxied answers are kept in Cloudflare's edge cache. Server assistant keys go in as secrets: `pnpm dlx wrangler pages secret put GEMINI_API_KEY`.
+
 All planning data comes from free public services (Transitous, OSRM, Photon, Open-Meteo, OpenFreeMap). They are fair-use and non-commercial, so read DESIGN.md before shipping anything commercial.
 
 ## Refresh the park 'n' ride data
