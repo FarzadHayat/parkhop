@@ -1,4 +1,4 @@
-// Live check against the real public APIs. Run with: npm run smoke
+// Live check against the real public APIs. Run with: pnpm smoke
 import { describe, expect, it } from 'vitest'
 import { defaultSettings, planDay } from '../src/engine/planner'
 import { formatHhmm } from '../src/engine/time'
