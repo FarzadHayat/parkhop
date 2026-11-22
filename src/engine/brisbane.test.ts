@@ -208,6 +208,32 @@ describe('planDay', () => {
     }
   })
 
+  it('avoids tolls with the toll-free router when the main router offers no alternative', async () => {
+    const calls: string[] = []
+    const drive: DriveProvider = {
+      async route(a, b) {
+        const d = km(a, b)
+        return { durationMin: d * 1.2, distanceKm: d, roadNames: ['Clem Jones Tunnel'] }
+      },
+      async tollFree(a, b) {
+        calls.push('tollFree')
+        const d = km(a, b) * 1.3
+        return { durationMin: d * 1.4, distanceKm: d, roadNames: ['Ipswich Road'] }
+      },
+    }
+    const clem = seq.tolls!.find((t) => t.id === 'clem7')!
+    const reg = mkRegion([mkLot('P', -27.34, 152.995)], { tolls: [clem] })
+    const withTolls = await planDay(plan, reg, defaultSettings, { drive, transit })
+    expect(calls).toHaveLength(0)
+    expect(withTolls.options.find((o) => o.strategy === 'drive')!.cost.tolls).toBeGreaterThan(0)
+
+    const avoiding = await planDay(plan, reg, { ...defaultSettings, avoidTolls: true }, { drive, transit })
+    const d = avoiding.options.find((o) => o.strategy === 'drive')!
+    expect(calls.length).toBeGreaterThan(0)
+    expect(d.cost.tolls ?? 0).toBe(0)
+    expect(d.warnings.some((w) => /No toll-free route/.test(w.text))).toBe(false)
+  })
+
   it('includes tolls in drive cost when the route uses a toll road', async () => {
     const drive: DriveProvider = {
       async route(a, b) {

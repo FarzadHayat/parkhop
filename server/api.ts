@@ -56,6 +56,7 @@ const upstreams: Upstream[] = [
     },
   },
   { prefix: '/api/osrm', origin: 'https://router.project-osrm.org', ttl: () => 7 * 24 * HOUR },
+  { prefix: '/api/valhalla', origin: 'https://valhalla1.openstreetmap.de', ttl: () => 7 * 24 * HOUR },
 ]
 
 async function proxyCached(up: Upstream, req: IncomingMessage, res: ServerResponse) {

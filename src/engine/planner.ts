@@ -99,9 +99,14 @@ export function tollsOn(roads: TollRoad[] | undefined, roadNames: string[] | und
  * Choose between the router's routes: take a toll road only when the minutes it
  * saves are worth more than the toll at your value of time.
  */
+/** What a route's toll roads cost a car. */
+export function tollCost(tolls: TollRoad[] | undefined, r: DriveRoute): number {
+  return tollsOn(tolls, r.roadNames).reduce((s, t) => s + t.carPrice, 0)
+}
+
 export function pickRoute(r: DriveRoute, tolls: TollRoad[] | undefined, valuePerHour: number, avoidTolls = false): DriveRoute {
   const all = [r, ...(r.alternatives ?? [])]
-  const tollOf = (x: DriveRoute) => tollsOn(tolls, x.roadNames).reduce((s, t) => s + t.carPrice, 0)
+  const tollOf = (x: DriveRoute) => tollCost(tolls, x)
   if (avoidTolls) {
     // Fewest tolls first (ideally none), then the fastest of those.
     return all.reduce((best, x) => (tollOf(x) < tollOf(best) || (tollOf(x) === tollOf(best) && x.durationMin < best.durationMin) ? x : best))
@@ -111,7 +116,14 @@ export function pickRoute(r: DriveRoute, tolls: TollRoad[] | undefined, valuePer
 }
 
 async function routeFor(ctx: Ctx, a: LatLon, b: LatLon): Promise<DriveRoute> {
-  return pickRoute(await ctx.deps.drive.route(a, b), ctx.region.tolls, ctx.settings.valuePerHour, ctx.settings.avoidTolls)
+  const { tolls } = ctx.region
+  const r = pickRoute(await ctx.deps.drive.route(a, b), tolls, ctx.settings.valuePerHour, ctx.settings.avoidTolls)
+  // The main router often has no toll-free alternative: ask one that can avoid tolls.
+  if (ctx.settings.avoidTolls && ctx.deps.drive.tollFree && tollCost(tolls, r) > 0) {
+    const free = await ctx.deps.drive.tollFree(a, b)
+    if (free && tollCost(tolls, free) < tollCost(tolls, r)) return free
+  }
+  return r
 }
 
 /** Fuel and wear for a drive, leaving out whichever the person chose not to count. */

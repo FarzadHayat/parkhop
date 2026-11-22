@@ -186,7 +186,7 @@ export const SettingsDialog = forwardRef<HTMLDialogElement>(function SettingsDia
           <h3>Where the numbers come from</h3>
           <ul>
             <li>Timetables and live delays: Transitous (TransLink GTFS and GTFS-RT).</li>
-            <li>Road routes: OSRM on OpenStreetMap, scaled by a typical weekday traffic profile. Not live traffic.</li>
+            <li>Road routes: OSRM on OpenStreetMap (Valhalla when avoiding tolls), scaled by a typical weekday traffic profile. Not live traffic.</li>
             <li>Park 'n' ride lots: OpenStreetMap. Fill times are estimates unless you report them.</li>
             <li>Weather: Open-Meteo. Rain adds drive time and flags long walks.</li>
             <li>Fares: {region.fareNote}.</li>

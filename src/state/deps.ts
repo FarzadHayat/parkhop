@@ -1,5 +1,6 @@
 import type { PlannerDeps } from '../engine/planner'
 import { osrmProvider } from '../providers/osrm'
+import { valhallaTollFree } from '../providers/valhalla'
 import { transitousProvider } from '../providers/transitous'
 import { openMeteoProvider } from '../providers/weather'
 
@@ -11,8 +12,8 @@ export interface Health {
 }
 
 const weather = openMeteoProvider()
-const direct: PlannerDeps = { drive: osrmProvider(), transit: transitousProvider(), weather }
-const proxied: PlannerDeps = { drive: osrmProvider('/api/osrm'), transit: transitousProvider('/api/transitous'), weather }
+const direct: PlannerDeps = { drive: { ...osrmProvider(), tollFree: valhallaTollFree() }, transit: transitousProvider(), weather }
+const proxied: PlannerDeps = { drive: { ...osrmProvider('/api/osrm'), tollFree: valhallaTollFree('/api/valhalla') }, transit: transitousProvider('/api/transitous'), weather }
 
 let current = direct
 

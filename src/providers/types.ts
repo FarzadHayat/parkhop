@@ -15,6 +15,8 @@ export interface DriveRoute {
 
 export interface DriveProvider {
   route(a: LatLon, b: LatLon): Promise<DriveRoute>
+  /** A route that avoids toll roads, when the main router did not offer one. Null if none. */
+  tollFree?(a: LatLon, b: LatLon): Promise<DriveRoute | null>
 }
 
 export interface TransitQuery {
