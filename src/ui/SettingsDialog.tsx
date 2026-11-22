@@ -146,6 +146,18 @@ export const SettingsDialog = forwardRef<HTMLDialogElement>(function SettingsDia
               <input type="checkbox" className="switch" checked={!!settings.avoidTolls} onChange={(e) => setSettings({ avoidTolls: e.target.checked })} />
             </span>
           </label>
+          <label className="setting">
+            <span>Leave fuel out of costs</span>
+            <span className="setting-input">
+              <input type="checkbox" className="switch" checked={!!settings.ignoreFuel} onChange={(e) => setSettings({ ignoreFuel: e.target.checked })} />
+            </span>
+          </label>
+          <label className="setting">
+            <span>Leave car wear out of costs</span>
+            <span className="setting-input">
+              <input type="checkbox" className="switch" checked={!!settings.ignoreWear} onChange={(e) => setSettings({ ignoreWear: e.target.checked })} />
+            </span>
+          </label>
         </div>
         <button type="button" className="btn ghost small" onClick={() => setSettings({ ...defaultSettings, priority: settings.priority })}>
           Reset to defaults

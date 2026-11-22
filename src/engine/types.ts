@@ -150,6 +150,10 @@ export interface Settings {
   priority: Priority
   /** Never take a toll road when the router offers a toll-free route. */
   avoidTolls?: boolean
+  /** Leave fuel out of car costs (someone else pays, or you do not count it). */
+  ignoreFuel?: boolean
+  /** Leave wear and servicing out of car costs. */
+  ignoreWear?: boolean
 }
 
 export type Priority = 'balanced' | 'cheapest' | 'fastest' | 'reliable'

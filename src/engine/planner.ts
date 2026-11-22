@@ -114,10 +114,17 @@ async function routeFor(ctx: Ctx, a: LatLon, b: LatLon): Promise<DriveRoute> {
   return pickRoute(await ctx.deps.drive.route(a, b), ctx.region.tolls, ctx.settings.valuePerHour, ctx.settings.avoidTolls)
 }
 
+/** Fuel and wear for a drive, leaving out whichever the person chose not to count. */
+export function carRunningCost(distanceKm: number, s: Settings): { fuel: number; wear: number } {
+  return {
+    fuel: s.ignoreFuel ? 0 : (distanceKm * s.fuelLPer100km * s.fuelPricePerL) / 100,
+    wear: s.ignoreWear ? 0 : distanceKm * s.wearPerKm,
+  }
+}
+
 function driveCost(r: DriveRoute, ctx: Ctx): CostBreakdown {
-  const s = ctx.settings
   const tolls = tollsOn(ctx.region.tolls, r.roadNames).reduce((sum, t) => sum + t.carPrice, 0)
-  return { fuel: (r.distanceKm * s.fuelLPer100km * s.fuelPricePerL) / 100, wear: r.distanceKm * s.wearPerKm, parking: 0, fares: 0, tolls }
+  return { ...carRunningCost(r.distanceKm, ctx.settings), parking: 0, fares: 0, tolls }
 }
 
 /** Walking minutes between a parking spot and its station (straight line, with a detour factor). */
