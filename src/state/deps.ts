@@ -6,7 +6,7 @@ import { openMeteoProvider } from '../providers/weather'
 export interface Health {
   /** The ParkHop server is running: use its caching proxies. */
   proxy: boolean
-  /** An Anthropic key is configured on the server. */
+  /** An assistant key is configured on the server. */
   assistant: boolean
 }
 

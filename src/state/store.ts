@@ -4,6 +4,7 @@ import { nextWeekday } from '../engine/time'
 import type { DayOption, DayPlan, LegRule, Lot, Place, PlanResult, Settings, Stop, StopParking } from '../engine/types'
 import { region, presets } from '../data/seq'
 import { km } from '../engine/geo'
+import { loadCredentials, saveCredentials, type Credentials } from '../assistant/credentials'
 import { getDeps, health } from './deps'
 
 export type Status = { kind: 'idle' } | { kind: 'planning'; done: number; total: number } | { kind: 'error'; message: string } | { kind: 'done' }
@@ -90,8 +91,13 @@ interface AppState extends StoredState {
   focusLotId: string | null
   /** Bumped when the plan changes after a result, to flag results as stale. */
   stale: boolean
-  /** The server has an Anthropic key, so the assistant can run. */
+  /** The assistant can run: the server is up and has a key, or you saved one in Settings. */
   assistantReady: boolean
+  /** The key you saved in Settings (kept in this browser only). */
+  assistantCreds: Credentials | null
+  /** What the ParkHop server reported: whether it is there, and whether it has its own assistant key. */
+  server: { up: boolean; assistant: boolean }
+  setAssistantCreds(c: Credentials | null): void
   setPlan(plan: DayPlan): void
   updateStop(id: string, patch: Partial<Stop>): void
   setRule(index: number, rule: LegRule): void
@@ -135,6 +141,8 @@ export const useApp = create<AppState>((set, get) => {
     focusLotId: null,
     stale: false,
     assistantReady: false,
+    assistantCreds: loadCredentials(),
+    server: { up: false, assistant: false },
 
     setPlan: (plan) => changed(plan),
     updateStop(id, patch) {
@@ -187,6 +195,11 @@ export const useApp = create<AppState>((set, get) => {
       const stops = plan.stops.slice()
       ;[stops[idx], stops[to]] = [stops[to], stops[idx]]
       changed({ ...plan, stops })
+    },
+    setAssistantCreds(c) {
+      saveCredentials(c)
+      const { server } = get()
+      set({ assistantCreds: c, assistantReady: server.up && (server.assistant || c !== null) })
     },
     setSettings(patch) {
       const settings = { ...get().settings, ...patch }
@@ -258,4 +271,7 @@ export function selectedOption(s: Pick<AppState, 'options' | 'selectedId'>): Day
 
 export { region }
 
-void health.then((h) => useApp.setState({ assistantReady: !!h?.assistant }))
+void health.then((h) => {
+  const server = { up: !!h?.proxy, assistant: !!h?.assistant }
+  useApp.setState({ server, assistantReady: server.up && (server.assistant || useApp.getState().assistantCreds !== null) })
+})

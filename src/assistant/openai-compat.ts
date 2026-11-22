@@ -10,6 +10,8 @@ export interface OpenAiProvider {
   name: string
   url: string
   keyEnv: string
+  /** Where to get a key. */
+  keyUrl: string
   defaultModel: string
 }
 
@@ -19,6 +21,7 @@ export const OPENAI_PROVIDERS: OpenAiProvider[] = [
     name: 'Gemini',
     url: 'https://generativelanguage.googleapis.com/v1beta/openai/chat/completions',
     keyEnv: 'GEMINI_API_KEY',
+    keyUrl: 'https://aistudio.google.com/apikey',
     defaultModel: 'gemini-flash-latest',
   },
   {
@@ -26,6 +29,7 @@ export const OPENAI_PROVIDERS: OpenAiProvider[] = [
     name: 'Groq',
     url: 'https://api.groq.com/openai/v1/chat/completions',
     keyEnv: 'GROQ_API_KEY',
+    keyUrl: 'https://console.groq.com/keys',
     defaultModel: 'openai/gpt-oss-120b',
   },
   {
@@ -33,6 +37,7 @@ export const OPENAI_PROVIDERS: OpenAiProvider[] = [
     name: 'OpenRouter',
     url: 'https://openrouter.ai/api/v1/chat/completions',
     keyEnv: 'OPENROUTER_API_KEY',
+    keyUrl: 'https://openrouter.ai/keys',
     // OpenRouter's free router picks a free model that supports tool calling.
     defaultModel: 'openrouter/free',
   },

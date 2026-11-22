@@ -142,6 +142,12 @@ function selectOption(input: { option_id: string }) {
   return { selected: input.option_id }
 }
 
+/** The key saved in Settings goes to the ParkHop server with each question. */
+function keyHeaders(): Record<string, string> {
+  const c = useApp.getState().assistantCreds
+  return c ? { 'x-assistant-provider': c.provider, 'x-assistant-key': c.key } : {}
+}
+
 export interface AgentHooks {
   /** Tool activity to show while working, e.g. "Planning your day". */
   onActivity(text: string): void
@@ -182,7 +188,7 @@ export class Conversation {
       hooks.onActivity(step === 0 ? 'Thinking' : 'Thinking about the results')
       const r = await fetch('/api/assistant', {
         method: 'POST',
-        headers: { 'content-type': 'application/json' },
+        headers: { 'content-type': 'application/json', ...keyHeaders() },
         body: JSON.stringify({ messages: this.messages }),
       })
       const body = (await r.json().catch(() => ({}))) as { content?: Block[]; stop_reason?: string; error?: string }

@@ -1317,6 +1317,15 @@ dialog::backdrop {
   vertical-align: 2px;
 }
 
+.setting-input input[type='password'] {
+  width: min(60vw, 230px);
+  text-align: left;
+}
+.key-actions {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0;
+}
 .my-parking {
   list-style: none;
   padding: 0;

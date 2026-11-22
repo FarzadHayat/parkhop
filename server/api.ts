@@ -120,7 +120,17 @@ function backend(): Backend | null {
   return null
 }
 
-const OFF = 'Assistant is off: set GEMINI_API_KEY, GROQ_API_KEY, OPENROUTER_API_KEY or ANTHROPIC_API_KEY in .env.local and restart.'
+/** A key typed into the app's Settings, sent with the question. Used first, never stored. */
+function backendFromHeaders(req: IncomingMessage): Backend | null {
+  const id = String(req.headers['x-assistant-provider'] ?? '').toLowerCase()
+  const key = String(req.headers['x-assistant-key'] ?? '').trim()
+  if (!id || !key) return null
+  if (id === 'anthropic') return { kind: 'anthropic', client: new Anthropic({ apiKey: key }) }
+  const provider = OPENAI_PROVIDERS.find((p) => p.id === id)
+  return provider ? { kind: 'openai', provider, key } : null
+}
+
+const OFF = 'Add an assistant key in Settings to turn the assistant on.'
 
 async function openaiTurn(b: Extract<Backend, { kind: 'openai' }>, messages: ClaudeMessage[], res: ServerResponse) {
   const { provider } = b
@@ -146,11 +156,13 @@ async function openaiTurn(b: Extract<Backend, { kind: 'openai' }>, messages: Cla
     const detail = await r.text().catch(() => '')
     let msg = ''
     try {
-      const j = JSON.parse(detail) as { error?: { message?: string } | { message?: string }[] }
-      msg = (Array.isArray(j.error) ? j.error[0]?.message : j.error?.message) ?? ''
+      // Gemini wraps its errors in an array.
+      const parsed = JSON.parse(detail) as { error?: { message?: string } } | { error?: { message?: string } }[]
+      msg = (Array.isArray(parsed) ? parsed[0] : parsed)?.error?.message ?? ''
     } catch {
       /* not JSON */
     }
+    if (/valid api key|api key not valid|invalid api key/i.test(msg)) return send(res, 503, { error: `${provider.name} key rejected` })
     return send(res, r.status >= 500 ? 502 : 400, { error: msg ? `${provider.name}: ${msg.slice(0, 200)}` : `${provider.name} error ${r.status}` })
   }
   try {
@@ -161,7 +173,7 @@ async function openaiTurn(b: Extract<Backend, { kind: 'openai' }>, messages: Cla
 }
 
 async function assistantTurn(req: IncomingMessage, res: ServerResponse) {
-  const b = backend()
+  const b = backendFromHeaders(req) ?? backend()
   if (!b) return send(res, 503, { error: OFF })
   let messages: Anthropic.Beta.BetaMessageParam[]
   try {

@@ -16,7 +16,9 @@ npm run build      # installable PWA in dist/
 
 The planner needs no API keys. Optional:
 
-- **Assistant:** put one key in `.env.local` (never committed) and restart. The server keeps it, and the browser never sees it. Free options: `GEMINI_API_KEY` (aistudio.google.com), `GROQ_API_KEY` (console.groq.com), `OPENROUTER_API_KEY` (openrouter.ai, free models). Paid: `ANTHROPIC_API_KEY`. If several are set, the free ones win; force one with `ASSISTANT_PROVIDER=anthropic` (or `gemini`, `groq`, `openrouter`), and change the model with `ASSISTANT_MODEL`. Free limits and model names change, so check each site.
+- **Assistant:** open Settings, pick a provider, paste a key and tap Save key. Free options: Gemini (aistudio.google.com), Groq (console.groq.com), OpenRouter (openrouter.ai). Paid: Claude. The key stays in your browser and goes only to your ParkHop server, which passes it on and keeps nothing.
+  - To set one for everyone using the server instead, put `GEMINI_API_KEY`, `GROQ_API_KEY`, `OPENROUTER_API_KEY` or `ANTHROPIC_API_KEY` in `.env.local` and restart. A key saved in Settings wins. `ASSISTANT_PROVIDER` forces one server key and `ASSISTANT_MODEL` changes the model.
+  - Free limits and model names change, so check each site.
 - **Phone preview over Tailscale:** `tailscale serve --bg --https=8443 http://127.0.0.1:5191` with `npm run dev -- --port 5191`.
 
 The dev and preview servers cache timetable and road answers in `.cache/`, so a repeat plan is instant and a flaky network does not stop you.
