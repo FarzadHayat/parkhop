@@ -1,5 +1,6 @@
 // Small server side for ParkHop, mounted into Vite (dev and preview).
-// - /api/assistant: holds the Anthropic key and forwards one assistant turn.
+// - /api/assistant: holds the AI provider key (Gemini, Groq, OpenRouter or
+//   Anthropic) and forwards one assistant turn.
 // - /api/transitous/*, /api/osrm/*: caching proxies, so repeat plans are
 //   instant, the public servers see few requests, and a demo survives a
 //   flaky network by serving the last good answer.
@@ -9,6 +10,7 @@ import { mkdir, readFile, stat, writeFile } from 'node:fs/promises'
 import type { IncomingMessage, ServerResponse } from 'node:http'
 import path from 'node:path'
 import { ASSISTANT_MODEL, SYSTEM_PROMPT, TOOLS } from '../src/assistant/definitions'
+import { fromChatResponse, OPENAI_PROVIDERS, toChatMessages, toChatTools, type ChatResponse, type ClaudeMessage, type OpenAiProvider } from '../src/assistant/openai-compat'
 
 const USER_AGENT = 'ParkHop/0.2 (open-source commute planner)'
 const CACHE_DIR = path.resolve('.cache')
@@ -99,9 +101,68 @@ function anthropic(): Anthropic | null {
   }
 }
 
+type Backend = { kind: 'anthropic'; client: Anthropic } | { kind: 'openai'; provider: OpenAiProvider; key: string }
+
+/** Free providers come first; ASSISTANT_PROVIDER=gemini|groq|openrouter|anthropic forces one. */
+function backend(): Backend | null {
+  const forced = process.env.ASSISTANT_PROVIDER?.trim().toLowerCase()
+  const order = forced ? [forced] : [...OPENAI_PROVIDERS.map((p) => p.id), 'anthropic']
+  for (const id of order) {
+    if (id === 'anthropic') {
+      const client = anthropic()
+      if (client) return { kind: 'anthropic', client }
+      continue
+    }
+    const provider = OPENAI_PROVIDERS.find((p) => p.id === id)
+    const key = provider && process.env[provider.keyEnv]?.trim()
+    if (provider && key) return { kind: 'openai', provider, key }
+  }
+  return null
+}
+
+const OFF = 'Assistant is off: set GEMINI_API_KEY, GROQ_API_KEY, OPENROUTER_API_KEY or ANTHROPIC_API_KEY in .env.local and restart.'
+
+async function openaiTurn(b: Extract<Backend, { kind: 'openai' }>, messages: ClaudeMessage[], res: ServerResponse) {
+  const { provider } = b
+  let r: Response
+  try {
+    r = await fetch(provider.url, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', authorization: `Bearer ${b.key}`, 'user-agent': USER_AGENT },
+      body: JSON.stringify({
+        model: process.env.ASSISTANT_MODEL?.trim() || provider.defaultModel,
+        messages: toChatMessages(SYSTEM_PROMPT, messages),
+        tools: toChatTools(TOOLS),
+        max_tokens: 2000,
+      }),
+      signal: AbortSignal.timeout(60_000),
+    })
+  } catch {
+    return send(res, 502, { error: `${provider.name} did not respond` })
+  }
+  if (!r.ok) {
+    if (r.status === 401 || r.status === 403) return send(res, 503, { error: `${provider.name} key rejected` })
+    if (r.status === 429) return send(res, 429, { error: `${provider.name} free limit reached, try again in a minute` })
+    const detail = await r.text().catch(() => '')
+    let msg = ''
+    try {
+      const j = JSON.parse(detail) as { error?: { message?: string } | { message?: string }[] }
+      msg = (Array.isArray(j.error) ? j.error[0]?.message : j.error?.message) ?? ''
+    } catch {
+      /* not JSON */
+    }
+    return send(res, r.status >= 500 ? 502 : 400, { error: msg ? `${provider.name}: ${msg.slice(0, 200)}` : `${provider.name} error ${r.status}` })
+  }
+  try {
+    send(res, 200, fromChatResponse((await r.json()) as ChatResponse))
+  } catch (e) {
+    send(res, 502, { error: e instanceof Error ? `${provider.name}: ${e.message}` : 'Assistant unavailable' })
+  }
+}
+
 async function assistantTurn(req: IncomingMessage, res: ServerResponse) {
-  const c = anthropic()
-  if (!c) return send(res, 503, { error: 'Assistant is off: set ANTHROPIC_API_KEY in .env.local and restart.' })
+  const b = backend()
+  if (!b) return send(res, 503, { error: OFF })
   let messages: Anthropic.Beta.BetaMessageParam[]
   try {
     const body = JSON.parse(await readBody(req)) as { messages?: Anthropic.Beta.BetaMessageParam[] }
@@ -110,6 +171,8 @@ async function assistantTurn(req: IncomingMessage, res: ServerResponse) {
   } catch {
     return send(res, 400, { error: 'Expected { messages: [...] }' })
   }
+  if (b.kind === 'openai') return openaiTurn(b, messages as unknown as ClaudeMessage[], res)
+  const c = b.client
   try {
     const response = await c.beta.messages.create({
       model: ASSISTANT_MODEL,
@@ -144,7 +207,7 @@ export function apiMiddleware() {
     const url = req.url ?? ''
     if (!url.startsWith('/api/')) return next()
     try {
-      if (url === '/api/health') return send(res, 200, { proxy: true, assistant: anthropic() !== null })
+      if (url === '/api/health') return send(res, 200, { proxy: true, assistant: backend() !== null })
       if (url === '/api/assistant' && req.method === 'POST') return await assistantTurn(req, res)
       for (const up of upstreams) if (url.startsWith(`${up.prefix}/`) && req.method === 'GET') return await proxyCached(up, req, res)
       send(res, 404, { error: 'Not found' })

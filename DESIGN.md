@@ -45,7 +45,7 @@ Launch region: South East Queensland (Brisbane, TransLink). Research notes with 
 
 ## Assistant and street parking
 
-- **Claude assistant:** Claude Opus 5.5 with tool use (`set_day`, `plan_options`, `select_option`).
+- **Assistant:** Gemini, Groq, OpenRouter or Claude Opus 5.5, all with tool use (`set_day`, `plan_options`, `select_option`).
   - The tools run in the browser, so the app visibly changes while Claude works. The server holds the key and adds prompt caching and a refusal fallback.
   - Claude answers only from tool results.
   - Voice input and spoken replies use the Web Speech API.

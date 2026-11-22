@@ -48,7 +48,17 @@ async function setDay(input: { date: string | null; stops: StopInput[]; leg_rule
   const current = useApp.getState().plan
   const found: { label: string; place: string }[] = []
   const stops: Stop[] = []
-  for (const [i, s] of input.stops.entries()) {
+  for (const [i, raw] of input.stops.entries()) {
+    // Some providers leave out optional fields or send "" for them.
+    const blank = <T,>(v: T | undefined | '') => (v === undefined || v === '' ? null : v)
+    const s: StopInput = {
+      ...raw,
+      arrive_by: blank(raw.arrive_by),
+      leave_after: blank(raw.leave_after),
+      stay_min: blank(raw.stay_min),
+      parking: raw.parking ?? 'default',
+      parking_per_day: blank(raw.parking_per_day),
+    }
     let place = null
     if (s.place.trim().toLowerCase() === 'keep') {
       const same = current.stops.find((c) => c.label.toLowerCase() === s.label.toLowerCase() && c.place)

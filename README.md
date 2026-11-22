@@ -16,7 +16,7 @@ npm run build      # installable PWA in dist/
 
 The planner needs no API keys. Optional:
 
-- **Claude assistant:** put `ANTHROPIC_API_KEY=...` in `.env.local` (never committed). The server keeps the key, and the browser never sees it.
+- **Assistant:** put one key in `.env.local` (never committed) and restart. The server keeps it, and the browser never sees it. Free options: `GEMINI_API_KEY` (aistudio.google.com), `GROQ_API_KEY` (console.groq.com), `OPENROUTER_API_KEY` (openrouter.ai, free models). Paid: `ANTHROPIC_API_KEY`. If several are set, the free ones win; force one with `ASSISTANT_PROVIDER=anthropic` (or `gemini`, `groq`, `openrouter`), and change the model with `ASSISTANT_MODEL`. Free limits and model names change, so check each site.
 - **Phone preview over Tailscale:** `tailscale serve --bg --https=8443 http://127.0.0.1:5191` with `npm run dev -- --port 5191`.
 
 The dev and preview servers cache timetable and road answers in `.cache/`, so a repeat plan is instant and a flaky network does not stop you.

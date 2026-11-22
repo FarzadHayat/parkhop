@@ -18,8 +18,8 @@ function parkhopApi(): Plugin {
 }
 
 export default defineConfig(({ mode }) => {
-  // Let the server read ANTHROPIC_* from .env.local without exposing it to the browser.
-  const env = loadEnv(mode, process.cwd(), 'ANTHROPIC_')
+  // Let the server read the AI provider keys from .env.local without exposing them to the browser.
+  const env = loadEnv(mode, process.cwd(), ['ANTHROPIC_', 'GEMINI_', 'GROQ_', 'OPENROUTER_', 'ASSISTANT_'])
   for (const [k, v] of Object.entries(env)) if (!process.env[k]) process.env[k] = v
   return {
     plugins: [
