@@ -72,7 +72,7 @@ export const SettingsDialog = forwardRef<HTMLDialogElement>(function SettingsDia
         <section className="about">
           <h3>Your parking</h3>
           {myParking.length === 0 ? (
-            <p className="fine">Set a stop's parking to "My permit" and ParkHop remembers it for that place, including for your shifts.</p>
+            <p className="fine">Set a stop's parking to "My permit" and ParkHop remembers it for that place.</p>
           ) : (
             <ul className="my-parking">
               {myParking.map((p, i) => (

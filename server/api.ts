@@ -3,8 +3,6 @@
 // - /api/transitous/*, /api/osrm/*: caching proxies, so repeat plans are
 //   instant, the public servers see few requests, and a demo survives a
 //   flaky network by serving the last good answer.
-// - /api/tanda/*: forwards Tanda API calls with the person's own token
-//   (Tanda does not allow browser calls from other sites).
 import Anthropic from '@anthropic-ai/sdk'
 import { createHash } from 'node:crypto'
 import { mkdir, readFile, stat, writeFile } from 'node:fs/promises'
@@ -12,7 +10,7 @@ import type { IncomingMessage, ServerResponse } from 'node:http'
 import path from 'node:path'
 import { ASSISTANT_MODEL, SYSTEM_PROMPT, TOOLS } from '../src/assistant/definitions'
 
-const USER_AGENT = 'ParkHop/0.2 (open-source commute planner, hackathon prototype)'
+const USER_AGENT = 'ParkHop/0.2 (open-source commute planner)'
 const CACHE_DIR = path.resolve('.cache')
 
 type Next = (err?: unknown) => void
@@ -85,25 +83,6 @@ async function proxyCached(up: Upstream, req: IncomingMessage, res: ServerRespon
   }
 }
 
-// ---------- Tanda ----------
-
-async function proxyTanda(req: IncomingMessage, res: ServerResponse) {
-  const token = req.headers['x-tanda-token']
-  if (typeof token !== 'string' || !token) return send(res, 401, { error: 'Missing Tanda token' })
-  const rest = req.url!.slice('/api/tanda'.length)
-  // Read-only: only the endpoints ParkHop needs.
-  if (!/^\/(users\/me|schedules|locations|departments|rosters\/current)(\?|$)/.test(rest)) return send(res, 403, { error: 'Endpoint not allowed' })
-  try {
-    const r = await fetch(`https://my.tanda.co/api/v2${rest}`, {
-      headers: { authorization: `bearer ${token}`, accept: 'application/json', 'user-agent': USER_AGENT },
-      signal: AbortSignal.timeout(20_000),
-    })
-    send(res, r.status, await r.text())
-  } catch {
-    send(res, 502, { error: 'Tanda did not respond' })
-  }
-}
-
 // ---------- assistant ----------
 
 let client: Anthropic | null = null
@@ -167,7 +146,6 @@ export function apiMiddleware() {
     try {
       if (url === '/api/health') return send(res, 200, { proxy: true, assistant: anthropic() !== null })
       if (url === '/api/assistant' && req.method === 'POST') return await assistantTurn(req, res)
-      if (url.startsWith('/api/tanda/') && req.method === 'GET') return await proxyTanda(req, res)
       for (const up of upstreams) if (url.startsWith(`${up.prefix}/`) && req.method === 'GET') return await proxyCached(up, req, res)
       send(res, 404, { error: 'Not found' })
     } catch (e) {

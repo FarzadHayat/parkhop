@@ -9,7 +9,6 @@ import { OptionDetail, RuledOut } from './ui/OptionDetail'
 import { OptionList, PriorityBar, TradeoffChart } from './ui/Results'
 import { AssistantBar } from './ui/AssistantBar'
 import { SettingsDialog } from './ui/SettingsDialog'
-import { Shifts } from './ui/Shifts'
 import { WeatherChip } from './ui/WeatherChip'
 
 type Sheet = 'peek' | 'half' | 'full'
@@ -84,7 +83,6 @@ export default function App() {
   const notes = useApp((s) => s.result?.dataNotes) ?? NO_NOTES
   const run = useApp((s) => s.plan_)
   const { sheet, setSheet, dragPx, onPointerDown, onPointerMove, endDrag, panel } = useSheet()
-  const [tab, setTab] = useState<'day' | 'shifts'>('day')
 
   // Plan once on first open so there is something to look at.
   useEffect(() => {
@@ -152,19 +150,8 @@ export default function App() {
           <span aria-hidden="true" />
         </button>
         <div className="panel-scroll">
-          <AssistantBar onShowShifts={() => setTab('shifts')} onShowDay={() => setTab('day')} />
-          <div className="tabs" role="tablist" aria-label="Plan">
-            <button type="button" role="tab" id="tab-day" aria-controls="panel-day" aria-selected={tab === 'day'} onClick={() => setTab('day')}>
-              My day
-            </button>
-            <button type="button" role="tab" id="tab-shifts" aria-controls="panel-shifts" aria-selected={tab === 'shifts'} onClick={() => setTab('shifts')}>
-              My shifts <span className="badge tanda">Tanda</span>
-            </button>
-          </div>
-          <div role="tabpanel" id="panel-shifts" aria-labelledby="tab-shifts" hidden={tab !== 'shifts'}>
-            <Shifts onOpenDay={() => setTab('day')} />
-          </div>
-          <div role="tabpanel" id="panel-day" aria-labelledby="tab-day" hidden={tab !== 'day'}>
+          <AssistantBar />
+          <div>
             <nav className="presets" aria-label="Example days">
               {presets.map((p) => (
                 <button key={p.id} type="button" className="chip" onClick={() => loadPreset(p.id)}>

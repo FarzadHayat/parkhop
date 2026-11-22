@@ -6,7 +6,6 @@ import { region } from '../data/seq'
 import { formatHhmm } from '../engine/time'
 import type { LegRule, Priority, Stop } from '../engine/types'
 import { photonProvider } from '../providers/photon'
-import { useShifts, weekTotals } from '../state/shifts'
 import { defaultParkingFor, newId, useApp } from '../state/store'
 
 type Block = Anthropic.Beta.BetaContentBlock
@@ -19,7 +18,6 @@ const HHMM = /^([01]?\d|2[0-3]):[0-5]\d$/
 
 function appState() {
   const s = useApp.getState()
-  const shifts = useShifts.getState()
   return {
     today: new Intl.DateTimeFormat('en-CA', { timeZone: tz }).format(new Date()),
     date: s.plan.date,
@@ -32,7 +30,6 @@ function appState() {
     leg_rules: s.plan.legRules,
     has_options: s.options.length > 0,
     selected_option: s.selectedId,
-    tanda_roster: shifts.roster ? `${shifts.roster.shifts.length} shifts (${shifts.roster.source})` : 'not connected',
   }
 }
 
@@ -135,39 +132,18 @@ function selectOption(input: { option_id: string }) {
   return { selected: input.option_id }
 }
 
-async function planShifts(onShifts: () => void) {
-  const sh = useShifts.getState()
-  if (!sh.roster) sh.loadDemo()
-  onShifts()
-  await useShifts.getState().planAll()
-  const { plans, roster, error } = useShifts.getState()
-  if (error) throw new Error(error)
-  return {
-    roster: roster?.source === 'demo' ? 'demo roster (not connected to Tanda)' : 'Tanda',
-    week: weekTotals(plans),
-    shifts: plans.map((p) => ({
-      when: `${new Intl.DateTimeFormat('en-AU', { timeZone: tz, weekday: 'short' }).format(new Date(p.shift.start))} ${formatHhmm(p.shift.start, tz)}-${formatHhmm(p.shift.finish, tz)}`,
-      best: p.best ? `${p.best.title}, leave ${formatHhmm(p.best.leaveBy, tz)}, $${p.best.costTotal.toFixed(2)}` : (p.error ?? 'no plan'),
-      flags: p.flags.map((f) => f.text),
-    })),
-  }
-}
-
 export interface AgentHooks {
   /** Tool activity to show while working, e.g. "Planning your day". */
   onActivity(text: string): void
-  /** Switch the panel to the shifts view. */
-  onShowShifts(): void
 }
 
 const ACTIVITY: Record<string, string> = {
   set_day: 'Setting up your day',
   plan_options: 'Checking timetables and traffic',
   select_option: 'Showing the option',
-  plan_shifts: 'Planning your shifts',
 }
 
-async function runTool(name: string, input: unknown, hooks: AgentHooks): Promise<unknown> {
+async function runTool(name: string, input: unknown): Promise<unknown> {
   switch (name) {
     case 'set_day':
       return setDay(input as Parameters<typeof setDay>[0])
@@ -175,8 +151,6 @@ async function runTool(name: string, input: unknown, hooks: AgentHooks): Promise
       return planOptions(input as { priority: Priority })
     case 'select_option':
       return selectOption(input as { option_id: string })
-    case 'plan_shifts':
-      return planShifts(hooks.onShowShifts)
     default:
       throw new Error(`Unknown tool ${name}`)
   }
@@ -221,7 +195,7 @@ export class Conversation {
       for (const u of uses) {
         hooks.onActivity(ACTIVITY[u.name] ?? 'Working')
         try {
-          const out = await runTool(u.name, u.input, hooks)
+          const out = await runTool(u.name, u.input)
           results.push({ type: 'tool_result', tool_use_id: u.id, content: JSON.stringify(out) })
         } catch (e) {
           results.push({ type: 'tool_result', tool_use_id: u.id, content: e instanceof Error ? e.message : 'Tool failed', is_error: true })

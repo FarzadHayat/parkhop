@@ -17,10 +17,9 @@ npm run build      # installable PWA in dist/
 The planner needs no API keys. Optional:
 
 - **Claude assistant:** put `ANTHROPIC_API_KEY=...` in `.env.local` (never committed). The server keeps the key, and the browser never sees it.
-- **Tanda:** in My shifts, paste a Tanda access token (scopes `me`, `roster`, `department`), or use the demo roster. The token stays in that browser tab.
 - **Phone preview over Tailscale:** `tailscale serve --bg --https=8443 http://127.0.0.1:5191` with `npm run dev -- --port 5191`.
 
-The dev and preview servers cache timetable and road answers in `.cache/`, so a repeat plan is instant and a demo survives a flaky network. Demo notes are in [PITCH.md](PITCH.md).
+The dev and preview servers cache timetable and road answers in `.cache/`, so a repeat plan is instant and a flaky network does not stop you.
 
 All planning data comes from free public services (Transitous, OSRM, Photon, Open-Meteo, OpenFreeMap). They are fair-use and non-commercial, so read DESIGN.md before shipping anything commercial.
 

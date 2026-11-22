@@ -27,7 +27,7 @@ describe('parking permits', () => {
     useApp.getState().updateStop(work.id, { parking: { perDay: 0, permit: true } })
     expect(useApp.getState().myParking).toHaveLength(1)
 
-    // A later plan (e.g. a Tanda shift) to the same place, 100 m away, gets the permit.
+    // A later plan to the same place, 100 m away, gets the permit.
     const nearby = { name: 'RBWH entrance', lat: rbwh.lat + 0.0008, lon: rbwh.lon }
     expect(defaultParkingFor(nearby)).toEqual({ perDay: 0, permit: true })
     // And it survives a reload.

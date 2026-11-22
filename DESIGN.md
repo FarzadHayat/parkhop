@@ -43,10 +43,9 @@ Launch region: South East Queensland (Brisbane, TransLink). Research notes with 
 - Explains what it rejected, for example "Car would be left at Work overnight" or "Car can't stay at School".
 - Installable PWA (phone, tablet, desktop), light and dark themes, keyboard and screen reader support. Data stays on the device.
 
-## Added for the Tanda hackathon
+## Assistant and street parking
 
-- **Tanda rosters:** reads the person's next 7 days of published shifts through the Tanda API v2 (`users/me`, `schedules`, `departments`, `locations`). It plans each shift home, to work 10 minutes early, and home after the finish, then flags shifts that public transport can't cover, lots that are full at the arrival time, and options that are rarely on time. Calls go through the ParkHop server because Tanda does not allow browser calls from other sites, and the token stays in the browser tab.
-- **Claude assistant:** Claude Opus 5.5 with tool use (`set_day`, `plan_options`, `select_option`, `plan_shifts`).
+- **Claude assistant:** Claude Opus 5.5 with tool use (`set_day`, `plan_options`, `select_option`).
   - The tools run in the browser, so the app visibly changes while Claude works. The server holds the key and adds prompt caching and a refusal fallback.
   - Claude answers only from tool results.
   - Voice input and spoken replies use the Web Speech API.

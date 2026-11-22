@@ -28,7 +28,7 @@ beforeAll(async () => {
   ;({ Conversation } = await import('./agent'))
 })
 
-const hooks = { onActivity: () => {}, onShowShifts: () => {} }
+const hooks = { onActivity: () => {} }
 
 describe('assistant tool loop', () => {
   it('runs tools, returns errors as tool results, and echoes assistant content unchanged', async () => {

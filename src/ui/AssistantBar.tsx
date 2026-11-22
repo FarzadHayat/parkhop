@@ -20,7 +20,6 @@ const SpeechRec =
 const EXAMPLES = [
   'Drop the kids at Mango Hill State School by 8:20, then work at RBWH by 9, home after 5',
   'Cheapest way to get to Queen Street by 8:30 tomorrow',
-  'Plan my Tanda shifts this week',
 ]
 
 function speak(text: string) {
@@ -34,7 +33,7 @@ function speak(text: string) {
   }
 }
 
-export function AssistantBar({ onShowShifts, onShowDay }: { onShowShifts(): void; onShowDay(): void }) {
+export function AssistantBar() {
   const ready = useApp((s) => s.assistantReady)
   const [text, setText] = useState('')
   const [busy, setBusy] = useState(false)
@@ -56,9 +55,8 @@ export function AssistantBar({ onShowShifts, onShowDay }: { onShowShifts(): void
     setBusy(true)
     setText('')
     setReply({ q: query, a: '' })
-    onShowDay()
     try {
-      const a = await convo.current.ask(query, { onActivity: setActivity, onShowShifts })
+      const a = await convo.current.ask(query, { onActivity: setActivity })
       setReply({ q: query, a })
       if (viaVoice.current) speak(a)
     } catch (e) {

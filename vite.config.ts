@@ -4,7 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 import { defineConfig } from 'vitest/config'
 import { apiMiddleware } from './server/api'
 
-/** Mounts the small API (assistant, caching proxies, Tanda) into dev and preview servers. */
+/** Mounts the small API (assistant, caching proxies) into dev and preview servers. */
 function parkhopApi(): Plugin {
   return {
     name: 'parkhop-api',

@@ -15,7 +15,6 @@ How to work:
 - A school drop-off is a short stop: stay 5 minutes, no parking. Work stops usually have an arrive-by time and a leave-after time.
 - If they have a parking permit, a staff car park or free parking at a place, set that stop's parking to "permit" (ParkHop remembers it). "default" already uses a saved permit.
 - For "I need the car for pickup" or similar, set that leg's rule to "car". For "no driving" use "transit".
-- If they ask about their Tanda shifts, roster or week, call plan_shifts.
 - If something is ambiguous, make a sensible Brisbane assumption, act, and say what you assumed in a few words.
 
 How to answer:
@@ -97,11 +96,5 @@ export const TOOLS: ToolDef[] = [
       required: ['option_id'],
       additionalProperties: false,
     },
-  },
-  {
-    name: 'plan_shifts',
-    description:
-      "Load the person's upcoming shifts from Tanda (or the demo roster) and plan the commute for each one. Returns each shift with the best way to get there and back, the cost, and shifts where public transport does not run or the lot will be full.",
-    input_schema: { type: 'object', properties: {}, required: [], additionalProperties: false },
   },
 ]

@@ -1297,33 +1297,6 @@ dialog::backdrop {
   vertical-align: 1px;
 }
 
-/* ---------- tabs ---------- */
-
-.tabs {
-  display: flex;
-  gap: 4px;
-  margin-top: 12px;
-  border-bottom: 1px solid var(--line);
-}
-.tabs button {
-  flex: 1;
-  min-height: 44px;
-  border: 0;
-  border-bottom: 3px solid transparent;
-  background: transparent;
-  font-weight: 650;
-  color: var(--ink-2);
-  cursor: pointer;
-}
-.tabs button[aria-selected='true'] {
-  color: var(--ink);
-  border-bottom-color: var(--brand);
-}
-.badge.tanda {
-  background: #ff5a5f22;
-  color: var(--ink);
-  border: 1px solid #ff5a5f66;
-}
 .badge.late {
   background: var(--warn-bg);
   color: var(--warn);
@@ -1331,91 +1304,6 @@ dialog::backdrop {
 }
 .badge {
   background: var(--surface-2);
-}
-
-/* ---------- shifts ---------- */
-
-.tanda-connect p {
-  margin: 0 0 10px;
-  font-size: 14px;
-}
-.token-row {
-  display: flex;
-  gap: 6px;
-  margin-bottom: 6px;
-}
-.token-row input {
-  flex: 1;
-  min-width: 0;
-  min-height: 40px;
-  padding: 0 10px;
-  border-radius: 10px;
-  border: 1px solid var(--line);
-  background: var(--surface-2);
-}
-.roster-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-.week-tiles {
-  margin-bottom: 10px;
-}
-.shift-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 8px;
-}
-.shift-card {
-  display: grid;
-  gap: 6px;
-  padding: 12px;
-  border-radius: var(--radius);
-  border: 1px solid var(--line);
-}
-.shift-card.is-risky {
-  border-color: color-mix(in srgb, var(--warn) 55%, var(--line));
-}
-.shift-head {
-  display: flex;
-  justify-content: space-between;
-  gap: 8px;
-  font-weight: 700;
-}
-.shift-where,
-.shift-card p {
-  margin: 0;
-  font-size: 13px;
-}
-.shift-verdict {
-  display: grid;
-}
-.shift-verdict span {
-  font-size: 13px;
-  color: var(--ink-2);
-}
-.shift-flags {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 4px;
-}
-.shift-flags li {
-  display: flex;
-  gap: 6px;
-  align-items: flex-start;
-  padding: 6px 8px;
-  border-radius: 8px;
-  font-size: 12px;
-}
-.shift-card .btn {
-  justify-self: start;
 }
 
 .map-key i.small-dot {

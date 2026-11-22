@@ -146,7 +146,7 @@ export const useApp = create<AppState>((set, get) => {
         if (patch.place && !('parking' in patch)) next.parking = defaultParkingFor(patch.place)
         return next
       })
-      // Remember (or forget) a permit for this place, so shifts and later plans use it.
+      // Remember (or forget) a permit for this place, so later plans use it.
       const stop = stops.find((s) => s.id === id)
       if ('parking' in patch && stop?.place) {
         const others = get().myParking.filter((p) => km(p, stop.place!) > 0.25)
