@@ -41,6 +41,7 @@ Launch region: South East Queensland (Brisbane, TransLink). Research notes with 
 - Map: all 137 SEQ park 'n' ride lots coloured by how early they fill, plus the selected route by mode.
 - Live data where it exists: realtime delays and service alerts that apply to your travel time, and the weather forecast.
 - Explains what it rejected, for example "Car would be left at Work overnight" or "Car can't stay at School".
+- Hand off to your navigation app: each drive step has Google Maps, Apple Maps and Waze links, and each public transport leg has a Google Maps transit link.
 - Installable PWA (phone, tablet, desktop), light and dark themes, keyboard and screen reader support. Data stays on the device.
 
 ## Assistant and street parking

@@ -5,6 +5,7 @@ import type { DayOption, LegPlan, Lot, Segment } from '../engine/types'
 import { region, selectedOption, useApp } from '../state/store'
 import { duration, money, MODE_LABEL, modeVar, pct, time, tz } from './format'
 import { Alert, Info, ModeIcon } from './icons'
+import { driveLinks, segmentEnd, transitLink, transitSpan, type NavLink } from './navigate'
 
 const lotById = (id: string) => region.lots.find((l) => l.id === id)
 
@@ -30,11 +31,24 @@ function stepText(s: Segment, leg: LegPlan, toLabel: string, lot?: Lot): string 
   }
 }
 
+function NavLinks({ label, links }: { label: string; links: NavLink[] }) {
+  return (
+    <span className="nav-links">
+      {links.map((l) => (
+        <a key={l.app} href={l.href} target="_blank" rel="noreferrer" aria-label={`${label} in ${l.app}`}>
+          {l.app}
+        </a>
+      ))}
+    </span>
+  )
+}
+
 function LegSteps({ leg }: { leg: LegPlan }) {
   const plan = useApp((s) => s.plan)
   const from = plan.stops[leg.legIndex]
   const to = plan.stops[leg.legIndex + 1]
   const lot = leg.lotId ? lotById(leg.lotId) : undefined
+  const transit = transitSpan(leg.segments)
   const deadline = to.arriveByHhmm ? localToEpoch(plan.date, to.arriveByHhmm, tz) : undefined
   return (
     <section className="leg" aria-label={`${from.label} to ${to.label}`}>
@@ -58,6 +72,7 @@ function LegSteps({ leg }: { leg: LegPlan }) {
               {s.realtime && s.delayMin !== undefined && (
                 <span className={`rt ${s.delayMin >= 3 ? 'late' : ''}`}>{s.delayMin > 0 ? ` ${s.delayMin} min late (live)` : ' on time (live)'}</span>
               )}
+              {s.mode === 'drive' && segmentEnd(s) && <NavLinks label={`Navigate to ${s.toName}`} links={driveLinks(segmentEnd(s)!)} />}
             </span>
           </li>
         ))}
@@ -75,6 +90,11 @@ function LegSteps({ leg }: { leg: LegPlan }) {
           </span>
         </li>
       </ol>
+      {transit && (
+        <p className="nav-transit">
+          Public transport directions: <NavLinks label={`Public transport from ${from.label} to ${to.label}`} links={[transitLink(transit.from, transit.to)]} />
+        </p>
+      )}
     </section>
   )
 }
